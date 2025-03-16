@@ -1,0 +1,64 @@
+.container {
+  width: 80%; /* Takes 80% of the parent width */
+  max-width: 1200px; /* Prevents it from getting too large */
+  height: auto;
+  min-height: 500px;
+  font-family: var(--font-geist-sans);
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40vw;
+  height: 50px;
+
+  z-index: 4444;
+}
+
+.screen {
+  width: 75%;
+  background-color: black;
+  height: 500px;
+  border: 8px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow-y: auto;
+  /*margin-right: 5.5px;*/
+ 
+  margin-top: 90px;
+}
+
+.screen::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.responsive-img {
+  width: 100%; /* adapts to container width */
+  height: auto; /* maintain aspect ratio */
+  margin-bottom: 10px;
+  object-fit: cover; /* optional: crop if needed */
+}
+
+.footer {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}

@@ -1,0 +1,275 @@
+.container {
+  width: 80%; /* Takes 80% of the parent width */
+  max-width: 1200px; /* Prevents it from getting too large */
+  height: auto;
+  min-height: 500px;
+  font-family: var(--font-geist-sans);
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40vw;
+  height: 50px;
+
+  z-index: 4444;
+}
+
+.background {
+
+    height:120vh;
+    width:100vw;
+}
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+
+
+.background span {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 20vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 45;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #adffef;
+    top: 15%;
+    left: 17%;
+    animation-duration: 51s;
+    animation-delay: -39s;
+    transform-origin: 24vw -24vh;
+    box-shadow: -40vmin 0 5.447890345703365vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #000000;
+    top: 38%;
+    left: 2%;
+    animation-duration: 42s;
+    animation-delay: -31s;
+    transform-origin: 21vw 4vh;
+    box-shadow: -40vmin 0 5.455674290946592vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #adffef;
+    top: 99%;
+    left: 73%;
+    animation-duration: 46s;
+    animation-delay: -19s;
+    transform-origin: 18vw -12vh;
+    box-shadow: -40vmin 0 5.981614038395935vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #000000;
+    top: 94%;
+    left: 86%;
+    animation-duration: 50s;
+    animation-delay: -23s;
+    transform-origin: 19vw -18vh;
+    box-shadow: -40vmin 0 5.0822397362639204vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #adffef;
+    top: 19%;
+    left: 27%;
+    animation-duration: 25s;
+    animation-delay: -28s;
+    transform-origin: -24vw -15vh;
+    box-shadow: -40vmin 0 5.087894099626038vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #3c4e86;
+    top: 57%;
+    left: 47%;
+    animation-duration: 45s;
+    animation-delay: -37s;
+    transform-origin: 2vw 2vh;
+    box-shadow: -40vmin 0 5.632598595345674vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #3c4e86;
+    top: 72%;
+    left: 4%;
+    animation-duration: 32s;
+    animation-delay: -38s;
+    transform-origin: 12vw 15vh;
+    box-shadow: -40vmin 0 5.453001738711381vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #adffef;
+    top: 84%;
+    left: 86%;
+    animation-duration: 23s;
+    animation-delay: -12s;
+    transform-origin: -4vw -7vh;
+    box-shadow: -40vmin 0 5.013508703970598vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #adffef;
+    top: 43%;
+    left: 26%;
+    animation-duration: 13s;
+    animation-delay: -17s;
+    transform-origin: 3vw 10vh;
+    box-shadow: -40vmin 0 5.125640643603084vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #adffef;
+    top: 89%;
+    left: 75%;
+    animation-duration: 54s;
+    animation-delay: -44s;
+    transform-origin: -19vw 5vh;
+    box-shadow: -40vmin 0 5.663067238186995vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #000000;
+    top: 46%;
+    left: 66%;
+    animation-duration: 49s;
+    animation-delay: -10s;
+    transform-origin: 11vw -13vh;
+    box-shadow: 40vmin 0 5.505064733051759vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #3c4e86;
+    top: 17%;
+    left: 26%;
+    animation-duration: 17s;
+    animation-delay: -39s;
+    transform-origin: -9vw 10vh;
+    box-shadow: -40vmin 0 5.3072599995986804vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #3c4e86;
+    top: 14%;
+    left: 25%;
+    animation-duration: 37s;
+    animation-delay: -15s;
+    transform-origin: 12vw 12vh;
+    box-shadow: 40vmin 0 5.614959074191287vmin currentColor;
+}
+.background span:nth-child(13) {
+    color: #adffef;
+    top: 97%;
+    left: 24%;
+    animation-duration: 33s;
+    animation-delay: -28s;
+    transform-origin: -8vw -17vh;
+    box-shadow: 40vmin 0 5.572206482765815vmin currentColor;
+}
+.background span:nth-child(14) {
+    color: #000000;
+    top: 100%;
+    left: 69%;
+    animation-duration: 12s;
+    animation-delay: -41s;
+    transform-origin: -21vw 19vh;
+    box-shadow: -40vmin 0 5.96250608347868vmin currentColor;
+}
+.background span:nth-child(15) {
+    color: #3c4e86;
+    top: 42%;
+    left: 8%;
+    animation-duration: 29s;
+    animation-delay: -35s;
+    transform-origin: 5vw 7vh;
+    box-shadow: 40vmin 0 5.597026786168861vmin currentColor;
+}
+.background span:nth-child(16) {
+    color: #3c4e86;
+    top: 41%;
+    left: 35%;
+    animation-duration: 27s;
+    animation-delay: -14s;
+    transform-origin: -10vw 14vh;
+    box-shadow: 40vmin 0 5.083936049252802vmin currentColor;
+}
+.background span:nth-child(17) {
+    color: #000000;
+    top: 62%;
+    left: 24%;
+    animation-duration: 48s;
+    animation-delay: -18s;
+    transform-origin: 17vw 18vh;
+    box-shadow: -40vmin 0 5.385754397084301vmin currentColor;
+}
+.background span:nth-child(18) {
+    color: #000000;
+    top: 1%;
+    left: 60%;
+    animation-duration: 12s;
+    animation-delay: -12s;
+}
+
+.laptop {
+  width: 80%;
+  position: absolute;
+  margin-left: 8vw;
+  /*margin-top: 700px;*/
+  margin-top: 92vh;
+  z-index: 1000;
+}
+
+.screen {
+  position: absolute;
+  /*margin-right: 5.5px;*/
+  margin-top: 210px;
+  width: 53%;
+  background-color: black;
+  height: 60vh;
+  border: 8px solid rgb(0, 0, 0);
+  /*border-radius: 10px;*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.screen::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.responsive-img {
+  width: 100%; /* adapts to container width */
+  height: auto; /* maintain aspect ratio */
+  margin-bottom: 10px;
+  object-fit: cover; /* optional: crop if needed */
+}
+
+.footer {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+
