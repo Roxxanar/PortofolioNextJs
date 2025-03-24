@@ -1,0 +1,26 @@
+.screen {
+    position: absolute;
+    margin-left: -27vw;
+    margin-top: 140px;
+    width: 53%;
+    background-color: black;
+    /*height: 60vh;*/
+    height: clamp(200px, 60%, 480px);
+    border: 8px solid rgb(0, 0, 0);
+    /*border-radius: 10px;*/
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .screen::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+
+  @media (min-width: 900px) {
+    .screen {
+      height:clamp(200px, 51vh, 500px);
+    }
+}

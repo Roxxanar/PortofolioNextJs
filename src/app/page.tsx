@@ -30,6 +30,33 @@ export default function Home() {
   style={{ width: '100%', height: 'auto' }}
 />
      </div>
+
+     <div className={styles.background}>
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+
       <footer className={styles.footer}>
         
         

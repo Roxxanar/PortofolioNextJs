@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import styles from './projects.module.css';
 import Link from 'next/link';
-//import LaptopIcon from '../components/LaptopIcon';
+
+import Gallery from '../components/Gallery'; // Adjust the path as needed
+import Screen from '../components/Screen'; // Adjust the path as needed
 
 export default function Home() {
   return (
     <div className={styles.container}>
 
      <div className={styles.navbar}>
-     <Link href="/">Home</Link>
+     <Link href="/" className={styles.noUnderline}><p>Home</p></Link>
      <Image
             aria-hidden
             src="/globe.svg"
@@ -16,7 +18,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-         <Link href="/projects">Projects</Link> 
+         <Link href="/projects" className={styles.noUnderline}>Projects</Link> 
      </div>
 <div className={styles.laptop}>
 <Image
@@ -29,42 +31,30 @@ export default function Home() {
   style={{ width: '89%', height: 'auto' }}
 />
 </div>
-     <div className={styles.screen}>
-     <Image
+
+<Gallery />
+
+<Screen/>
+
+
+     <div className={styles.background}>
+
+     
+
+     </div>
+     <div className={styles.container2}>
+     <div className={styles.laptop}>
+<Image
   aria-hidden
-  src="/desktop1.png"
+  src="/tastaturatr.png"
   alt="Globe icon"
   width={0}
   height={0}
   sizes="100vw"
-  style={{ width: '100%', height: 'auto' }}
+  style={{ width: '89%', height: 'auto' }}
 />
-
-     </div>
-
-     <div className={styles.background}>
-
-     <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-
+</div>
+    <Screen/>
      </div>
       <footer className={styles.footer}>
         
