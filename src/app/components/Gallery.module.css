@@ -1,40 +1,34 @@
-
-
-
 .container_artgallery {
-   
-
-  /*width: 700px;*/
-  height: 150vh;
+  width: 80vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  overflow: auto;
 }
 
 .carousel_view {
-  
-  
- /*width: 40vw;*/
+  width: 1550px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
+  /*overflow: auto;*/
 }
 
 .item_list {
-  
-  
   /*width: 100vw;*/
+  /*width:100vw;*/
   display: flex;
-  gap: 20px;
+  gap: 40px;
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-
+/*overflow: auto;*/
   scroll-snap-type: x mandatory;
 }
 
@@ -44,58 +38,61 @@
 }
 
 .prev_btn {
- 
   cursor: pointer;
-  
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: none;
-    transition: all 0.3s ease-in-out;
-  
+
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .next_btn {
-
   cursor: pointer;
-  
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: none;
-    transition: all 0.3s ease-in-out;
-  
+
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .item {
- 
   scroll-snap-align: center;
   height: 500px;
   background-color: deeppink;
   border-radius: 8px;
 }
 
-
-.screen {
-  
-  /*margin-right: 5.5px;*/
-  /*margin-top: 210px;*/
-  /*width: 1600px;*/
-  /*width: clamp(300px, 80vw, 2000px);*/
-  width: 100%;
+.screen2 {
+ 
+  width: 70vw;
   background-color: black;
-  /*height: 60vh;*/
-  /*height: clamp(200px, 100%, 1000px);*/
+ 
   border: 4px solid rgb(0, 0, 0);
   border-radius: 10px;
 
   scroll-snap-align: center;
   height: auto;
   background-color: rgb(0, 0, 0);
- 
 
-
- 
   overflow-y: auto;
   z-index: 1000;
 }
+
+
+@media (max-width: 1300px) {
+.container_artgallery {
+
+
+  height:200vh;
+}
+}
+
+@media (max-width: 500px) {
+  .carousel_view {
+  
+    width: 450px;
+   
+  }
+  }

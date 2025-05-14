@@ -11,7 +11,44 @@
   flex-direction: column;
 }
 
+
+
+
 .container2 {
+  position: relative;
+  
+    width: 80%; /* Takes 80% of the parent width */
+    
+    max-width: 1200px; /* Prevents it from getting too large */
+    /*min-height: 500px;*/
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.prev_btn {
+  cursor: pointer;
+
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.next_btn {
+  cursor: pointer;
+
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: none;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.container3 {
   position: relative;
   
     width: 80%; /* Takes 80% of the parent width */
@@ -22,6 +59,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+
 
 .navbar {
   display: flex;
@@ -120,8 +159,26 @@
 
 
   @media (max-width: 1000px) {
-  
 
+
+    .container2 {
+      position: relative;
+      
+        width: 82.7%; /* Takes 80% of the parent width */
+        
+        max-width: 1200px; /* Prevents it from getting too large */
+        /*min-height: 500px;*/
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top:50px;
+    }
+
+  
+.container3 {
+
+  display:none;
+}
     .laptop {
       
        display: none;
