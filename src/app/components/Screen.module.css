@@ -29,6 +29,7 @@
   @media (min-width: 900px) {
     .screen {
       height:clamp(200px, 50vh, 500px);
+      
     }
 }
 
@@ -53,12 +54,14 @@
   .screen {
     margin-top: 130px;
     height:clamp(200px, 70vh, 390px);
+    
   }
 }
 
 @media (max-width: 500px) {
   .screen {
     height:clamp(200px, 53vh, 330px);
+    
   }
 }
 

@@ -1,5 +1,5 @@
 .container_artgallery {
-  width: 80vw;
+  width: 71vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,20 +15,24 @@
   align-items: center;
   gap: 10px;
   scroll-behavior: smooth;
+ 
   transition: all 0.25s ease-in;
   /*overflow: auto;*/
 }
 
 .item_list {
-  /*width: 100vw;*/
-  /*width:100vw;*/
+ 
+  
   display: flex;
   gap: 40px;
+  /*overflow-x: scroll;*/
+  /*overflow-x: auto;*/
+  /*overflow-y: hidden;*/
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-/*overflow: auto;*/
+
   scroll-snap-type: x mandatory;
 }
 
@@ -37,27 +41,11 @@
   display: none;
 }
 
-.prev_btn {
-  cursor: pointer;
 
-  border: none;
-  cursor: pointer;
-  color: white;
-  background: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.next_btn {
-  cursor: pointer;
-
-  border: none;
-  cursor: pointer;
-  color: white;
-  background: none;
-  transition: all 0.3s ease-in-out;
-}
 
 .item {
+  flex: 0 0 auto; /* Previne redimensionarea automată */
+  
   scroll-snap-align: center;
   height: 500px;
   background-color: deeppink;
@@ -85,11 +73,14 @@
 .container_artgallery {
 
 
-  height:200vh;
+  height:auto;
 }
 }
 
 @media (max-width: 500px) {
+
+
+
   .carousel_view {
   
     width: 450px;

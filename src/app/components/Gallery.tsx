@@ -11,7 +11,7 @@ const Gallery = () => {
   useEffect(() => {
     // Check the width once mounted and set state accordingly
     const checkWidth = () => {
-      setShouldRender(window.innerWidth < 1000);
+      setShouldRender(window.innerWidth < 1200);
     };
     
     // Initial check
@@ -23,6 +23,12 @@ const Gallery = () => {
     // Clean up
     return () => window.removeEventListener('resize', checkWidth);
   }, []);
+
+
+
+  
+
+
   
   // This is key: Always render the same structure on both server and client
   // But make it invisible when not needed using CSS
