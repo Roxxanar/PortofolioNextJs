@@ -1,26 +1,64 @@
-.screen {
+
+
+  .screen {
     position: absolute;
-    margin-left: -27vw;
-    margin-top: 140px;
-    width: 53%;
+ 
+    margin-left: -24vw;
+    margin-top: 280px;;
     background-color: black;
-    /*height: 60vh;*/
+    width:75%;
+    height:100%;
+    max-width: 1200px; /* Prevents it from getting too large */
     height: clamp(200px, 60%, 480px);
     border: 8px solid rgb(0, 0, 0);
-    /*border-radius: 10px;*/
+    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow-y: auto;
     z-index: 1000;
   }
+
   
   .screen::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
 
 
+
+
   @media (min-width: 900px) {
     .screen {
-      height:clamp(200px, 51vh, 500px);
+      height:clamp(200px, 50vh, 500px);
     }
 }
+
+
+
+
+
+@media (max-width: 1000px) {
+  
+
+  .screen {
+    
+     display: none;
+     margin-left: 0vw;
+   
+    }
+
+   
+}
+
+@media (min-width: 1300px) {
+  .screen {
+    margin-top: 130px;
+    height:clamp(200px, 70vh, 390px);
+  }
+}
+
+@media (max-width: 500px) {
+  .screen {
+    height:clamp(200px, 53vh, 330px);
+  }
+}
+

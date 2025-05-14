@@ -11,7 +11,7 @@ const Gallery = () => {
   useEffect(() => {
     // Check the width once mounted and set state accordingly
     const checkWidth = () => {
-      setShouldRender(window.innerWidth < 900);
+      setShouldRender(window.innerWidth < 1000);
     };
     
     // Initial check
@@ -29,7 +29,7 @@ const Gallery = () => {
   return (
     <div 
       className={styles.container_artgallery} 
-      style={{ display: shouldRender ? 'flex' : 'none' }}
+      style={{ display: shouldRender ? 'block' : 'none' }}
     >
       <div className={styles.carousel_view}>
         <button id="prev-btn" className={styles.prev_btn}>
@@ -47,8 +47,9 @@ const Gallery = () => {
   alt="Globe icon"
   width={0}
   height={0}
-  sizes="200vw"
-  style={{ width: '450%', height: 'auto' }}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
+
 />
           </div>
 
@@ -59,8 +60,9 @@ const Gallery = () => {
   alt="Globe icon"
   width={0}
   height={0}
-  sizes="200vw"
-  style={{ width: '450%', height: 'auto' }}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
+
 />
           </div>
 
@@ -71,8 +73,8 @@ const Gallery = () => {
   alt="Globe icon"
   width={0}
   height={0}
-  sizes="200vw"
-  style={{ width: '450%', height: 'auto' }}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
 />
           </div>
 
@@ -83,8 +85,8 @@ const Gallery = () => {
   alt="Globe icon"
   width={0}
   height={0}
-  sizes="200vw"
-  style={{ width: '450%', height: 'auto' }}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
 />
           </div>
 

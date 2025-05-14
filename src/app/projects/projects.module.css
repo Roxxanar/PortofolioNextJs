@@ -1,7 +1,8 @@
 .container {
-  width: 80%; /* Takes 80% of the parent width */
+  position: relative;
+  /*width: 80%;*/
   max-width: 1200px; /* Prevents it from getting too large */
-  height: auto;
+  
   min-height: 500px;
   font-family: var(--font-geist-sans);
   display: flex;
@@ -11,7 +12,10 @@
 }
 
 .container2 {
+  position: relative;
+  
     width: 80%; /* Takes 80% of the parent width */
+    height:100px;
     max-width: 1200px; /* Prevents it from getting too large */
     /*min-height: 500px;*/
     display:flex;
@@ -35,37 +39,24 @@
   
   .background {
 
-    height:120vh;
+    height:80vh;
     width:100vw;
+   /* background-color: #a62b2b; */
   }
 
 .laptop {
-  width: 80%;
+  width: 100%;
   position: absolute;
-  margin-left: 8vw;
-  /*margin-top: 700px;*/
+  /*margin-left: 8vw;*/
+  margin-top: 650px ;
   /*margin-top: 92vh;*/
- margin-top: clamp(50px, 93vh, 730px); /* min 50px, preferred 10vh, max 150px */
+
   
   
   z-index: 1000;
 }
 
-.screen {
-  position: absolute;
-  /*margin-right: 5.5px;*/
-  margin-top: 210px;
-  width: 53%;
-  background-color: black;
-  /*height: 60vh;*/
-  height: clamp(200px, 60%, 480px);
-  border: 8px solid rgb(0, 0, 0);
-  /*border-radius: 10px;*/
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  overflow-y: auto;
-  z-index: 1000;
-}
+
 
 .screen::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
@@ -77,12 +68,6 @@
   margin-bottom: 10px;
   object-fit: cover; /* optional: crop if needed */
 }
-
-
-
-
-
-
 
 
 
@@ -108,27 +93,34 @@
 }
 
 
-@media (max-width: 1440px) {
+
+
+
+  @media (min-width: 1300px) {
+    .laptop {
+      
+      margin-top: clamp(50px, 75vh, 730px); /* min 50px, preferred 10vh, max 150px */
+      /* margin-left: 8vw;*/
+       
+    
+     }
+  }
+
+
+
+
+  @media (max-width: 1300px) {
     .screen {
       height:clamp(200px, 50vh, 500px);
     }
 
-    .laptop {
-      
-       margin-top: clamp(50px, 86vh, 730px); /* min 50px, preferred 10vh, max 150px */
-        margin-left: 8vw;
-        
-     
-      }
   }
 
-  @media (max-width: 900px) {
-    .screen {
-        
-    
-        
-      height:auto;
-    }
+
+
+
+  @media (max-width: 1000px) {
+  
 
     .laptop {
       
@@ -136,9 +128,6 @@
         
      
       }
-
-
-
 
      
   }
