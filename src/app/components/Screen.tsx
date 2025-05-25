@@ -1,43 +1,45 @@
+// components/Screen.js
 "use client";
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './Screen.module.css';
 
-const Screen = () => {
+const Screen = ({ index = 0 }) => {
   const [isWideScreen, setIsWideScreen] = useState(false);
 
   useEffect(() => {
-    // Function to check window width and update state
     const checkScreenWidth = () => {
       setIsWideScreen(window.innerWidth > 900);
     };
 
-    // Initial check
     checkScreenWidth();
-
-    // Add event listener for window resize
     window.addEventListener('resize', checkScreenWidth);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', checkScreenWidth);
-    };
+    return () => window.removeEventListener('resize', checkScreenWidth);
   }, []);
+
+  const images = [
+    '/desktop1.png',
+    '/desktop2.png',
+    '/desktop3.png',
+    '/desktop4.png',
+  ];
+
+  const selectedImage = images[index] || images[0];
 
   return (
     <div>
       {isWideScreen && (
         <div className={styles.screen}>
-        <Image
-          aria-hidden
-          src="/desktop1.png"
-          alt="Globe icon"
-          width={0}
-          height={0}
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
-        />
+          <Image
+            aria-hidden
+            src={selectedImage}
+            alt={`Desktop screen ${index + 1}`}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+          />
         </div>
       )}
     </div>

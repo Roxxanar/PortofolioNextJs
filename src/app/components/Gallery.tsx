@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './Gallery.module.css';
+//import { forwardRef } from 'react';
 
 const Gallery = () => {
   // Start with showing the component (this is important!)
@@ -25,8 +26,6 @@ const Gallery = () => {
   }, []);
 
 
-
-  
 
 
   
@@ -59,7 +58,7 @@ const Gallery = () => {
  <div className={styles.screen2}>
           <Image
   aria-hidden
-  src="/desktop1.png"
+  src="/desktop2.png"
   alt="Globe icon"
   width={0}
   height={0}
@@ -72,7 +71,7 @@ const Gallery = () => {
           <div className={styles.screen2}>
           <Image
   aria-hidden
-  src="/desktop1.png"
+  src="/desktop3.png"
   alt="Globe icon"
   width={0}
   height={0}
@@ -84,7 +83,7 @@ const Gallery = () => {
           <div className={styles.screen2}>
           <Image
   aria-hidden
-  src="/desktop1.png"
+  src="/desktop4.png"
   alt="Globe icon"
   width={0}
   height={0}

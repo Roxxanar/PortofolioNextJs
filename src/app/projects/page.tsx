@@ -9,6 +9,7 @@ import Screen from "../components/Screen"; // Adjust the path as needed
 import React, { useState, useEffect } from 'react';
 import { useRef } from 'react';
 
+
 export default function Home() {
 
  const [shouldRender, setShouldRender] = useState(true);
@@ -31,17 +32,17 @@ export default function Home() {
 
  
 
-  const listRef = useRef<HTMLDivElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
 
   const handlePrev = () => {
-    if (listRef.current) {
-      listRef.current.scrollLeft -= 600; // Ajustează valoarea după necesități
+    if (galleryRef.current) {
+      galleryRef.current.scrollLeft -= 600;
     }
   };
 
   const handleNext = () => {
-    if (listRef.current) {
-      listRef.current.scrollLeft += 600; // Ajustează valoarea după necesități
+    if (galleryRef.current) {
+      galleryRef.current.scrollLeft += 600;
     }
   };
   
@@ -84,7 +85,8 @@ export default function Home() {
     </svg>
   </button>
 )}
-        {shouldRender ? <Gallery /> : <Screen />}
+        {shouldRender ? <Gallery /> : <Screen index={0} />
+}
         {shouldRender && (
   <button onClick={handleNext} id="next-btn" className={styles.next_btn}>
     <svg viewBox="0 0 512 512" width="20" aria-label="Next">
@@ -110,8 +112,41 @@ export default function Home() {
             style={{ width: "100%", height: "auto" }}
           />
         </div>
-        {shouldRender ? <Gallery /> : <Screen />}
+        {shouldRender ? <Gallery /> :  <Screen index={1} />}
       </div>
+
+      <div className={styles.background}></div>
+      <div  className={styles.container3}>
+        <div className={styles.laptop}>
+          <Image
+            aria-hidden
+            src="/tastaturatr.png"
+            alt="Globe icon"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+        {shouldRender ? <Gallery /> :  <Screen index={2} />}
+      </div>
+
+      <div className={styles.background}></div>
+      <div  className={styles.container3}>
+        <div className={styles.laptop}>
+          <Image
+            aria-hidden
+            src="/tastaturatr.png"
+            alt="Globe icon"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+        {shouldRender ? <Gallery /> :  <Screen index={3} />}
+      </div>
+
       <footer className={styles.footer}></footer>
     </div>
   );
