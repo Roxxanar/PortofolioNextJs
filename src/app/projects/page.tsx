@@ -4,15 +4,18 @@ import Image from "next/image";
 import styles from "./projects.module.css";
 import Link from "next/link";
 
-import Gallery from "../components/Gallery"; // Adjust the path as needed
 import Screen from "../components/Screen"; // Adjust the path as needed
-import React, { useState, useEffect } from 'react';
-import { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
 
 
 export default function Home() {
 
  const [shouldRender, setShouldRender] = useState(true);
+ 
+ const itemListRef = useRef<HTMLDivElement | null>(null);
+
+ 
   
   useEffect(() => {
     // Check the width once mounted and set state accordingly
@@ -31,23 +34,39 @@ export default function Home() {
   }, []);
 
  
-
-  const galleryRef = useRef<HTMLDivElement>(null);
-
-  const handlePrev = () => {
-    if (galleryRef.current) {
-      galleryRef.current.scrollLeft -= 600;
-    }
-  };
-
-  const handleNext = () => {
-    if (galleryRef.current) {
-      galleryRef.current.scrollLeft += 600;
-    }
-  };
   
   
+const handlePrev = () => {
+  if (!itemListRef.current) return;
+  
+  const item = itemListRef.current.querySelector(".screen2") as HTMLElement;
+  if (!item) return; // Add null check
+  
+  const itemWidth = item.offsetWidth;
+  const style = window.getComputedStyle(itemListRef.current);
+  const gap = parseInt(style.gap) || 0; // Use 0 as fallback, or match your CSS
+  
+  itemListRef.current.scrollBy({ 
+    left: -(itemWidth + gap), 
+    behavior: "smooth" 
+  });
+};
 
+const handleNext = () => {
+  if (!itemListRef.current) return;
+  
+  const item = itemListRef.current.querySelector(".screen2") as HTMLElement;
+  if (!item) return; // Add null check
+  
+  const itemWidth = item.offsetWidth;
+  const style = window.getComputedStyle(itemListRef.current);
+  const gap = parseInt(style.gap) || 0; // Use 0 as fallback, or match your CSS
+  
+  itemListRef.current.scrollBy({ 
+    left: itemWidth + gap, 
+    behavior: "smooth" 
+  });
+};
 
   return (
     <div className={styles.container}>
@@ -85,7 +104,74 @@ export default function Home() {
     </svg>
   </button>
 )}
-        {shouldRender ? <Gallery /> : <Screen index={0} />
+        {shouldRender ? 
+        <div 
+      className={styles.container_artgallery} 
+      style={{ visibility: shouldRender ? 'visible' : 'hidden' }}
+    >
+      
+      <div className={styles.carousel_view}>
+        
+
+        <div id="item-list" className={styles.item_list} ref={itemListRef}>
+
+          <div className={`${styles.screen2} screen2`}>
+          <Image
+  aria-hidden
+  src="/desktop1.png"
+  alt="Globe icon"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
+
+/>
+          </div>
+
+ <div className={`${styles.screen2} screen2`}>
+          <Image
+  aria-hidden
+  src="/desktop2.png"
+  alt="Globe icon"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
+
+/>
+          </div>
+
+          <div className={`${styles.screen2} screen2`}>
+          <Image
+  aria-hidden
+  src="/desktop3.png"
+  alt="Globe icon"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
+/>
+          </div>
+
+          <div className={`${styles.screen2} screen2`}>
+          <Image
+  aria-hidden
+  src="/desktop4.png"
+  alt="Globe icon"
+  width={0}
+  height={0}
+  sizes="100vw"
+  style={{ width: '100%', height: 'auto' }}
+/>
+          </div>
+
+        </div>
+
+        
+      </div>
+      
+    </div>
+  : <Screen index={0} />
 }
         {shouldRender && (
   <button onClick={handleNext} id="next-btn" className={styles.next_btn}>
@@ -112,7 +198,7 @@ export default function Home() {
             style={{ width: "100%", height: "auto" }}
           />
         </div>
-        {shouldRender ? <Gallery /> :  <Screen index={1} />}
+          <Screen index={1} />
       </div>
 
       <div className={styles.background}></div>
@@ -128,7 +214,7 @@ export default function Home() {
             style={{ width: "100%", height: "auto" }}
           />
         </div>
-        {shouldRender ? <Gallery /> :  <Screen index={2} />}
+        <Screen index={2} />
       </div>
 
       <div className={styles.background}></div>
@@ -144,7 +230,7 @@ export default function Home() {
             style={{ width: "100%", height: "auto" }}
           />
         </div>
-        {shouldRender ? <Gallery /> :  <Screen index={3} />}
+         <Screen index={3} />
       </div>
 
       <footer className={styles.footer}></footer>
