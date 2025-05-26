@@ -39,7 +39,7 @@
 
 .next_btn {
   cursor: pointer;
-   transform: translateX(50%);
+  
 
   border: none;
 
@@ -261,7 +261,14 @@
   }
   
   @media (max-width: 500px) {
-    .carousel_view {
-      width: 450px;
+
+    .container_artgallery {
+      width: 87vw;
+    }
+
+    .item_list {
+
+      width:72vw;
+
     }
   }
