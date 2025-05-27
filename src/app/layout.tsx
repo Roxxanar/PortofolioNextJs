@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { EB_Garamond } from 'next/font/google';
 import "./globals.css";
+import Script from 'next/script';
 
 const dancingScript = EB_Garamond({ subsets: ['latin'], weight: '400' });
 
@@ -17,9 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body
         className={dancingScript.className}
       >
+        <Script src="/fairy-dust-cursor.js" strategy="lazyOnload" />
+      <div className="container-cursor">
+        
+      </div>
         {children}
       </body>
     </html>

@@ -6,6 +6,8 @@ import Link from "next/link";
 
 import Screen from "../components/Screen"; // Adjust the path as needed
 import React, { useState, useEffect, useRef } from 'react';
+import { mateSC } from "../fonts"; // Adjust path as needed
+import { setupPulsingGrid } from '../pulsing-grid.js';
 
 
 
@@ -15,7 +17,9 @@ export default function Home() {
  
  const itemListRef = useRef<HTMLDivElement | null>(null);
 
- 
+ useEffect(() => {
+  setupPulsingGrid();
+}, []);
   
   useEffect(() => {
     // Check the width once mounted and set state accordingly
@@ -68,20 +72,22 @@ const handleNext = () => {
   });
 };
 
+
+
+
+
+
+
+
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
-        <Link href="/" className={styles.noUnderline}>
+        <Link href="/" style={{ textDecoration: 'none', color: '#247DAE' }} className={mateSC.className}>
           <p>Home</p>
         </Link>
-        <Image
-          aria-hidden
-          src="/globe.svg"
-          alt="Globe icon"
-          width={16}
-          height={16}
-        />
-        <Link href="/projects" className={styles.noUnderline}>
+        <div id="pulsing-grid" ></div>
+       
+        <Link href="/projects" style={{ textDecoration: 'none', color: '#DA1818' }} className={mateSC.className}>
           Projects
         </Link>
       </div>

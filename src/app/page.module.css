@@ -11,6 +11,8 @@
 }
 
 .navbar {
+
+  font-family: 'Mate SC', serif;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
