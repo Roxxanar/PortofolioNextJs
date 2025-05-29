@@ -16,6 +16,8 @@
 
 body {
   display: flex;
+  
+
   justify-content: center;
   background: var(--background);
   color: var(--foreground);
@@ -25,8 +27,11 @@ body {
 
 
 .container-cursor {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
 width: 100vw;
-height: 100vh;
-overflow: hidden;
+height: auto;
+z-index: 4443;
+
 }

@@ -24,9 +24,11 @@ export default function RootLayout({
       >
         <Script src="/fairy-dust-cursor.js" strategy="lazyOnload" />
       <div className="container-cursor">
-        
-      </div>
+         </div>
+      
+      
         {children}
+       
       </body>
     </html>
   );

@@ -80,7 +80,15 @@ const handleNext = () => {
 
 
   return (
+   
     <div className={styles.container}>
+    <div
+  className={styles.backgroundsvg}
+  style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>
+    </div>
+    
+<div className={styles.fundal}></div>
+
       <div className={styles.navbar}>
         <Link href="/" style={{ textDecoration: 'none', color: '#247DAE' }} className={mateSC.className}>
           <p>Home</p>
@@ -241,5 +249,7 @@ const handleNext = () => {
 
       <footer className={styles.footer}></footer>
     </div>
+
+
   );
 }
