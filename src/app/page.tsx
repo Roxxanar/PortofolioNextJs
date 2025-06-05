@@ -28,7 +28,7 @@ export default function Home() {
     <div className={styles.container}>
     <div
   className={styles.backgroundsvg}
-  style={{ backgroundImage: "url('/low-poly-grid-haikei(1).svg')" }}>
+  style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>
     </div>
     
 <div className={styles.fundal}>

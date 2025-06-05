@@ -3,7 +3,7 @@
 /*import Image from "next/image";*/
 import styles from "./projects.module.css";
 import Link from "next/link";
-
+import Image from 'next/image';
 
 import React, { useEffect } from 'react';
 import { mateSC } from "../fonts"; // Adjust path as needed
@@ -33,8 +33,9 @@ export default function Home() {
     
 <div className={styles.fundal}>
 <div className={styles.folder}>
+  
 <section className={styles.hoversection}>
-    
+     <Link href="/uiux">
     <div className={styles.file}>
         
       <div className={styles.work5}></div>
@@ -46,16 +47,27 @@ export default function Home() {
     </div>
     
 
-   
+   </Link>
   </section>
+  
   <div className={styles.writing}>
- <Link href="/uiux" style={{ textDecoration: 'none', color: 'black' }}> Programming </Link> 
+       <Image
+      aria-hidden
+      src="/code-xml.svg"
+      alt="Globe icon"
+      width={0}
+      height={0}
+      sizes="100vw"
+      style={{ width: '10%', height: 'auto' }}
+    
+    />
+ <Link href="/uiux" style={{ textDecoration: 'none', color: 'black' }}>  Programming </Link> 
  </div>
 </div>
 
 <div className={styles.folder}>
 <section className={styles.hoversection}>
-    
+<Link href="/uiux">
     <div className={styles.file}>
         
       <div className={styles.work5}></div>
@@ -65,18 +77,28 @@ export default function Home() {
       <div className={styles.work1}></div>
      
     </div>
-    
+    </Link>
 
    
   </section>
   <div className={styles.writing}>
+  <Image
+      aria-hidden
+      src="/component.svg"
+      alt="Globe icon"
+      width={0}
+      height={0}
+      sizes="100vw"
+      style={{ width: '10%', height: 'auto' }}
+    
+    />
  <Link href="/uiux" style={{ textDecoration: 'none', color: 'black' }}> UI/UX Design </Link> 
  </div>
 </div>
 
 <div className={styles.folder}>
 <section className={styles.hoversection}>
-    
+<Link href="/uiux">
     <div className={styles.file}>
         
       <div className={styles.work5}></div>
@@ -86,11 +108,21 @@ export default function Home() {
       <div className={styles.work1}></div>
      
     </div>
-    
+    </Link>
 
    
   </section>
   <div className={styles.writing}>
+  <Image
+      aria-hidden
+      src="/brush.svg"
+      alt="Globe icon"
+      width={0}
+      height={0}
+      sizes="100vw"
+      style={{ width: '10%', height: 'auto' }}
+    
+    />
  <Link href="/uiux" style={{ textDecoration: 'none', color: 'black' }}> Drawings </Link> 
  </div>
 </div>
