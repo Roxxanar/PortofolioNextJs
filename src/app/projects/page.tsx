@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
    
-    <div className={styles.container}>
+    <div className={`${styles.container} ${mateSC.className}`}>
     <div
   className={styles.backgroundsvg}
   style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>

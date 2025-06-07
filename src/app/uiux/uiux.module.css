@@ -25,18 +25,192 @@ html {
   background: linear-gradient(to right, #247dae, #da1818);
   border-radius: 13px; /* border-radius + border width */
   z-index: -1;
-  opacity: 40%;
+  opacity: 60%;
 }
 
 .fundal {
   position: absolute;
-  margin-top: 150px;
+  margin-top: 250px;
   background-color: white;
   width: 70vw;
   height: 5000px;
   border-radius: 30px;
   opacity: 80%;
 }
+
+
+.fundal::after {
+    content: "";
+    display: flex;
+    width: min(400px, 60vw);
+    height: 100px;
+    background-color: transparent;
+    border-top: 20px solid white;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -114px;
+  }
+
+  .gallery_btn {
+
+position:absolute;
+width:35px;
+height:35px;
+
+  }
+
+
+  .fundalsus {
+    height: 150px;
+   
+    width: calc(min(400px, 60vw) + 40px) ;
+  
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+
+.ribbon {
+    
+    margin-top: 90px;
+   
+    height: 100px;
+    width: calc(min(400px, 60vw) + 40px) ;
+  
+    background-color:transparent;
+  }
+
+
+
+  .ribbon5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(min(400px, 60vw) + 60px);
+    height: 70px;
+    
+    text-align: center;
+    
+    margin-left: -10px;
+    margin-right: -10px;
+    /*background: #5aad8f;*/
+    background-image: linear-gradient(135deg, #915d9b 20%, #cec1d2 55%,  #915d9b 85%);
+    position: relative;
+    top: 20px;
+  }
+  .ribbon5:before, .ribbon5:after {
+    content: "";
+    position: absolute;
+  }
+  .ribbon5:before {
+    height: 0;
+    width: 0;
+    bottom: -10px;
+    left: 0;
+    border-top: 10px solid #4f3755;
+    border-left: 10px solid transparent;
+  }
+  .ribbon5:after {
+    height: 0;
+    width: 0;
+    right: 0;
+    bottom: -10px;
+    border-top: 10px solid #4f3755;
+    border-right: 10px solid transparent;
+  }
+
+  .newswebsite {
+
+        font-size: 1.5rem; 
+        font-weight: bold;
+        margin: 0;
+      
+  }
+
+
+  @media (max-width: 1200px) {
+   
+    .fundalsus {
+    
+        height:80px;
+        
+    }
+    
+       
+        .ribbon {
+    
+            background-color: #ffffff;
+            opacity: 80%;
+            border-radius: 5px;
+            width: calc(min(200px, 40vw) + 40px) ;
+            height: 65px;
+            margin-top: 45px;
+            box-shadow: inset 0 0 0 5px rgb(255, 255, 255);
+            background-color: transparent;
+        }
+        
+        .ribbon5 {
+            width: calc(min(200px, 40vw) + 60px) ;
+          height: 40px;
+          
+          top:10px;
+        }
+
+        .newswebsite {
+
+            font-size: 0.8rem; 
+            
+          
+      }
+
+
+
+      }
+
+
+
+
+
+
+  @media (max-width: 500px) {
+   
+.fundalsus {
+
+    height:80px;
+    
+}
+
+   
+    .ribbon {
+
+        background-color: #ffffff;
+        opacity: 80%;
+        border-radius: 5px;
+        width: calc(min(200px, 40vw) + 40px) ;
+        height: 65px;
+        margin-top: 45px;
+        box-shadow: inset 0 0 0 5px rgb(255, 255, 255);
+            background-color: transparent;
+    }
+    
+    .ribbon5 {
+        width: calc(min(200px, 40vw) + 60px) ;
+      height: 40px;
+      
+      top:10px;
+    }
+  }
+
+
+
+
+
 
 .container {
   /*position: relative;*/
@@ -49,6 +223,12 @@ html {
   /*justify-content: center;*/
   align-items: center;
   flex-direction: column;
+}
+
+.container a {
+
+
+    font-weight: bold;
 }
 
 .container2 {
@@ -308,7 +488,22 @@ html {
     align-items: center;
     width: 100px; /* fixed width */
   }
+
+ 
+
+  .container a {
+
+    font-weight: normal;
+  }
 }
+
+@media (max-width: 1200px) {
+
+
+    .navbar {
+        width: 60vw;
+      }
+  }
 
 #pulsing-grid {
   position: relative;

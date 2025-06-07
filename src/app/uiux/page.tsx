@@ -7,6 +7,7 @@ import Link from "next/link";
 import Screen from "../components/Screen"; // Adjust the path as needed
 import React, { useState, useEffect, useRef } from 'react';
 import { mateSC } from "../fonts"; // Adjust path as needed
+import { rockSalt } from "../fonts"; // Adjust path as needed
 import { setupPulsingGrid } from '../pulsing-grid.js';
 
 
@@ -14,6 +15,9 @@ import { setupPulsingGrid } from '../pulsing-grid.js';
 export default function Home() {
 
  const [shouldRender, setShouldRender] = useState(true);
+ {/*const [shouldRenderGallery, setShouldRenderGallery] = useState(false);
+ const [shouldRenderLaptops, setShouldRenderLaptops] = useState(true);*/}
+
  
  const itemListRef = useRef<HTMLDivElement | null>(null);
 
@@ -73,9 +77,21 @@ const handleNext = () => {
 };
 
 
+{/*
+const handleGallery = () => {
+    
+    if(shouldRenderGallery==false) {
+    setShouldRenderGallery(true);
+    setShouldRenderLaptops(false);
+    }
 
+    if(shouldRenderGallery==true) {
+        setShouldRenderGallery(false);
+        setShouldRenderLaptops(true);
+        }
 
-
+  };
+*/}
 
 
 
@@ -84,10 +100,13 @@ const handleNext = () => {
     <div className={styles.container}>
     <div
   className={styles.backgroundsvg}
-  style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>
+  style={{ backgroundImage: "url('/low-poly-grid-haikei(1).svg')" }}>
     </div>
-    
-<div className={styles.fundal}></div>
+   
+<div className={styles.fundal}>
+   {/* <button onClick={handleGallery}  className={styles.gallery_btn}></button>*/}
+</div>
+
 
       <div className={styles.navbar}>
         <Link href="/" style={{ textDecoration: 'none', color: '#247DAE' }} className={mateSC.className}>
@@ -99,8 +118,18 @@ const handleNext = () => {
           Projects
         </Link>
       </div>
+
+      <div className={styles.fundalsus}>
+      <div className={styles.ribbon}>
+      <span className={`${styles.ribbon5} ${rockSalt.className}`}>
+      <span className={styles.newswebsite}>News Website</span>
+      </span>
+  </div>
+             </div>
+
+
       <div  className={styles.container2}>
-        <div className={styles.laptop}>
+      <div  className={styles.laptop}>
           <Image
             aria-hidden
             src="/tastaturatr.png"
@@ -111,17 +140,17 @@ const handleNext = () => {
             style={{ width: "100%", height: "auto" }}
           />
         </div>
-        {shouldRender && (
+        {shouldRender  && (
   <button onClick={handlePrev} id="prev-btn" className={styles.prev_btn}>
     <svg viewBox="0 0 512 512" width="20" aria-label="Previous">
       <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
     </svg>
   </button>
 )}
-        {shouldRender ? 
+        {shouldRender  ? 
         <div 
       className={styles.container_artgallery} 
-      style={{ visibility: shouldRender ? 'visible' : 'hidden' }}
+      style={{ visibility: shouldRender  ? 'visible' : 'hidden' }}
     >
       
       <div className={styles.carousel_view}>
@@ -194,14 +223,16 @@ const handleNext = () => {
     </svg>
   </button>
 )}
+
+
       </div>
 
     
 
 
       <div className={styles.background}></div>
-      <div  className={styles.container3}>
-        <div className={styles.laptop}>
+      <div   className={styles.container3}>
+        <div  className={styles.laptop}>
           <Image
             aria-hidden
             src="/tastaturatr.png"
@@ -216,7 +247,7 @@ const handleNext = () => {
       </div>
 
       <div className={styles.background}></div>
-      <div  className={styles.container3}>
+      <div   className={styles.container3}>
         <div className={styles.laptop}>
           <Image
             aria-hidden
