@@ -390,7 +390,7 @@ height: 100vh;
 
   .container a {
 
-    font-weight: normal;
+    font-size: 0.5rem; /* nu face nimic */
   }
 }
 

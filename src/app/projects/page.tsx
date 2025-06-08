@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 import React, { useEffect } from 'react';
 import { mateSC } from "../fonts"; // Adjust path as needed
+import { stalemate } from '../fonts'; // adjust path if needed
 import { setupPulsingGrid } from '../pulsing-grid.js';
 
 
@@ -132,12 +133,12 @@ export default function Home() {
 </div>
 
       <div className={styles.navbar}>
-        <Link href="/" style={{ textDecoration: 'none', color: '#247DAE' }} className={mateSC.className}>
+        <Link href="/" style={{ textDecoration: 'none', color: '#247DAE', fontSize: '1.6rem' }} className={stalemate.className}>
           <p>Home</p>
         </Link>
         <div id="pulsing-grid" ></div>
        
-        <Link href="/projects" style={{ textDecoration: 'none', color: '#DA1818' }} className={mateSC.className}>
+        <Link href="/projects" style={{ textDecoration: 'none', color: '#DA1818', fontSize: '1.6rem' }} className={stalemate.className}>
           Projects
         </Link>
       </div>

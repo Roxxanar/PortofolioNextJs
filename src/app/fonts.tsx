@@ -1,5 +1,6 @@
 import { Mate_SC } from "next/font/google";
 import { Rock_Salt } from 'next/font/google';
+import { Stalemate } from 'next/font/google';
 
 export const mateSC = Mate_SC({
   subsets: ["latin"],
@@ -11,4 +12,10 @@ export const mateSC = Mate_SC({
 export const rockSalt = Rock_Salt({
     weight: '400', // Rock Salt are doar 400
     subsets: ['latin'],
+  });
+
+
+  export const stalemate = Stalemate({
+    subsets: ['latin'],
+    weight: '400', // only 400 is available for Stalemate
   });
