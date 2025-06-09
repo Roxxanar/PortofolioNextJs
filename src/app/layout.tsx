@@ -22,6 +22,10 @@ export default function RootLayout({
       <body
         className={dancingScript.className}
       >
+
+
+
+
         <Script src="/fairy-dust-cursor.js" strategy="lazyOnload" />
       <div className="container-cursor">
          </div>

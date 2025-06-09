@@ -10,6 +10,10 @@ import React, { useEffect } from 'react';
 import { stalemate } from './fonts'; // adjust path if needed
 import { setupPulsingGrid } from './pulsing-grid.js';
 
+import Contact from "./components/Contact"; // Adjust the path as needed
+import Typewriter from "./components/Typewriter";
+
+
 
 
 export default function Home() {
@@ -18,6 +22,7 @@ export default function Home() {
 
  useEffect(() => {
   setupPulsingGrid();
+ 
 }, []);
   
  
@@ -31,21 +36,29 @@ export default function Home() {
   className={styles.backgroundsvg}
   style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>
     </div>
+
+  
     
 <div className={styles.fundal}>
-<p> Hi, I am a web designer and programmer! :)</p>
+<Typewriter />
 
 
 </div>
 
       <div className={styles.navbar}>
-        <Link href="/" style={{ textDecoration: 'none', color: '#247DAE' , fontSize: '1.6rem' }} className={stalemate.className}>
-          <p>Home</p>
+      <Link
+  href="/"
+  className={stalemate.className}
+  style={{ textDecoration: 'none', color: '#247DAE', fontSize: '1.6rem' }}
+>          <span className={styles.effect}><p>Home</p></span>
         </Link>
         <div id="pulsing-grid" ></div>
        
-        <Link href="/projects" style={{ textDecoration: 'none', color: '#DA1818' , fontSize: '1.6rem' }} className={stalemate.className}>
-          Projects
+        <Link
+  href="/projects"
+  className={stalemate.className}
+  style={{ textDecoration: 'none', color: '#DA1818', fontSize: '1.6rem' }}
+>          <span className={styles.effect}>Projects</span>
         </Link>
       </div>
       
@@ -79,7 +92,13 @@ export default function Home() {
 
       
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+
+     <Contact/> 
+
+      </footer>
+
+      
     </div>
 
 

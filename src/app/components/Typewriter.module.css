@@ -1,0 +1,60 @@
+.typed {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    color: #ffffff;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    display: block;
+    
+   
+  }
+  
+  .typewrap {
+    width: 100%;
+    height: 150px;
+    
+    /*background-color: blueviolet;*/
+    padding: 1rem;
+    border-radius: 10px;
+  
+    /* Optional: Center vertically in the page */
+    display: flex;
+    
+    justify-content: center;
+  align-items: center;
+    /* Optional: full height for vertical centering */
+    min-height: 100px;
+  }
+  
+
+  /* Let the cursor behave inline */
+.typed .typed-cursor {
+    display: inline;
+    animation: blink 0.7s infinite;
+  }
+  
+  /* Optional blink animation fix (in case typed.js doesn't handle it well) */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+
+  @media (max-width: 1200px) {
+
+
+    .typed {
+       
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+
+    .typed {
+       
+        font-size: 1.1rem;
+    }
+}

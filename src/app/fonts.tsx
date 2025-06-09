@@ -1,6 +1,9 @@
 import { Mate_SC } from "next/font/google";
 import { Rock_Salt } from 'next/font/google';
 import { Stalemate } from 'next/font/google';
+import { Ysabeau_SC } from 'next/font/google';
+import { Tangerine } from 'next/font/google';
+
 
 export const mateSC = Mate_SC({
   subsets: ["latin"],
@@ -19,3 +22,17 @@ export const rockSalt = Rock_Salt({
     subsets: ['latin'],
     weight: '400', // only 400 is available for Stalemate
   });
+
+  export const ysabeauSC = Ysabeau_SC({
+    subsets: ['latin'],
+    weight: ['400'], // You can add other weights like '300', '500', etc.
+    display: 'swap',
+  });
+
+  export const tangerine = Tangerine({
+    subsets: ['latin'],
+    weight: ['400', '700'], // Use the weights you need
+    display: 'swap',
+  });
+  
+  
