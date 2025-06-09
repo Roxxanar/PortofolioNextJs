@@ -3,6 +3,9 @@ import { Rock_Salt } from 'next/font/google';
 import { Stalemate } from 'next/font/google';
 import { Ysabeau_SC } from 'next/font/google';
 import { Tangerine } from 'next/font/google';
+import { Square_Peg } from 'next/font/google';
+
+
 
 
 export const mateSC = Mate_SC({
@@ -35,4 +38,8 @@ export const rockSalt = Rock_Salt({
     display: 'swap',
   });
   
+  export const squarePeg = Square_Peg({
+    subsets: ['latin'],
+    weight: '400', // Only one weight available for Square Peg
+  });
   

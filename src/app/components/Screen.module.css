@@ -1,10 +1,9 @@
 
 
   .screen {
-    position: absolute;
+    position: relative;
  
-    /*margin-left: -24vw;*/
-    margin-left: 7.6vw;
+    
     margin-top: 280px;;
     background-color: black;
     width:75%;
@@ -13,8 +12,9 @@
     height: clamp(200px, 60%, 480px);
     border: 8px solid rgb(0, 0, 0);
     
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+   /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px;*/
+    border-radius: 10px;
     overflow-y: auto;
     z-index: 1000;
   }
@@ -44,7 +44,7 @@
   .screen {
     
      display: none;
-     margin-left: 0vw;
+    /* margin-left: 0vw;*/
    
     }
 
@@ -65,4 +65,6 @@
     
   }
 }
+
+
 
