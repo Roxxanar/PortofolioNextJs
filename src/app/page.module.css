@@ -32,11 +32,11 @@ html {
 .fundal {
   display: flex;
   justify-content: center;
-  position: absolute;
-  margin-top: 150px;
+  position: relative;
+  margin-top: 100px;
  
   width: calc(40vw + 6px);
-  height: 80vh;
+  height: 600px;
   border-radius: 30px;
   opacity: 80%;
   z-index: 1000;
@@ -44,11 +44,164 @@ html {
   color: white;
 }
 
+
+.icon_container {
+  display: flex;
+ justify-content: center;
+  align-items: center;
+  width: 30vw;
+  gap: 60px;
+ 
+}
+
+.icon_left,
+.icon_right {
+ 
+  opacity: 0;
+  transform: translateX(0);
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* Slide in from left */
+.icon_left {
+
+  width: 40px;
+  animation-name: slideInLeft;
+  transition: 0.25s;
+}
+
+/* Slide in from right */
+.icon_right {
+
+  width: 40px;
+  animation-name: slideInRight;
+  transition: 0.25s;
+  /*animation-delay: 0.3s;*/
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*
+.icon_left:hover {
+  background-color: #ff8000;
+  animation: bounce_613 0.4s linear;
+}
+
+.icon_right:hover {
+  background-color: #ff8000;
+  animation: bounce_613 0.4s linear;
+}
+
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+*/
+
+
+/* Add this new wrapper class */
+.tooltip_wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+/* Your existing tooltip class, just tweak behavior */
+.text_tooltip {
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  position: absolute;
+  width: 60px;
+  left: 0%;
+  bottom: 100%;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 10px;
+  background: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border: 5px solid #4f3755;
+  border-radius: 10px;
+ text-align: center;
+
+  visibility: hidden;
+ 
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Tooltip appears on hover */
+.tooltip_wrapper:hover .text_tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.text_tooltip::before,
+.text_tooltip::after {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text_tooltip::before {
+  border-top: 10px solid #4b244b;
+  margin-top: 5px;
+}
+
+.text_tooltip::after {
+  border-top: 10px solid white;
+  margin-top: -1px;
+  z-index: 1;
+}
+
+
+
+
+
 @media (max-width: 1200px) {
 
   .fundal {
     
-  margin-top: 120px;
+  margin-top: 80px;
+  height: 500px;
   }
   }
 
@@ -57,8 +210,26 @@ html {
 
 .fundal {
   width: calc(60vw + 6px);
-margin-top: 110px;
+  height:400px;
+margin-top: 60px;
 }
+
+
+.icon_left {
+
+  width: 100%;
+  height: auto;
+}
+
+.icon_right {
+
+  width: 100%;
+  height: auto;
+}
+
+
+
+
 }
 
 
@@ -152,7 +323,7 @@ height: 950px;
 }
 
 .background span {
-  display: none;
+  
   width: 20vmin;
   height: 20vmin;
   border-radius: 20vmin;
@@ -162,6 +333,7 @@ height: 950px;
   animation-duration: 45;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  z-index: -1;
 }
 
 .background span:nth-child(0) {

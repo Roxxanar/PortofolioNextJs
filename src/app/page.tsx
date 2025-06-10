@@ -3,7 +3,7 @@
 /*import Image from "next/image";*/
 import styles from "./page.module.css";
 import Link from "next/link";
-
+import Image from 'next/image';
 
 import React, { useEffect } from 'react';
 /*import { mateSC } from "./fonts"; */
@@ -37,15 +37,7 @@ export default function Home() {
   style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>
     </div>
 
-  
-    
-<div className={styles.fundal}>
-<Typewriter />
-
-
-</div>
-
-      <div className={styles.navbar}>
+    <div className={styles.navbar}>
       <Link
   href="/"
   className={stalemate.className}
@@ -61,7 +53,52 @@ export default function Home() {
 >          <span className={styles.effect}>Projects</span>
         </Link>
       </div>
+    
+<div className={styles.fundal}>
+<Typewriter />
+
+
+</div>
+
+     
       
+      <div className={styles.icon_container}>
+      <div className={styles.icon_left}>
+  <div className={styles.tooltip_wrapper}>
+    <Image
+      aria-hidden
+      src="/github.png"
+      alt="Globe icon"
+      width={0}
+      height={0}
+      sizes="100vw"
+      style={{ width: '100%', height: 'auto' }}
+    />
+    <span className={styles.text_tooltip}>
+      Github
+    </span>
+  </div>
+</div>
+
+  <div className={styles.icon_right}>
+  <div className={styles.tooltip_wrapper}>
+  <Image
+        aria-hidden
+        src="/social (1).png"
+        alt="Globe icon"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: '100%', height: 'auto' }}
+      
+      />
+       <span className={styles.text_tooltip}>
+      LinkedIn
+    </span>
+
+  </div>
+  </div>
+</div>
 
 
       <div className={styles.background}>
