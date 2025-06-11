@@ -58,7 +58,7 @@ html {
 .icon_right {
  
   opacity: 0;
-  transform: translateX(0);
+  /*transform: translateX(0);*/
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
@@ -169,6 +169,12 @@ html {
   visibility: visible;
   opacity: 1;
 }
+
+
+.tooltip_wrapper img:hover  {
+  transform: scale(1.1);
+}
+
 
 .text_tooltip::before,
 .text_tooltip::after {
@@ -296,6 +302,12 @@ height: 950px;
 }
 
 
+
+.effect:hover {
+
+/*color:#000000;*/
+transform: scale(1.05);
+}
 
 
 .background {

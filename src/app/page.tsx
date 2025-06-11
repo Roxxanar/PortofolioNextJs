@@ -65,6 +65,8 @@ export default function Home() {
       <div className={styles.icon_container}>
       <div className={styles.icon_left}>
   <div className={styles.tooltip_wrapper}>
+  <Link
+  href="https://github.com/Roxxanar">
     <Image
       aria-hidden
       src="/github.png"
@@ -74,6 +76,7 @@ export default function Home() {
       sizes="100vw"
       style={{ width: '100%', height: 'auto' }}
     />
+  </Link>
     <span className={styles.text_tooltip}>
       Github
     </span>
@@ -82,6 +85,8 @@ export default function Home() {
 
   <div className={styles.icon_right}>
   <div className={styles.tooltip_wrapper}>
+  <Link
+  href="https://www.linkedin.com/in/roxana-rusu-189303293/">
   <Image
         aria-hidden
         src="/social (1).png"
@@ -92,6 +97,7 @@ export default function Home() {
         style={{ width: '100%', height: 'auto' }}
       
       />
+  </Link>
        <span className={styles.text_tooltip}>
       LinkedIn
     </span>
