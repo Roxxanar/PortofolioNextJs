@@ -5,6 +5,9 @@ import React, { useEffect, useRef } from 'react';
 import styles from './Typewriter.module.css';
 import Typed from 'typed.js';
 
+import { squarePeg } from "../fonts"; // adjust path if needed
+/*import { rockSalt, mateSC, ysabeauSC, tangerine, squarePeg, stalemate } from "../fonts"; */
+
 const Typewriter = () => {
   const typedRef = useRef<HTMLSpanElement>(null);
 
@@ -27,7 +30,7 @@ const Typewriter = () => {
 
   return (
     <div className={styles.typewrap}>
-      <span className={styles.typed}>
+      <span className={`${styles.typed} ${squarePeg.className}`}>
         <span ref={typedRef} />
       </span>
     </div>

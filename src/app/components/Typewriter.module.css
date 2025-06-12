@@ -1,12 +1,16 @@
 .typed {
-    font-family: 'Courier New', monospace;
-    font-size: 1.5rem;
+    /*font-family: 'Courier New', monospace;*/
+    font-size: 3rem;
     color: #ffffff;
     white-space: normal;
     word-wrap: break-word;
     text-align: center;
     display: block;
-    
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #000000,
+               0 0 20px #ffffff,
+               0 0 30px #ffffff,
+               0 0 40px #ffffff;
    
   }
   
@@ -46,7 +50,7 @@
 
     .typed {
        
-        font-size: 1.3rem;
+        font-size: 2.3rem;
     }
 
 }
@@ -56,7 +60,7 @@
 
     .typed {
        
-        font-size: 1.1rem;
+        font-size: 2rem;
     }
 
 

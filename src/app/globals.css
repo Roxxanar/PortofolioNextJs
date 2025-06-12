@@ -1,11 +1,7 @@
-
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -16,7 +12,6 @@
 
 body {
   display: flex;
-  
 
   justify-content: center;
   background: var(--background);
@@ -24,17 +19,14 @@ body {
   font-family: "Mate SC", serif;
 }
 
-
-
-
-
-
 .container-cursor {
   position: fixed;
   top: 0;
   left: 0;
-width: 100vw;
-height: auto;
-z-index: 4443;
-
+  width: 100vw;
+  height: auto;
+  z-index: 4443;
 }
+
+
+
