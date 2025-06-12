@@ -36,7 +36,7 @@ export default function Home() {
 <div className={styles.folder}>
   
 <section className={styles.hoversection}>
-     <Link href="/uiux">
+     <Link href="/programming">
     <div className={styles.file}>
         
       <div className={styles.work5}></div>
@@ -62,7 +62,7 @@ export default function Home() {
       style={{ width: '10%', height: 'auto' }}
     
     />
- <Link href="/uiux" style={{ textDecoration: 'none', color: 'black' }}>  Programming </Link> 
+ <Link href="/programming" style={{ textDecoration: 'none', color: 'black' }}>  Programming </Link> 
  </div>
 </div>
 
