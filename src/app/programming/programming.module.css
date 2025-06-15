@@ -59,7 +59,7 @@ html {
 
 .site_container {
   display: flex;
-  height: 400px;
+  height: fit-content;
   width: 65vw;
   /*background-color: aqua;*/
 }
@@ -71,8 +71,13 @@ html {
   /*background-color: #ff0000;*/
   width: 50vw;
   padding: 50px;
-  
+  padding-top: 40px;
   font-weight: 600;
+
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 30px;
+ 
 }
 
 .project_container {
@@ -81,7 +86,7 @@ html {
 
   /*background-color: aqua;*/
   height: 70px;
-  border-bottom: 3px solid #7d5686;
+  border-bottom: 3px solid #000000;
 }
 
 .p_name {
@@ -107,7 +112,7 @@ html {
 
 .description_container {
   /*background-color: #247dae;*/
-  height: 300px;
+  height: fit-content;
   font-size: 1.8rem;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -115,7 +120,7 @@ html {
 
 .p_description {
   font-weight: 700;
-  color: #454545;
+  color: #000000;
 }
 
 .percent_container {
@@ -138,6 +143,23 @@ html {
   padding: 10px 20px;
   border-radius: 7px;
 }
+
+.fourth_percent {
+
+  height:256px;
+}
+
+.js_percent {
+  
+  height: auto;
+ 
+}
+.js_percent .skillBox .title {
+  
+ text-align: left;
+ 
+}
+
 
 .percent_container2 .skillBox {
   width: 100%;
@@ -233,7 +255,7 @@ html {
 /* From Uiverse.io by sawantyash11 */
 .loader {
   display: block;
-  --height-of-loader: 3px;
+  --height-of-loader: 5px;
   --loader-color: #da1818;
   width: 63vw;
   height: var(--height-of-loader);
@@ -351,10 +373,18 @@ html {
 
   .info_container {
     width: 50vw;
-    height: 400px;
+   
+    height: auto;
+    padding: 30px;
     padding-bottom: 0px;
     justify-content: center;
     align-items: center;
+
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+
+    background-color: transparent;
   }
 
   .percent_container {
@@ -380,6 +410,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
 
   .p_socials {
@@ -393,6 +424,7 @@ html {
     width: 50vw;
     display: flex;
     font-size: 1.7rem;
+    
   }
 
   .loader {
@@ -423,11 +455,22 @@ html {
   .project_container {
     display: flex;
     justify-content: space-between;
+    
   }
+
 
   .p_name {
     font-size: 1.7rem;
+    
   }
+
+.cwfrontend {
+
+  
+padding-bottom: 20px;
+}
+
+
 
   .description_container {
     font-size: 1.6rem;
