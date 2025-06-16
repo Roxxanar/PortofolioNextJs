@@ -1,13 +1,13 @@
 "use client";
 
-/*import Image from "next/image";*/
+import Image from "next/image";
 import styles from "./drawings.module.css";
 import Link from "next/link";
 
 import React, { useEffect } from "react";
 
 import { stalemate } from "../fonts"; // adjust path if needed
-/*import { squarePeg } from "../fonts";*/ 
+import { squarePeg } from "../fonts";
 import { setupPulsingGrid } from "../pulsing-grid.js";
 
 export default function Drawings() {
@@ -30,9 +30,53 @@ export default function Drawings() {
 
       <div className={styles.fundal}>
 
+      <div className={styles.container_card}>
+  <div className={styles.card}>
+    <div className={styles.front}>
+      <Image className={styles.image}
+        aria-hidden
+        src="/Sfera2partiGata2.png"
+        alt="Globe icon"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+      />
+    </div>
+
+    <div className={`${styles.back} ${squarePeg.className}`}>
+      <p className={styles.backHeading}>1. Landscape Drawing</p>
+      <p className={styles.backHeading2}>Made in Photoshop with Wacom tablet and inspired from a real painting I found</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div className={styles.container_card}>
+  <div className={styles.card}>
+    <div className={styles.front}>
+      <Image className={styles.image}
+        aria-hidden
+        src="/SferaCuBraziGatav2.png"
+        alt="Globe icon"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+      />
+    </div>
+
+    <div className={`${styles.back} ${squarePeg.className}`}>
+      <p className={styles.backHeading}>2. Landscape Drawing</p>
+      <p className={styles.backHeading2}>Made in Photoshop with Wacom tablet and inspired from a real painting I found</p>
+    </div>
+  </div>
+</div>
 
 
 </div>
+
 
 
 

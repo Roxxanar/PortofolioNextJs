@@ -10,7 +10,7 @@ import { stalemate } from "../fonts"; // adjust path if needed
 import { squarePeg } from "../fonts"; 
 import { setupPulsingGrid } from "../pulsing-grid.js";
 
-export default function Home() {
+export default function Programming() {
  
 
   useEffect(() => {

@@ -10,7 +10,8 @@ import { squarePeg, stalemate } from "../fonts"; // adjust path if needed
 
 import { setupPulsingGrid } from "../pulsing-grid.js";
 
-export default function Home() {
+export default function Uiux() {
+
   const itemListRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
