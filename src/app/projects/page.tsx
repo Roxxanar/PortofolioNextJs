@@ -99,7 +99,7 @@ export default function Home() {
 
 <div className={styles.folder}>
 <section className={styles.hoversection}>
-<Link href="/uiux">
+<Link href="/drawings">
     <div className={styles.file}>
         
       <div className={styles.work5}></div>
@@ -124,7 +124,7 @@ export default function Home() {
       style={{ width: '10%', height: 'auto' }}
     
     />
- <Link href="/uiux" style={{ textDecoration: 'none', color: 'black' }}> Drawings </Link> 
+ <Link href="/drawings" style={{ textDecoration: 'none', color: 'black' }}> Drawings </Link> 
  </div>
 </div>
 

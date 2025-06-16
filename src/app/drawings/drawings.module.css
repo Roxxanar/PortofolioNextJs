@@ -1,0 +1,58 @@
+html {
+    overflow-x: hidden;
+  }
+  
+  .backgroundsvg {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 5000px;
+    object-fit: cover;
+    filter: blur(15px);
+    /*overflow: hidden;*/
+    z-index: -1; /* behind content */
+  }
+  
+  .backgroundsvg::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(to right, #247dae, #da1818);
+    border-radius: 13px; /* border-radius + border width */
+    z-index: -1;
+    opacity: 40%;
+  }
+  
+  .container {
+    /*position: relative;*/
+    /*width: 80%;*/
+  
+    min-height: 500px;
+  
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .container a {
+    font-weight: bold;
+  }
+  
+  .fundal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 160px;
+    background-color: white;
+    width: 70vw;
+    height: 3000px;
+    border-radius: 30px;
+    opacity: 60%;
+  }
