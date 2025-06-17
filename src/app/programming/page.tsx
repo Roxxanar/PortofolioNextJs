@@ -28,6 +28,35 @@ export default function Programming() {
         style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}
       ></div>
 
+
+<div className={styles.navbar}>
+        <Link
+          href="/"
+          style={{
+            textDecoration: "none",
+            color: "#247DAE",
+            fontSize: "1.6rem",
+          }}
+          className={stalemate.className}
+        >
+          <span className={styles.effect}><p>Home</p></span>
+        </Link>
+        <div id="pulsing-grid"></div>
+
+        <Link
+          href="/projects"
+          style={{
+            textDecoration: "none",
+            color: "#DA1818",
+            fontSize: "1.6rem",
+          }}
+          className={stalemate.className}
+        >
+          <span className={styles.effect}>Projects</span>
+        </Link>
+      </div>
+
+
       <div className={styles.fundal}>
 
 <div className={styles.site_container}>
@@ -122,7 +151,9 @@ export default function Programming() {
   </div>
   <div className={`${styles.description_container} ${squarePeg.className}`}>
   <div className={styles.p_description}>
-  Frontend of a personal project, a website for clothes shopping made with Angular framework. The project is unfinished but it has some caracteristhics, including seach filter, load more button etc.
+  Frontend of a personal project, a website for clothes shopping made with Angular framework. 
+  The project is unfinished but it has some 
+  characteristics, including seach filter, load more button etc.
   </div>
   </div>
 </div>
@@ -183,7 +214,8 @@ export default function Programming() {
   </div>
   <div className={`${styles.description_container} ${squarePeg.className}`}>
   <div className={styles.p_description}>
-    Backend for the previous project, made with Node.js and Supabase postgresql database
+    Backend for the previous project, made with Node.js and Supabase Postgresql database. <br></br>The features implemented are dynamic images
+    extracted from the database, log in and sign up routes with account or google account, subscribe route
   </div>
   </div>
 </div>
@@ -235,9 +267,9 @@ export default function Programming() {
   </div>
   <div className={`${styles.description_container} ${squarePeg.className}`}>
   <div className={styles.p_description}>
-  A web application made with Angular framework and .NET technology, both frontend and backend. <br></br>
+  A web application made with Angular framework for the frontend and .NET technology for the backend. <br></br>
   The project was made in the Summer Practice program and it is an application that allow students to share feedback on different topics. 
-  <br></br>Above you can find the work-flow, wireframes in Figma and Github link 
+  <br></br>Below you can find the work-flow and wireframes in Figma link 
   </div>
   </div>
 </div>
@@ -293,32 +325,6 @@ export default function Programming() {
 
 
 
-      <div className={styles.navbar}>
-        <Link
-          href="/"
-          style={{
-            textDecoration: "none",
-            color: "#247DAE",
-            fontSize: "1.6rem",
-          }}
-          className={stalemate.className}
-        >
-          <span className={styles.effect}><p>Home</p></span>
-        </Link>
-        <div id="pulsing-grid"></div>
-
-        <Link
-          href="/projects"
-          style={{
-            textDecoration: "none",
-            color: "#DA1818",
-            fontSize: "1.6rem",
-          }}
-          className={stalemate.className}
-        >
-          <span className={styles.effect}>Projects</span>
-        </Link>
-      </div>
 
       <div className={styles.fundalsus}>
        

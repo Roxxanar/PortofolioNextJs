@@ -132,14 +132,30 @@ export default function Projects() {
 
 </div>
 
-      <div className={styles.navbar}>
-        <Link href="/" style={{ textDecoration: 'none', color: '#247DAE', fontSize: '1.6rem' }} className={stalemate.className}>
-          <p>Home</p>
+<div className={styles.navbar}>
+        <Link
+          href="/"
+          style={{
+            textDecoration: "none",
+            color: "#247DAE",
+            fontSize: "1.6rem",
+          }}
+          className={stalemate.className}
+        >
+          <span className={styles.effect}><p>Home</p></span>
         </Link>
-        <div id="pulsing-grid" ></div>
-       
-        <Link href="/projects" style={{ textDecoration: 'none', color: '#DA1818', fontSize: '1.6rem' }} className={stalemate.className}>
-          Projects
+        <div id="pulsing-grid"></div>
+
+        <Link
+          href="/projects"
+          style={{
+            textDecoration: "none",
+            color: "#DA1818",
+            fontSize: "1.6rem",
+          }}
+          className={stalemate.className}
+        >
+          <span className={styles.effect}>Projects</span>
         </Link>
       </div>
       

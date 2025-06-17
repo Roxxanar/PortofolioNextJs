@@ -8,7 +8,7 @@ html {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 2000px;
+  height: 100vh;
   object-fit: cover;
   filter: blur(15px);
   /*overflow: hidden;*/
@@ -135,6 +135,12 @@ height: 100vh;
  
 }
 
+.effect:hover {
+  /*color:#000000;*/
+  transform: scale(1.05);
+}
+
+
 .background {
   display: none;
   height: 100vh;
@@ -200,6 +206,25 @@ padding: 50px 0px 0px 0px;
   .navbar {
     width: 60vw;
   }
+
+  .backgroundsvg {
+  
+    height: 120vh;
+}
+ 
+}
+
+
+
+
+@media (max-height: 700px) {
+
+  
+
+  .backgroundsvg {
+  
+    height: 150vh;
+}
 }
 
 

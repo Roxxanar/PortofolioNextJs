@@ -69,7 +69,7 @@ export default function Uiux() {
           }}
           className={stalemate.className}
         >
-          <p>Home</p>
+          <span className={styles.effect}><p>Home</p></span>
         </Link>
         <div id="pulsing-grid"></div>
 
@@ -82,7 +82,7 @@ export default function Uiux() {
           }}
           className={stalemate.className}
         >
-          Projects
+          <span className={styles.effect}>Projects</span>
         </Link>
       </div>
 

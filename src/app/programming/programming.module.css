@@ -8,7 +8,7 @@ html {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 5000px;
+  height: 2500px;
   object-fit: cover;
   filter: blur(15px);
   /*overflow: hidden;*/
@@ -45,14 +45,16 @@ html {
 }
 
 .fundal {
-  position: absolute;
+  position:relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 160px;
+  margin-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 40px;
   background-color: white;
   width: 70vw;
-  height: 3000px;
+  height: fit-content;
   border-radius: 30px;
   opacity: 60%;
 }
@@ -355,7 +357,7 @@ html {
 
 @media (max-width: 1300px) {
   .fundal {
-    margin-top: 140px;
+    padding-top: 0px;
   }
 }
 
@@ -363,6 +365,8 @@ html {
   .navbar {
     width: 60vw;
   }
+
+ 
 
   .site_container {
     flex-direction: column;
@@ -445,7 +449,7 @@ html {
   }
 
   .fundal {
-    margin-top: 130px;
+   padding-top: 0px;
   }
 
   .info_container {

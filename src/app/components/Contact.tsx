@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from './Contact.module.css';
-import { tangerine } from "../fonts"; // Adjust path as needed
+import { squarePeg } from "../fonts"; // Adjust path as needed
 
 
 const Contact = () => {
@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div className={styles.contactdiv} >
       <button 
-        className={`${styles.contact} ${tangerine.className}`}
+        className={`${styles.contact} ${squarePeg.className}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

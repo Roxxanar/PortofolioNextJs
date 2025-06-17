@@ -57,6 +57,41 @@ export default function Drawings() {
         style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}
       ></div>
 
+
+
+<div className={styles.navbar}>
+        <Link
+          href="/"
+          style={{
+            textDecoration: "none",
+            color: "#247DAE",
+            fontSize: "1.6rem",
+          }}
+          className={stalemate.className}
+        >
+          <span className={styles.effect}><p>Home</p></span>
+        </Link>
+        <div id="pulsing-grid"></div>
+
+        <Link
+          href="/projects"
+          style={{
+            textDecoration: "none",
+            color: "#DA1818",
+            fontSize: "1.6rem",
+          }}
+          className={stalemate.className}
+        >
+          <span className={styles.effect}>Projects</span>
+        </Link>
+      </div>
+
+      <div className={styles.fundalsus}>
+       
+      </div>
+
+
+
       <div className={styles.fundal}>
 
       <div className={`${styles.hoveronphoto} ${squarePeg.className}`}>
@@ -115,36 +150,7 @@ export default function Drawings() {
 
 
 
-      <div className={styles.navbar}>
-        <Link
-          href="/"
-          style={{
-            textDecoration: "none",
-            color: "#247DAE",
-            fontSize: "1.6rem",
-          }}
-          className={stalemate.className}
-        >
-          <span className={styles.effect}><p>Home</p></span>
-        </Link>
-        <div id="pulsing-grid"></div>
-
-        <Link
-          href="/projects"
-          style={{
-            textDecoration: "none",
-            color: "#DA1818",
-            fontSize: "1.6rem",
-          }}
-          className={stalemate.className}
-        >
-          <span className={styles.effect}>Projects</span>
-        </Link>
-      </div>
-
-      <div className={styles.fundalsus}>
-       
-      </div>
+     
 
       
 
