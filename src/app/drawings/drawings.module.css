@@ -107,13 +107,32 @@ html {
 
 
 
+.hoveronphoto {
+padding-top: 40px;
+    position: relative;
+    font-size:2rem;
+
+}
+
+.hoveronphoto p {
+   margin: 0px;
+   font-weight: 700;
+
+   background: linear-gradient(to right, #247dae, #da1818);
+
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+
   /* From Uiverse.io by IWhat1 */ 
 .container_card {
    position: relative;
     width: 30vw;
     height: 30vw;
     perspective: 900px;
- padding-top: 100px;
+ padding-top: 50px;
+ padding-bottom: 20px;
 
  border-radius: 20px;
  transform-style: preserve-3d;
@@ -140,11 +159,29 @@ html {
    
   }
   
-  .container_card:hover > .card {
-    cursor: pointer;
-    transform: rotateY(180deg) rotateZ(180deg);
-    
+
+  @media (min-width: 1300px) {
+    .container_card:hover > .card {
+      cursor: pointer;
+      transform: rotateY(180deg) rotateZ(180deg);
+    }
   }
+  
+ 
+
+  .flipped {
+ 
+    transform: rotateY(180deg) rotateZ(180deg);
+  }
+
+  .flipped2 {
+    transform: rotateY(180deg) rotateZ(180deg);
+  
+  }
+
+ 
+
+  
   
   .front, .back {
     height: 100%;
@@ -196,10 +233,15 @@ html {
 
   .container_card {
   
-    padding-top: 60px;
+    padding-top: 40px;
      width: 50vw;
      height: 50vw;
   }
+
+  .hoveronphoto {
+   padding-top: 30px;
+        font-size:1.7rem;
+    }
 
 }
 
@@ -216,6 +258,12 @@ html {
     font-size: 1.2rem;
   
   }
+
+  .hoveronphoto {
+   
+    font-size:1.5rem;
+}
+
 
 
 }

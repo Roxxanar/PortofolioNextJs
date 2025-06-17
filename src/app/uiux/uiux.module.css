@@ -142,13 +142,13 @@ html {
 
   margin-left: -10px;
   margin-right: -10px;
-  /*background: #5aad8f;*/
-  background-image: linear-gradient(
+  background: hsl(0, 0%, 0%);
+  /*background-image: linear-gradient(
     135deg,
     #915d9b 20%,
     #cec1d2 55%,
     #915d9b 85%
-  );
+  );*/
   position: relative;
   top: 20px;
 }
@@ -162,7 +162,7 @@ html {
   width: 0;
   bottom: -10px;
   left: 0;
-  border-top: 10px solid #4f3755;
+  border-top: 10px solid #2c2c2c;
   border-left: 10px solid transparent;
 }
 .ribbon5:after {
@@ -170,7 +170,7 @@ html {
   width: 0;
   right: 0;
   bottom: -10px;
-  border-top: 10px solid #4f3755;
+  border-top: 10px solid #2c2c2c;
   border-right: 10px solid transparent;
 }
 
@@ -178,6 +178,12 @@ html {
   font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
+
+  background: linear-gradient(to right, #247dae, #da1818);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 @media (max-width: 1300px) {
@@ -201,10 +207,16 @@ html {
 
     top: 10px;
     background-image: none;
+    background: transparent ;
   }
 
   .newswebsite {
     font-size: 2rem;
+   color: #000000;
+  
+   background: none;
+   -webkit-background-clip: unset;
+   -webkit-text-fill-color: unset;
   }
 
   .ribbon5:before {

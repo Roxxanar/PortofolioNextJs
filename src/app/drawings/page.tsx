@@ -5,19 +5,48 @@ import styles from "./drawings.module.css";
 import Link from "next/link";
 
 import React, { useEffect } from "react";
+import { useState } from "react";
 
 import { stalemate } from "../fonts"; // adjust path if needed
 import { squarePeg } from "../fonts";
 import { setupPulsingGrid } from "../pulsing-grid.js";
 
 export default function Drawings() {
+
+
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped2, setIsFlipped2] = useState(false);
+
+  const handleCardClick = () => {
+    setIsFlipped((prev) => !prev);
+    
+  };
+
+  const handleCardClick2 = () => {
+   
+    setIsFlipped2((prev) => !prev);
+  };
+
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1300);
+    };
+  
+    handleResize(); // run once on load
+    window.addEventListener("resize", handleResize);
+  
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
  
 
   useEffect(() => {
     setupPulsingGrid();
   }, []);
 
-  
 
   
 
@@ -30,8 +59,14 @@ export default function Drawings() {
 
       <div className={styles.fundal}>
 
-      <div className={styles.container_card}>
-  <div className={styles.card}>
+      <div className={`${styles.hoveronphoto} ${squarePeg.className}`}>
+{isSmallScreen ? <p>Click on the drawings!</p> : <p>Hover on the drawings!</p>}
+</div>
+
+
+
+      <div className={`${styles.container_card}`} onClick={handleCardClick}>
+  <div className={`${styles.card} ${isFlipped ? styles.flipped : ""}`}>
     <div className={styles.front}>
       <Image className={styles.image}
         aria-hidden
@@ -53,8 +88,8 @@ export default function Drawings() {
 
 
 
-<div className={styles.container_card}>
-  <div className={styles.card}>
+<div className={`${styles.container_card}`} onClick={handleCardClick2}>
+  <div className={`${styles.card} ${isFlipped2 ? styles.flipped2 : ""}`}>
     <div className={styles.front}>
       <Image className={styles.image}
         aria-hidden
