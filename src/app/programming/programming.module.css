@@ -52,11 +52,11 @@ html {
   margin-top: 100px;
   padding-top: 20px;
   padding-bottom: 40px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6); /* ✅ semi-transparent bg only */
   width: 70vw;
   height: fit-content;
   border-radius: 30px;
-  opacity: 60%;
+ 
 }
 
 .site_container {
@@ -69,7 +69,7 @@ html {
 .info_container {
   display: flex;
   flex-direction: column;
-
+position: relative;
   /*background-color: #ff0000;*/
   width: 50vw;
   padding: 50px;
@@ -110,6 +110,77 @@ html {
   justify-content: center;
   width: 34px;
   height: auto;
+}
+
+.text_tooltip {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.7rem;
+  position: absolute;
+  width: 60px;
+  left: 84%;
+  bottom: 86%;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 10px;
+  background: rgb(218, 218, 218);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border: 5px solid #916f9a;
+  border-radius: 10px;
+  text-align: center;
+
+  visibility: hidden;
+
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.text_tooltip2 {
+
+  bottom:87%;
+}
+
+.text_tooltip3 {
+
+  bottom:88%;
+}
+
+.text_tooltip4 {
+
+  bottom:90%;
+}
+
+/* Tooltip appears on hover */
+.info_container:hover .text_tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+.info_container img:hover {
+  transform: scale(1.07);
+}
+
+.text_tooltip::before,
+.text_tooltip::after {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text_tooltip::before {
+  border-top: 10px solid #916f9a;
+  margin-top: 5px;
+}
+
+.text_tooltip::after {
+  border-top: 10px solid rgb(218, 218, 218);
+  margin-top: -1px;
+  z-index: 1;
 }
 
 .description_container {
@@ -197,23 +268,74 @@ html {
   opacity: 0;
 }
 
-.skillBar .skillPerhtml {
+.skillBar .first {
   /*progreso de las diferentes lenguajes*/
   width: 58.8%;
   animation-delay: 0.1s;
 }
 
-.skillBar .skillPerscss {
+.skillBar .second {
   /*progreso de las diferentes lenguajes*/
   width: 29.3%;
   animation-delay: 0.1s;
 }
 
-.skillBar .skillPerbootstrap {
+.skillBar .third {
   /*progreso de las diferentes lenguajes*/
   width: 14.9%;
   animation-delay: 0.2s;
 }
+
+.skillBar .first2 {
+  /*progreso de las diferentes lenguajes*/
+  width: 18.6%;
+  animation-delay: 0.1s;
+}
+
+.skillBar .second2 {
+  /*progreso de las diferentes lenguajes*/
+  width: 32.3%;
+  animation-delay: 0.1s;
+}
+
+.skillBar .third2 {
+  /*progreso de las diferentes lenguajes*/
+  width: 49.1%;
+  animation-delay: 0.2s;
+}
+
+.skillBar .first3 {
+  /*progreso de las diferentes lenguajes*/
+  width: 95.3%;
+  animation-delay: 0.1s;
+}
+
+
+.skillBar .first4 {
+  /*progreso de las diferentes lenguajes*/
+  width: 8.8%;
+  animation-delay: 0.1s;
+}
+
+.skillBar .second4 {
+  /*progreso de las diferentes lenguajes*/
+  width: 12.9%;
+  animation-delay: 0.1s;
+}
+
+.skillBar .third4 {
+  /*progreso de las diferentes lenguajes*/
+  width: 21.4%;
+  animation-delay: 0.2s;
+}
+
+.skillBar .fourth4 {
+  /*progreso de las diferentes lenguajes*/
+  width: 56.1%;
+  animation-delay: 0.2s;
+}
+
+
 
 @keyframes progress {
   0% {

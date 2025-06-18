@@ -65,7 +65,9 @@ export default function Programming() {
 
   <div className={`${styles.project_container} ${squarePeg.className}`}>
     <div className={styles.p_name}>1. Portofolio Website</div>
-    <div className={styles.p_socials}>
+    <div className={styles.p_socials}>    
+      <Link
+  href="https://github.com/Roxxanar/PortofolioNextJs">
       <Image
                         aria-hidden
                         src="/github (1).png"
@@ -75,13 +77,23 @@ export default function Programming() {
                         sizes="100vw"
                         style={{ width: "100%", height: "auto" }}
                       />
+        </Link>
+
+                   
     </div>
+
+   
+    
   </div>
   <div className={`${styles.description_container} ${squarePeg.className}`}>
   <div className={styles.p_description}>
     This website, made with Next.js framework. Design made by me with some components and animations inspired from codepen.io and uiverse.io
   </div>
   </div>
+
+  <span className={`${styles.text_tooltip} ${styles.text_tooltip1}`}>
+      Github
+    </span>  
 </div>
 
 <div className={styles.percent_container}>
@@ -117,6 +129,7 @@ export default function Programming() {
 </div>
 
 
+  
 </div>
 
 
@@ -138,6 +151,8 @@ export default function Programming() {
   <div className={`${styles.project_container} ${squarePeg.className} ${styles.cwfrontend}`}>
     <div className={`${styles.p_name}`}>2. Clothes Website Frontend</div>
     <div className={styles.p_socials}>
+    <Link
+  href="https://github.com/Roxxanar/ClothesWebsiteAngular">
       <Image
                         aria-hidden
                         src="/github (1).png"
@@ -147,15 +162,20 @@ export default function Programming() {
                         sizes="100vw"
                         style={{ width: "100%", height: "auto" }}
                       />
+                      </Link>
     </div>
   </div>
   <div className={`${styles.description_container} ${squarePeg.className}`}>
   <div className={styles.p_description}>
   Frontend of a personal project, a website for clothes shopping made with Angular framework. 
   The project is unfinished but it has some 
-  characteristics, including seach filter, load more button etc.
+  characteristics already implemented, including seach filter, load more button etc.
   </div>
   </div>
+
+  <span className={`${styles.text_tooltip} ${styles.text_tooltip2}`}>
+      Github
+    </span>  
 </div>
 
 <div className={styles.percent_container}>
@@ -164,8 +184,8 @@ export default function Programming() {
       <div className={styles.skillBox}>
         <span className={styles.title}>HTML</span>
         <div className={styles.skillBar}>
-          <span className={`${styles.skillPerhtml} ${styles.first}`}>
-            <span className={styles.tooltip}>49.1%</span>
+          <span className={`${styles.skillPerhtml} ${styles.first2}`}>
+            <span className={styles.tooltip}>18.6%</span>
           </span>
         </div>
       </div>
@@ -173,7 +193,7 @@ export default function Programming() {
       <div className={styles.skillBox}>
         <span className={styles.title}>SCSS</span>
         <div className={styles.skillBar}>
-          <span className={`${styles.skillPerscss} ${styles.second}`}>
+          <span className={`${styles.skillPerscss} ${styles.second2}`}>
             <span className={styles.tooltip}>32.3%</span>
           </span>
         </div>
@@ -182,8 +202,8 @@ export default function Programming() {
       <div className={styles.skillBox}>
         <span className={styles.title}>TypeScript</span>
         <div className={styles.skillBar}>
-          <span className={`${styles.skillPerbootstrap} ${styles.third}`}>
-            <span className={styles.tooltip}>32.3%</span>
+          <span className={`${styles.skillPerbootstrap} ${styles.third2}`}>
+            <span className={styles.tooltip}>49.1%</span>
           </span>
         </div>
       </div>
@@ -201,6 +221,8 @@ export default function Programming() {
   <div className={`${styles.project_container} ${squarePeg.className} ${styles.cwfrontend}`}>
     <div className={`${styles.p_name} `}>3. Clothes Website Backend</div>
     <div className={styles.p_socials}>
+    <Link
+  href="https://github.com/Roxxanar/ClothesWebsiteBackendPostgresqlSupabase">
       <Image
                         aria-hidden
                         src="/github (1).png"
@@ -210,14 +232,19 @@ export default function Programming() {
                         sizes="100vw"
                         style={{ width: "100%", height: "auto" }}
                       />
+                      </Link>
     </div>
   </div>
   <div className={`${styles.description_container} ${squarePeg.className}`}>
   <div className={styles.p_description}>
     Backend for the previous project, made with Node.js and Supabase Postgresql database. <br></br>The features implemented are dynamic images
-    extracted from the database, log in and sign up routes with account or google account, subscribe route
+    extracted from the database, subscribe route, log in and sign up routes (with username and password or google account)
   </div>
   </div>
+
+  <span className={`${styles.text_tooltip} ${styles.text_tooltip3}`}>
+      Github
+    </span>  
 </div>
 
 <div className={styles.percent_container}>
@@ -226,8 +253,8 @@ export default function Programming() {
       <div className={styles.skillBox}>
         <span className={styles.title}>JavaScript</span>
         <div className={styles.skillBar}>
-          <span className={`${styles.skillPerhtml} ${styles.first}`}>
-            <span className={styles.tooltip}>49.1%</span>
+          <span className={`${styles.skillPerhtml} ${styles.first3}`}>
+            <span className={styles.tooltip}>95.3%</span>
           </span>
         </div>
       </div>
@@ -254,6 +281,8 @@ export default function Programming() {
   <div className={`${styles.project_container} ${squarePeg.className} ${styles.cwfrontend}`}>
     <div className={`${styles.p_name}`}>4. StudentVoice WebApp</div>
     <div className={styles.p_socials}>
+    <Link
+  href="https://github.com/Roxxanar/StudentVoiceWebAppAngular">
       <Image
                         aria-hidden
                         src="/github (1).png"
@@ -263,6 +292,7 @@ export default function Programming() {
                         sizes="100vw"
                         style={{ width: "100%", height: "auto" }}
                       />
+                      </Link>
     </div>
   </div>
   <div className={`${styles.description_container} ${squarePeg.className}`}>
@@ -272,6 +302,10 @@ export default function Programming() {
   <br></br>Below you can find the work-flow and wireframes in Figma link 
   </div>
   </div>
+
+  <span className={`${styles.text_tooltip} ${styles.text_tooltip4}`}>
+      Github
+    </span>  
 </div>
 
 <div className={styles.percent_container}>
@@ -280,8 +314,8 @@ export default function Programming() {
       <div className={styles.skillBox}>
         <span className={styles.title}>HTML</span>
         <div className={styles.skillBar}>
-          <span className={`${styles.skillPerhtml} ${styles.first}`}>
-            <span className={styles.tooltip}>49.1%</span>
+          <span className={`${styles.skillPerhtml} ${styles.first4}`}>
+            <span className={styles.tooltip}>8.8%</span>
           </span>
         </div>
       </div>
@@ -289,8 +323,8 @@ export default function Programming() {
       <div className={styles.skillBox}>
         <span className={styles.title}>SCSS</span>
         <div className={styles.skillBar}>
-          <span className={`${styles.skillPerscss} ${styles.second}`}>
-            <span className={styles.tooltip}>32.3%</span>
+          <span className={`${styles.skillPerscss} ${styles.second4}`}>
+            <span className={styles.tooltip}>12.9%</span>
           </span>
         </div>
       </div>
@@ -298,8 +332,8 @@ export default function Programming() {
       <div className={styles.skillBox}>
         <span className={styles.title}>TypeScript</span>
         <div className={styles.skillBar}>
-          <span className={`${styles.skillPerbootstrap} ${styles.third}`}>
-            <span className={styles.tooltip}>32.3%</span>
+          <span className={`${styles.skillPerbootstrap} ${styles.third4}`}>
+            <span className={styles.tooltip}>21.4%</span>
           </span>
         </div>
       </div>
@@ -307,8 +341,8 @@ export default function Programming() {
       <div className={styles.skillBox}>
         <span className={styles.title}>C#</span>
         <div className={styles.skillBar}>
-          <span className={`${styles.skillPerbootstrap} ${styles.fourth}`}>
-            <span className={styles.tooltip}>49.1%</span>
+          <span className={`${styles.skillPerbootstrap} ${styles.fourth4}`}>
+            <span className={styles.tooltip}>56.1%</span>
           </span>
         </div>
       </div>
