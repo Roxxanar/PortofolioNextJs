@@ -143,7 +143,8 @@ html {
   align-items: center;
   width: calc(min(400px, 60vw) + 60px);
   height: 70px;
-
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
   text-align: center;
 
   margin-left: -10px;
@@ -189,6 +190,8 @@ html {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+ 
 
 }
 
@@ -494,7 +497,7 @@ button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px; /* fixed width */
+    width: 50px; /* fixed width */
   }
 
   .container a {

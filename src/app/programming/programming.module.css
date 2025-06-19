@@ -558,6 +558,17 @@ position: relative;
   }
 }
 
+@media (max-width: 600px) {
+
+.text_tooltip {
+
+  display:none;
+}
+}
+
+
+
+
 @media (max-width: 500px) {
   .navbar {
     width: 60vw;
@@ -567,7 +578,7 @@ position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px; /* fixed width */
+    width: 50px; /* fixed width */
   }
 
   .fundal {
