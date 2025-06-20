@@ -14,11 +14,52 @@ import Contact from "../components/Contact"; // Adjust the path as needed
 
 export default function Uiux() {
 
-  const itemListRef = useRef<HTMLDivElement | null>(null);
+
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const backgroundRef = useRef<HTMLDivElement | null>(null);
+  const fundalRef = useRef<HTMLDivElement | null>(null);
+  const container2Ref = useRef<HTMLDivElement | null>(null);
+  
+
 
   useEffect(() => {
-    setupPulsingGrid();
+    const adjustHeights = () => {
+      if (
+        !containerRef.current ||
+        !backgroundRef.current ||
+        !fundalRef.current ||
+        !container2Ref.current
+      ) return;
+  
+      const container2Height = container2Ref.current.offsetHeight;
+      const fundalHeight = container2Height + 300;
+      const fullHeight = fundalHeight + 450;
+  
+      fundalRef.current.style.height = `${fundalHeight}px`;
+      containerRef.current.style.height = `${fullHeight}px`;
+      backgroundRef.current.style.height = `${fullHeight}px`;
+    };
+  
+    // Initial attempt
+    adjustHeights();
+  
+    // Fallback to catch images that load late
+    const timeout = setTimeout(() => {
+      adjustHeights();
+    }, 500); // you can tweak this if needed
+  
+    window.addEventListener("resize", adjustHeights);
+  
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("resize", adjustHeights);
+    };
   }, []);
+  
+
+
+  const itemListRef = useRef<HTMLDivElement | null>(null);
+
 
   const handlePrev = () => {
     if (!itemListRef.current) return;
@@ -53,20 +94,22 @@ export default function Uiux() {
   };
 
 
+  useEffect(() => {
+    setupPulsingGrid();
+  }, []);
 
 
 
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={containerRef}>
       <div
-        className={styles.backgroundsvg}
+        className={styles.backgroundsvg}  ref={backgroundRef}
         style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}
       ></div>
 
-      <div className={styles.fundal}></div>
 
-      <div className={styles.navbar}>
+<div className={styles.navbar}>
         <Link
           href="/"
           style={{
@@ -93,6 +136,11 @@ export default function Uiux() {
         </Link>
       </div>
 
+
+      <div className={styles.fundal} ref={fundalRef}></div>
+
+    
+
       <div className={styles.fundalsus}>
         <div className={styles.ribbon}>
           <span className={`${styles.ribbon5} ${squarePeg.className}`}>
@@ -101,14 +149,17 @@ export default function Uiux() {
         </div>
       </div>
 
-      <div className={styles.container2}>
+
+   
+
+      <div className={styles.container2} ref={container2Ref}>
         <button onClick={handlePrev} id="prev-btn" className={styles.prev_btn}>
           <svg viewBox="0 0 512 512" width="20" aria-label="Previous">
             <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
           </svg>
         </button>
 
-        <div className={styles.container_artgallery}>
+        <div className={styles.container_artgallery} >
           <div className={styles.carousel_view}>
             <div id="item-list" className={styles.item_list} ref={itemListRef}>
               <div className={`${styles.screen2} screen2`}>
@@ -156,6 +207,7 @@ export default function Uiux() {
                   height={0}
                   sizes="100vw"
                   style={{ width: "100%", height: "auto" }}
+                  
                 />
               </div>
             </div>
@@ -168,6 +220,8 @@ export default function Uiux() {
           </svg>
         </button>
       </div>
+
+<div className={styles.fundaljos}></div>
 
       <footer className={styles.footer}>
 
