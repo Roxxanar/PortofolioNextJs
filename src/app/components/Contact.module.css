@@ -1,124 +1,76 @@
 .contact {
-    width: 180px;
-    height: 54.8px;
+  width: 180px;
+  height: 54.8px;
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: #4f3755;
+  border: 3px solid #4f3755;
+  aspect-ratio: 7 / 10;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
 
-    font-weight: bold;
+  --list: #4f3755;
+  --grad: linear-gradient(45deg, var(--list));
+  background: conic-gradient(rgba(255, 255, 255, 0.75) 0 0) padding-box,
+              var(--grad) border-box;
+}
 
-    --list: #4f3755;
-    --grad: linear-gradient(45deg, var(--list));
-    background: conic-gradient(rgba(255, 255, 255, 0.75) 0 0) padding-box,
-    var(--grad) border-box;
+.contact::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: white;
+  filter: blur(0.75em);
+  content: "";
+}
 
+.contactdiv {
+  position: relative;
+  width: 180px;
+  height: 54.8px;
+  z-index: 4444;
+}
 
-    &::before {
-        position: absolute;
-        inset: 10;
-        z-index: -1;
-        background: white;
-        filter: blur(0.75em);
-        content: "";
-      }
+/* Default state for ::after */
+.contactdiv .contact::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
 
-  
-    color: #4f3755;
-    border: 3px solid #4f3755;
-    aspect-ratio: 7/ 10;
-    border-radius: 10px;
-    font-size: 1.9rem;
-    
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
+/* Clicked state */
+.contact.clicked {
+  color: #4f3755;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
 
-  .contactdiv {
+.contact.clicked::after {
+  transform: skewX(-45deg) scale(1, 1);
+}
 
-    position: relative;
-   
-   /* left: 30;*/
-    /*bottom: 30;*/
-    width: 180px;
-    height: 54.8px;
-    z-index: 4444;
-  
-    
-  }
-
-  button:hover {
-
+/* Hover state only for larger screens */
+@media (min-width: 1300px) {
+  .contact:hover:not(.clicked) {
     color: #4f3755;
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
-    font-size:0.8rem;
+    font-size: 0.8rem;
   }
-  
-  .contactdiv button:after {
-    content: "";
-    background: rgba(255, 255, 255, 0.75);
-    position: absolute;
-    z-index: -1;
-    left: -20%;
-    right: -20%;
-    top: 0;
-    bottom: 0;
-    transform: skewX(-45deg) scale(0, 1);
-    transition: all 0.5s;
-  }
-  
-  .contactdiv button:hover:after {
+
+  .contactdiv .contact:hover:not(.clicked)::after {
     transform: skewX(-45deg) scale(1, 1);
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-
-
-
-
-
-/* Continue animation and add shine on hover */
-button:hover,
-button:focus {
-	animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in, hoverShine 200ms;
-}
-
-/* Declate color shifting animation */
-@keyframes colorShift {
-	0%, 100% {
-			background: #fdfdfd;
-	}
-	33% {
-		background: #acacac;
-	}
-	66%{
-		background: #6f6f6f;
-	}
-}
-
-/* Declare border pulse animation */
-@keyframes borderPulse {
-  0% {
-    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255,.4), 0px 0px 0px 0px rgba(255,255,255,1);
-  }
-  100% {
-    box-shadow: inset 0px 0px 0px 3px rgba(237, 237, 237, 0.2), 0px 0px 0px 10px rgba(255, 255, 255, 0);
   }
 }
-
-/* Declare shine on hover animation */
-@keyframes hoverShine {
-	0%{
-		background-image: linear-gradient(135deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
-	}
-	50%{
-		background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.4) 50%, rgba(255,255,255,0) 100%);
-	}
-	100%{
-		background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,.4) 100%);
-	}
-}
-
-
-
-
-

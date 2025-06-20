@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import styles from "./programming.module.css";
 import Link from "next/link";
@@ -10,6 +11,8 @@ import { stalemate } from "../fonts"; // adjust path if needed
 import { squarePeg } from "../fonts"; 
 import { setupPulsingGrid } from "../pulsing-grid.js";
 
+import Contact from "../components/Contact"; // Adjust the path as needed
+
 export default function Programming() {
  
 
@@ -17,14 +20,34 @@ export default function Programming() {
     setupPulsingGrid();
   }, []);
 
-  
+  const fundalRef = useRef<HTMLDivElement>(null);
+const containerRef = useRef<HTMLDivElement>(null);
+const backgroundRef = useRef<HTMLDivElement>(null);
+
+useEffect(() => {
+  const adjustHeights = () => {
+    if (fundalRef.current && containerRef.current && backgroundRef.current) {
+      const fundalHeight = fundalRef.current.offsetHeight;
+      const totalHeight = fundalHeight + 400;
+
+      containerRef.current.style.height = `${totalHeight}px`;
+      backgroundRef.current.style.height = `${totalHeight}px`;
+    }
+  };
+
+  adjustHeights(); // run on mount
+  window.addEventListener("resize", adjustHeights); // re-run on resize
+
+  return () => window.removeEventListener("resize", adjustHeights);
+}, []);
+
 
   
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={containerRef}>
       <div
-        className={styles.backgroundsvg}
+        className={styles.backgroundsvg} ref={backgroundRef}
         style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}
       ></div>
 
@@ -57,7 +80,7 @@ export default function Programming() {
       </div>
 
 
-      <div className={styles.fundal}>
+      <div className={styles.fundal} ref={fundalRef}>
 
 <div className={styles.site_container}>
 
@@ -366,7 +389,10 @@ export default function Programming() {
 
       
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+
+      <Contact/> 
+      </footer>
     </div>
   );
 }

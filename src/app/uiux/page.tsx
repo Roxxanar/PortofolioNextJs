@@ -10,6 +10,8 @@ import { squarePeg, stalemate } from "../fonts"; // adjust path if needed
 
 import { setupPulsingGrid } from "../pulsing-grid.js";
 
+import Contact from "../components/Contact"; // Adjust the path as needed
+
 export default function Uiux() {
 
   const itemListRef = useRef<HTMLDivElement | null>(null);
@@ -49,6 +51,11 @@ export default function Uiux() {
       behavior: "smooth",
     });
   };
+
+
+
+
+
 
   return (
     <div className={styles.container}>
@@ -162,7 +169,10 @@ export default function Uiux() {
         </button>
       </div>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+
+      <Contact/> 
+      </footer>
     </div>
   );
 }

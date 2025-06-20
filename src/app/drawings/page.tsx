@@ -1,4 +1,5 @@
 "use client";
+import { useRef } from "react";
 
 import Image from "next/image";
 import styles from "./drawings.module.css";
@@ -10,6 +11,8 @@ import { useState } from "react";
 import { stalemate } from "../fonts"; // adjust path if needed
 import { squarePeg } from "../fonts";
 import { setupPulsingGrid } from "../pulsing-grid.js";
+
+import Contact from "../components/Contact"; // Adjust the path as needed
 
 export default function Drawings() {
 
@@ -41,6 +44,32 @@ export default function Drawings() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
+
+  const fundalRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const backgroundRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const adjustHeights = () => {
+      if (fundalRef.current && containerRef.current && backgroundRef.current) {
+        const fundalHeight = fundalRef.current.offsetHeight;
+        const totalHeight = fundalHeight + 400;
+  
+        containerRef.current.style.height = `${totalHeight}px`;
+        backgroundRef.current.style.height = `${totalHeight}px`;
+      }
+    };
+  
+    adjustHeights(); // run on mount
+    window.addEventListener("resize", adjustHeights); // re-run on resize
+  
+    return () => window.removeEventListener("resize", adjustHeights);
+  }, []);
+  
+
+
+
  
 
   useEffect(() => {
@@ -51,9 +80,9 @@ export default function Drawings() {
   
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container}  ref={containerRef}>
       <div
-        className={styles.backgroundsvg}
+        className={styles.backgroundsvg}  ref={backgroundRef}
         style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}
       ></div>
 
@@ -86,13 +115,11 @@ export default function Drawings() {
         </Link>
       </div>
 
-      <div className={styles.fundalsus}>
-       
-      </div>
+  
 
 
 
-      <div className={styles.fundal}>
+      <div className={styles.fundal} ref={fundalRef}>
 
       <div className={`${styles.hoveronphoto} ${squarePeg.className}`}>
 {isSmallScreen ? <p>Click on the drawings!</p> : <p>Hover on the drawings!</p>}
@@ -148,13 +175,13 @@ export default function Drawings() {
 </div>
 
 
+<div className={styles.fundalsus}>
+       
+       </div>
 
-
-     
-
-      
-
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+      <Contact/> 
+      </footer>
     </div>
   );
 }

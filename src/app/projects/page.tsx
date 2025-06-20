@@ -1,6 +1,7 @@
 "use client";
 
 /*import Image from "next/image";*/
+import { useRef } from "react";
 import styles from "./projects.module.css";
 import Link from "next/link";
 import Image from 'next/image';
@@ -11,8 +12,31 @@ import { stalemate } from '../fonts'; // adjust path if needed
 import { setupPulsingGrid } from '../pulsing-grid.js';
 
 
-
 export default function Projects() {
+
+
+
+  const fundalRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const backgroundRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const adjustHeights = () => {
+      if (fundalRef.current && containerRef.current && backgroundRef.current) {
+        const fundalHeight = fundalRef.current.offsetHeight;
+        const totalHeight = fundalHeight + 300;
+  
+        containerRef.current.style.height = `${totalHeight}px`;
+        backgroundRef.current.style.height = `${totalHeight}px`;
+      }
+    };
+  
+    adjustHeights(); // run on mount
+    window.addEventListener("resize", adjustHeights); // re-run on resize
+  
+    return () => window.removeEventListener("resize", adjustHeights);
+  }, []);
+  
 
 
 
@@ -26,13 +50,13 @@ export default function Projects() {
 
   return (
    
-    <div className={`${styles.container} ${mateSC.className}`}>
+    <div className={`${styles.container} ${mateSC.className}`} ref={containerRef}>
     <div
-  className={styles.backgroundsvg}
+  className={styles.backgroundsvg} ref={backgroundRef}
   style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>
     </div>
     
-<div className={styles.fundal}>
+<div className={styles.fundal} ref={fundalRef}>
 <div className={styles.folder}>
   
 <section className={styles.hoversection}>

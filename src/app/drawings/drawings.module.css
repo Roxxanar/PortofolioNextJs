@@ -32,7 +32,7 @@ html {
   /*position: relative;*/
   /*width: 80%;*/
 
-  min-height: 500px;
+  min-height: 100vh;
 
   display: flex;
   /*justify-content: center;*/
@@ -57,6 +57,11 @@ html {
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.7); /* ✅ semi-transparent bg only */
   z-index: 2;
+}
+
+.fundalsus {
+    position: relative;
+    height: 150px;
 }
 
 .navbar {
