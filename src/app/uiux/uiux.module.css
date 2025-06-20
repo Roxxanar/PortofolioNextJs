@@ -316,8 +316,8 @@ height: 29px;
 
 
 /* Continue animation and add shine on hover */
-button:hover,
-button:focus {
+.container2 button:hover,
+.container2 button:focus {
 	animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in, hoverShine 200ms;
 }
 

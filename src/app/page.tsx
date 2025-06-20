@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 /*import Image from "next/image";*/
 import styles from "./page.module.css";
 import Link from "next/link";
@@ -20,6 +21,39 @@ export default function Home() {
 
 
 
+  const containerRef = useRef<HTMLDivElement>(null);
+  const backgroundRef = useRef<HTMLDivElement>(null);
+  const fundalRef = useRef<HTMLDivElement>(null);
+  const iconContainerRef = useRef<HTMLDivElement>(null);
+  const dinosaurRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateHeights = () => {
+      const fundal = fundalRef.current;
+      const iconContainer = iconContainerRef.current;
+      const dinosaur = dinosaurRef.current;
+      const container = containerRef.current;
+      const backgroundsvg = backgroundRef.current;
+
+      if (fundal && iconContainer && dinosaur && container && backgroundsvg) {
+        const totalHeight =
+          fundal.offsetHeight +
+          iconContainer.offsetHeight +
+          dinosaur.offsetHeight +
+          600;
+
+        container.style.height = `${totalHeight - 50}px`;
+        backgroundsvg.style.height = `${totalHeight}px`;
+      }
+    };
+
+    updateHeights();
+    window.addEventListener("resize", updateHeights);
+    return () => window.removeEventListener("resize", updateHeights);
+  }, []);
+
+
+
  useEffect(() => {
   setupPulsingGrid();
  
@@ -31,9 +65,9 @@ export default function Home() {
 
   return (
    
-    <div className={styles.container}>
+    <div className={styles.container} ref={containerRef}>
     <div
-  className={styles.backgroundsvg}
+  className={styles.backgroundsvg} ref={backgroundRef}
   style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>
     </div>
 
@@ -54,7 +88,7 @@ export default function Home() {
         </Link>
       </div>
     
-<div className={styles.fundal}>
+<div className={styles.fundal} ref={fundalRef}>
 <Typewriter />
 
 
@@ -63,7 +97,7 @@ export default function Home() {
 
      
       
-      <div className={styles.icon_container}>
+      <div className={styles.icon_container} ref={iconContainerRef}>
       <div className={styles.icon_left}>
   <div className={styles.tooltip_wrapper}>
   <Link
@@ -108,7 +142,7 @@ export default function Home() {
 </div>
 
 
-<div className={styles.dinosaur}>
+<div className={styles.dinosaur} ref={dinosaurRef}>
 
 
 <aside className={styles.loader_dino} style={{ "--wh-number": "24" } as React.CSSProperties}>

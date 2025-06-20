@@ -1177,7 +1177,7 @@ padding-bottom: 10px;
   width: var(--sizeLoader);
   height: var(--sizeLoader);
   /*background: radial-gradient(#f1f8,transparent 30%);*/
-  
+  margin-right: 7px;
 }
 
 .loader_butterfly:hover {
@@ -1287,8 +1287,13 @@ padding-bottom: 10px;
     height:200px;
   }
 
+  .icon_container {
+
+    margin-top: 90px;
+  }
+
   .background {
-    height: 70px;
+    height: 170px;
   }
 
   .container a {
