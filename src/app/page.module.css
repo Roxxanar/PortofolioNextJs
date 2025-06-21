@@ -295,7 +295,7 @@ html::-webkit-scrollbar {
 .background {
   height: 1200px;
   width: 100vw;
-
+overflow: hidden;
   /* background-color: #a62b2b; */
 }
 
@@ -544,10 +544,14 @@ padding-bottom: 10px;
 .dinosaur :nth-child(1) {
 
   align-self: flex-end;
+  
 }
 
 /* From Uiverse.io by 20essentials */ 
 .loader_dino {
+
+  animation: dinoMove 5s linear infinite, mover 0.3s linear infinite;
+
   --zoom: 0.1;
   position: relative;
   /*top: 50%;
@@ -565,7 +569,7 @@ padding-bottom: 10px;
     drop-shadow(0 var(--wh) var(--blur) var(--color));
   image-rendering: pixelated;
   zoom: var(--zoom);
-  animation: mover 0.3s linear infinite;
+ /* animation: mover 0.3s linear infinite;*/
 
   .pixel {
     width: var(--wh);
@@ -573,6 +577,20 @@ padding-bottom: 10px;
     box-shadow: var(--shadow);
   }
 }
+
+
+@keyframes dinoMove {
+  from {
+    transform: translateX(0);
+    
+  }
+  to {
+    transform: translateX(305vw);
+   
+  }
+}
+
+
 
 @keyframes mover {
   0%,
@@ -1266,6 +1284,48 @@ padding-bottom: 10px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1300px) {
+
+  @keyframes dinoMove {
+    from {
+      transform: translateX(0);
+      
+    }
+    to {
+      transform: translateX(285vw);
+     
+    }
+  }
+}
+
+@media (max-width: 801px) {
+
+  @keyframes dinoMove {
+    from {
+      transform: translateX(0);
+      
+    }
+    to {
+      transform: translateX(260vw);
+     
+    }
+  }
+}
+
+@media (max-width: 601px) {
+
+  @keyframes dinoMove {
+    from {
+      transform: translateX(0);
+      
+    }
+    to {
+      transform: translateX(220vw);
+     
+    }
+  }
 }
 
 

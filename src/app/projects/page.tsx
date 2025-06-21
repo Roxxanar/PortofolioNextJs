@@ -187,26 +187,6 @@ export default function Projects() {
 
       <div className={styles.background}>
 
-      <span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
 
       </div>
     

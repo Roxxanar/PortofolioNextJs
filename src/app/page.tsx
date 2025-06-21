@@ -26,6 +26,7 @@ export default function Home() {
   const fundalRef = useRef<HTMLDivElement>(null);
   const iconContainerRef = useRef<HTMLDivElement>(null);
   const dinosaurRef = useRef<HTMLDivElement>(null);
+  
 
   useEffect(() => {
     const updateHeights = () => {
@@ -34,6 +35,7 @@ export default function Home() {
       const dinosaur = dinosaurRef.current;
       const container = containerRef.current;
       const backgroundsvg = backgroundRef.current;
+      
 
       if (fundal && iconContainer && dinosaur && container && backgroundsvg) {
         const totalHeight =
@@ -44,6 +46,7 @@ export default function Home() {
 
         container.style.height = `${totalHeight - 50}px`;
         backgroundsvg.style.height = `${totalHeight}px`;
+       
       }
     };
 
@@ -170,7 +173,7 @@ export default function Home() {
 </div>
 
 
-      <div className={styles.background}>
+      <div className={styles.background} >
 
       <span></span>
 <span></span>
