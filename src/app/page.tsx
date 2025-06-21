@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from 'next/image';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 /*import { mateSC } from "./fonts"; */
 import { stalemate } from './fonts'; // adjust path if needed
 import { setupPulsingGrid } from './pulsing-grid.js';
@@ -35,9 +35,9 @@ export default function Home() {
       const dinosaur = dinosaurRef.current;
       const container = containerRef.current;
       const backgroundsvg = backgroundRef.current;
-      
+      const left = leftRef.current;
 
-      if (fundal && iconContainer && dinosaur && container && backgroundsvg) {
+      if (fundal && iconContainer && dinosaur && container && backgroundsvg && left) {
         const totalHeight =
           fundal.offsetHeight +
           iconContainer.offsetHeight +
@@ -46,7 +46,7 @@ export default function Home() {
 
         container.style.height = `${totalHeight - 50}px`;
         backgroundsvg.style.height = `${totalHeight}px`;
-       
+        left.style.height = `${totalHeight}px`;
       }
     };
 
@@ -54,6 +54,30 @@ export default function Home() {
     window.addEventListener("resize", updateHeights);
     return () => window.removeEventListener("resize", updateHeights);
   }, []);
+
+
+
+ 
+    const leftRef = useRef<HTMLDivElement>(null);
+    const [lineCount, setLineCount] = useState(0);
+  
+    const lineHeight = 30; // px
+  
+    useEffect(() => {
+      const calculateLines = () => {
+        if (leftRef.current) {
+          const height = leftRef.current.offsetHeight;
+          setLineCount(Math.floor(height / lineHeight));
+        }
+      };
+  
+      calculateLines();
+      window.addEventListener('resize', calculateLines);
+      return () => window.removeEventListener('resize', calculateLines);
+    }, []);
+  
+  
+
 
 
 
@@ -72,7 +96,29 @@ export default function Home() {
     <div
   className={styles.backgroundsvg} ref={backgroundRef}
   style={{ backgroundImage: "url('/low-poly-grid-haikei (1).svg')" }}>
+
+
+
+
     </div>
+
+    <div className={styles.left} ref={leftRef}>
+{Array.from({ length: lineCount }, (_, i) => (
+          <span key={i}>
+            {i + 1}
+            <br />
+          </span>
+          ))}
+</div>
+<div className={styles.right} ref={leftRef}>
+{Array.from({ length: lineCount }, (_, i) => (
+          <span key={i}>
+            {i + 1}
+            <br />
+          </span>
+          ))}
+</div>
+
 
     <div className={styles.navbar}>
       <Link

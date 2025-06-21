@@ -23,6 +23,8 @@ html::-webkit-scrollbar {
   /*overflow: hidden;*/
   z-index: -1; /* behind content */
   background-color: black;
+display: flex;
+justify-content: space-between;
 }
 
 .backgroundsvg::before {
@@ -32,11 +34,67 @@ html::-webkit-scrollbar {
   left: -3px;
   right: -3px;
   bottom: -3px;
-  background: linear-gradient(to right, #247dae, #da1818);
+  background: linear-gradient(to right, rgba(36, 125, 174, 0.4), rgba(218, 24, 24, 0.4));
+
   border-radius: 13px; /* border-radius + border width */
   z-index: -1;
-  opacity: 40%;
+  
 }
+
+
+
+
+.left {
+
+  width: 5vw;
+/*height: 100%;*/
+  position: absolute;
+  /*background-color: #4b244b;*/
+  z-index: 0;
+  left: 0;
+border-right: 1px solid white;
+}
+
+.left span {
+
+  line-height: 30px;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding-left: 20px;
+
+ 
+}
+
+.right {
+  width: 5vw;
+/*height: 100%;*/
+  position: absolute;
+/*background-color: #4b244b;*/
+z-index: 0;
+right:0;
+
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+border-left: 1px solid white;
+}
+
+.right span {
+
+  line-height: 30px;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding-right: 20px;
+  
+
+ 
+}
+
+
 
 .fundal {
   display: flex;
@@ -204,6 +262,26 @@ html::-webkit-scrollbar {
     margin-top: 80px;
     height: 500px;
   }
+
+  .left {
+
+    width: 8vw;
+  }
+
+  .right {
+
+    width: 8vw;
+  }
+
+  .left span {
+
+    padding-left: 10px;
+  }
+
+  .right span {
+
+    padding-right: 10px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -226,6 +304,18 @@ html::-webkit-scrollbar {
   .icon_right {
     width: 100%;
     height: auto;
+  }
+
+
+
+  .left {
+
+   border: none;
+  }
+
+  .right {
+
+    border: none;
   }
 }
 

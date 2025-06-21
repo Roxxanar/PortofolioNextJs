@@ -30,9 +30,11 @@ const Typewriter = () => {
 
   return (
     <div className={styles.typewrap}>
+      
       <span className={`${styles.typed} ${squarePeg.className}`}>
         <span ref={typedRef} />
       </span>
+      
     </div>
   );
 };

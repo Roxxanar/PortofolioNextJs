@@ -221,7 +221,24 @@ export default function Uiux() {
         </button>
       </div>
 
+<div className={`${styles.description_cont} ${squarePeg.className}`}>
+  <p>This is a creative News Website Design</p>
+  <div className={styles.figmaborder}>
+  <Image
+                  aria-hidden
+                  src="/figma.png"
+                  alt="Globe icon"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                  
+                />
+  </div>
+</div>
+
 <div className={styles.fundaljos}></div>
+
 
       <footer className={styles.footer}>
 
