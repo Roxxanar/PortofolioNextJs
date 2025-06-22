@@ -113,16 +113,22 @@ html {
   padding-top: 40px;
   position: relative;
   font-size: 2rem;
+  display: flex;
+ width: 30vw;
+ justify-content: center;
+ gap:20px;
+ 
 }
 
 .hoveronphoto p {
   margin: 0px;
   font-weight: 700;
-
+text-align: center;
   background: linear-gradient(to right, #247dae, #da1818);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+ 
 }
 
 /* From Uiverse.io by IWhat1 */
@@ -221,7 +227,16 @@ html {
   .hoveronphoto {
     padding-top: 30px;
     font-size: 1.7rem;
+    width: 40vw;
   }
+}
+
+@media (max-width: 800px) {
+
+   .analyze {
+
+    display: none;
+   }
 }
 
 @media (max-width: 500px) {
@@ -253,3 +268,115 @@ html {
     font-size: 1.5rem;
   }
 }
+
+
+
+
+/* From Uiverse.io by elijahgummer */ 
+.analyze svg path.stick {
+    transform: translate(0);
+    animation: stick 2s ease infinite;
+    /* Change wand color */
+  }
+  
+  .analyze svg path.star_1 {
+    fill: #ff4500; /* OrangeRed color */
+    animation: sparkles 2s ease infinite, scaleStars 2s ease infinite,
+      colorChange 2s ease infinite;
+    animation-delay: 150ms;
+  }
+  
+  .analyze svg path.star_2 {
+    fill: #00ff00; /* Lime color */
+    animation: sparkles 2s ease infinite, scaleStars 2s ease infinite,
+      colorChange 2s ease infinite;
+  }
+  
+  .board {
+    animation: bounce 2s ease infinite;
+  }
+  
+  @keyframes sparkles {
+    0% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes stick {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0);
+    }
+    25% {
+      transform: translate3d(0, 0, 0) rotate(0);
+    }
+    50% {
+      transform: translate3d(3px, -2px, 0) rotate(8deg);
+    }
+    75% {
+      transform: translate3d(0, 0, 0) rotate(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0);
+    }
+  }
+  
+  @keyframes scaleStars {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-1px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes colorChange {
+    0% {
+      fill: #ff4500; /* OrangeRed */
+    }
+    25% {
+      fill: #ffd700; /* Gold */
+    }
+    50% {
+      fill: #00ff00; /* Lime */
+    }
+    75% {
+      fill: #1e90ff; /* DodgerBlue */
+    }
+    100% {
+      fill: #ff4500; /* OrangeRed */
+    }
+  }
+  

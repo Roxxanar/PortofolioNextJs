@@ -32,11 +32,11 @@ export default function Uiux() {
       ) return;
   
       const container2Height = container2Ref.current.offsetHeight;
-      const fundalHeight = container2Height + 300;
+      const fundalHeight = container2Height + 480;
       const fullHeight = fundalHeight + 450;
   
       fundalRef.current.style.height = `${fundalHeight}px`;
-      containerRef.current.style.height = `${fullHeight}px`;
+      containerRef.current.style.height = `${fullHeight - 40}px`;
       backgroundRef.current.style.height = `${fullHeight}px`;
     };
   
@@ -222,7 +222,10 @@ export default function Uiux() {
       </div>
 
 <div className={`${styles.description_cont} ${squarePeg.className}`}>
-  <p>This is a creative News Website Design</p>
+  <p>This is a creative News Website Design made in Figma
+    <br></br> You can find the link below</p>
+  <Link
+  href="https://www.figma.com/design/SLIUR2O2EosNNjqKjdyQRO/News-Website?node-id=0-1&p=f&t=zvjEGdaWRwrmJmuR-0">
   <div className={styles.figmaborder}>
   <Image
                   aria-hidden
@@ -235,6 +238,7 @@ export default function Uiux() {
                   
                 />
   </div>
+  </Link>
 </div>
 
 <div className={styles.fundaljos}></div>

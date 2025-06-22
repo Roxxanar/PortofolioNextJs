@@ -123,13 +123,14 @@ html {
   transform: scale(1.05);
 }
 
+.figmaborder:hover {
+  
+  transform: scale(1.05);
+}
+
 .fundaljos {
   position: relative;
-  height: 130px;
-
-  width: calc(min(400px, 60vw) + 40px);
-
- 
+  height: 80px;
 }
 
 
@@ -137,7 +138,7 @@ html {
   margin-top: 50px;
   position: relative;
     width:50vw;
-    height:140px;
+    height:280px;
     border: 3px solid black;
     border-radius: 10px;
     font-size: 1.9rem;
@@ -145,9 +146,11 @@ html {
     flex-direction: column;
     
   align-items: center;
-  
+  justify-content: center;
     text-align: center;
     padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   
   .description_cont p {
@@ -288,6 +291,7 @@ border-top-right-radius: 10px;
   -webkit-text-fill-color: transparent;
     
   }
+
 }
 
 @media (max-width: 500px) {
@@ -312,11 +316,11 @@ border-top-right-radius: 10px;
     top: 10px;
   }
 
-  .description_cont {
+ 
 
-    height:fit-content;
-    padding-left: 10px;
-    padding-right: 10px;
+  .figmaborder {
+
+    border:none;
   }
 }
 
@@ -418,6 +422,8 @@ height: 29px;
 
 
 .footer {
+
+  margin-top: 130px;
   position: relative;
   display: flex;
   gap: 1.5rem;
