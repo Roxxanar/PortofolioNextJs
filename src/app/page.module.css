@@ -352,7 +352,8 @@ border-left: 1px solid white;
 
 .navbar::before {
   position: absolute;
-  inset: 10;
+  inset: 10px; /* or 10%, depending on your design */
+
   z-index: -1;
   background: white;
   filter: blur(0.75em);
