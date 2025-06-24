@@ -133,8 +133,8 @@ export default function Drawings() {
   >
     <rect height="20" width="20"></rect>
     <path
-      stroke-linecap="round"
-      stroke-width="1"
+      strokeLinecap="round"
+      strokeWidth="1"
       stroke="black"
       d="M19.25 9.25V5.25C19.25 4.42157 18.5784 3.75 17.75 3.75H6.25C5.42157 3.75 4.75 4.42157 4.75 5.25V18.75C4.75 19.5784 5.42157 20.25 6.25 20.25H12.25"
       className={styles.board}
@@ -149,8 +149,8 @@ export default function Drawings() {
     ></path>
     <path
       className={styles.stick}
-      stroke-linejoin="round"
-      stroke-width="1"
+      strokeLinejoin="round"
+      strokeWidth="1"
       stroke="black"
       d="M17 14L21.2929 18.2929C21.6834 18.6834 21.6834 19.3166 21.2929 19.7071L20.7071 20.2929C20.3166 20.6834 19.6834 20.6834 19.2929 20.2929L15 16M17 14L15.7071 12.7071C15.3166 12.3166 14.6834 12.3166 14.2929 12.7071L13.7071 13.2929C13.3166 13.6834 13.3166 14.3166 13.7071 14.7071L15 16M17 14L15 16"
     ></path>
@@ -169,8 +169,8 @@ export default function Drawings() {
   >
     <rect height="20" width="20"></rect>
     <path
-      stroke-linecap="round"
-      stroke-width="1"
+      strokeLinecap="round"
+      strokeWidth="1"
       stroke="black"
       d="M19.25 9.25V5.25C19.25 4.42157 18.5784 3.75 17.75 3.75H6.25C5.42157 3.75 4.75 4.42157 4.75 5.25V18.75C4.75 19.5784 5.42157 20.25 6.25 20.25H12.25"
       className={styles.board}
@@ -185,8 +185,8 @@ export default function Drawings() {
     ></path>
     <path
       className={styles.stick}
-      stroke-linejoin="round"
-      stroke-width="1"
+      strokeLinejoin="round"
+      strokeWidth="1"
       stroke="black"
       d="M17 14L21.2929 18.2929C21.6834 18.6834 21.6834 19.3166 21.2929 19.7071L20.7071 20.2929C20.3166 20.6834 19.6834 20.6834 19.2929 20.2929L15 16M17 14L15.7071 12.7071C15.3166 12.3166 14.6834 12.3166 14.2929 12.7071L13.7071 13.2929C13.3166 13.6834 13.3166 14.3166 13.7071 14.7071L15 16M17 14L15 16"
     ></path>

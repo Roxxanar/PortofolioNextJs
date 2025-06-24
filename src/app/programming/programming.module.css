@@ -112,6 +112,20 @@ position: relative;
   height: auto;
 }
 
+.p_socials2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  width: 92px;
+  
+  height: 34px;
+  margin-top: 30px;
+}
+
+
+
+
 .text_tooltip {
   font-family: "Courier New", Courier, monospace;
   font-size: 0.7rem;
@@ -145,7 +159,7 @@ position: relative;
 
 .text_tooltip4 {
 
-  bottom:90%;
+  bottom:91%;
 }
 
 /* Tooltip appears on hover */
@@ -550,8 +564,19 @@ position: relative;
     width: 50vw;
     display: flex;
     font-size: 1.7rem;
+    flex-direction: column;
     
   }
+
+  .p_socials2 {
+width: 50vw;
+
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+ 
 
   .loader {
     width: 62vw;
@@ -600,6 +625,14 @@ position: relative;
     font-size: 1.7rem;
     
   }
+
+
+  .p_socials {
+   
+    width: 36px;
+  }
+
+  
 
 .cwfrontend {
 

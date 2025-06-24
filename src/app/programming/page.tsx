@@ -322,8 +322,37 @@ useEffect(() => {
   <div className={styles.p_description}>
   A web application made with Angular framework for the frontend and .NET technology for the backend. <br></br>
   The project was made in the Summer Practice program and it is an application that allow students to share feedback on different topics. 
-  <br></br>Below you can find the work-flow and wireframes in Figma link 
+  <br></br>Below you can find the work-flow and wireframes in Figma links 
+ 
   </div>
+<div className={styles.p_socials2}>
+  <Link
+  href="https://miro.com/app/board/uXjVOoz8ahI=/?share_link_id=394126618215">
+      <Image
+                        aria-hidden
+                        src="/workflow mov.png"
+                        alt="Globe icon"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: "100%", height: "24px" }}
+                      />
+                      </Link>
+
+
+                      <Link
+  href="https://www.figma.com/design/RINetoukEgh1t1O7quKP8p/StudentVoice?node-id=0-1&p=f">
+      <Image
+                        aria-hidden
+                        src="/figma mov(1).png"
+                        alt="Globe icon"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: "100%", height: "24px" }}
+                      />
+                      </Link>
+</div>
   </div>
 
   <span className={`${styles.text_tooltip} ${styles.text_tooltip4}`}>

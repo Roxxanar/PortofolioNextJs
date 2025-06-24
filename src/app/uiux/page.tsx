@@ -32,7 +32,7 @@ export default function Uiux() {
       ) return;
   
       const container2Height = container2Ref.current.offsetHeight;
-      const fundalHeight = container2Height + 480;
+      const fundalHeight = container2Height + 330;
       const fullHeight = fundalHeight + 450;
   
       fundalRef.current.style.height = `${fundalHeight}px`;
