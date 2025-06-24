@@ -424,14 +424,16 @@
   background: conic-gradient(rgba(255, 255, 255, 0.75) 0 0) padding-box,
     var(--grad) border-box;
 
-  &::before {
-    position: absolute;
-    inset: 10;
-    z-index: -1;
-    background: white;
-    filter: blur(0.75em);
-    content: "";
-  }
+
+}
+
+.navbar::before {
+  position: absolute;
+  inset: 10;
+  z-index: -1;
+  background: white;
+  filter: blur(0.75em);
+  content: "";
 }
 
 .navbar a {
