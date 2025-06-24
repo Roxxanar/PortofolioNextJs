@@ -1,6 +1,4 @@
-html {
-  overflow-x: hidden;
-}
+
 
 .backgroundsvg {
   margin: 0;
@@ -45,7 +43,7 @@ html {
 }
 
 .fundal {
-  position:relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,7 +54,6 @@ html {
   width: 70vw;
   height: fit-content;
   border-radius: 30px;
- 
 }
 
 .site_container {
@@ -69,7 +66,7 @@ html {
 .info_container {
   display: flex;
   flex-direction: column;
-position: relative;
+  position: relative;
   /*background-color: #ff0000;*/
   width: 50vw;
   padding: 50px;
@@ -79,7 +76,6 @@ position: relative;
   border: 2px solid black;
   border-radius: 20px;
   margin: 30px;
- 
 }
 
 .project_container {
@@ -116,15 +112,12 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:20px;
+  gap: 20px;
   width: 92px;
-  
+
   height: 34px;
   margin-top: 30px;
 }
-
-
-
 
 .text_tooltip {
   font-family: "Courier New", Courier, monospace;
@@ -148,18 +141,15 @@ position: relative;
 }
 
 .text_tooltip2 {
-
-  bottom:87%;
+  bottom: 87%;
 }
 
 .text_tooltip3 {
-
-  bottom:88%;
+  bottom: 88%;
 }
 
 .text_tooltip4 {
-
-  bottom:91%;
+  bottom: 91%;
 }
 
 /* Tooltip appears on hover */
@@ -167,9 +157,6 @@ position: relative;
   visibility: visible;
   opacity: 1;
 }
-
-
-
 
 .info_container img:hover {
   transform: scale(1.07);
@@ -217,7 +204,6 @@ position: relative;
   /*background-color: palevioletred;*/
   width: 100%;
   height: 400px;
- 
 }
 
 .percent_container2 {
@@ -232,21 +218,15 @@ position: relative;
 }
 
 .fourth_percent {
-
-  height:256px;
+  height: 256px;
 }
 
 .js_percent {
-  
   height: auto;
- 
 }
 .js_percent .skillBox .title {
-  
- text-align: left;
- 
+  text-align: left;
 }
-
 
 .percent_container2 .skillBox {
   width: 100%;
@@ -324,7 +304,6 @@ position: relative;
   animation-delay: 0.1s;
 }
 
-
 .skillBar .first4 {
   /*progreso de las diferentes lenguajes*/
   width: 8.8%;
@@ -348,8 +327,6 @@ position: relative;
   width: 56.1%;
   animation-delay: 0.2s;
 }
-
-
 
 @keyframes progress {
   0% {
@@ -502,8 +479,6 @@ position: relative;
     width: 60vw;
   }
 
- 
-
   .site_container {
     flex-direction: column;
 
@@ -513,7 +488,7 @@ position: relative;
 
   .info_container {
     width: 50vw;
-   
+
     height: auto;
     padding: 30px;
     padding-bottom: 0px;
@@ -530,11 +505,9 @@ position: relative;
   .percent_container {
     height: auto;
     padding-bottom: 40px;
-   
   }
 
   .percent_container2 {
-
     margin-right: 15px;
   }
 
@@ -550,7 +523,6 @@ position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    
   }
 
   .p_socials {
@@ -565,18 +537,15 @@ position: relative;
     display: flex;
     font-size: 1.7rem;
     flex-direction: column;
-    
   }
 
   .p_socials2 {
-width: 50vw;
+    width: 50vw;
 
     align-items: center;
     justify-content: center;
     margin-top: 20px;
   }
-
- 
 
   .loader {
     width: 62vw;
@@ -584,15 +553,10 @@ width: 50vw;
 }
 
 @media (max-width: 1200px) {
-
-.text_tooltip {
-
-  display:none;
+  .text_tooltip {
+    display: none;
+  }
 }
-}
-
-
-
 
 @media (max-width: 500px) {
   .navbar {
@@ -607,7 +571,7 @@ width: 50vw;
   }
 
   .fundal {
-   padding-top: 0px;
+    padding-top: 0px;
   }
 
   .info_container {
@@ -617,30 +581,19 @@ width: 50vw;
   .project_container {
     display: flex;
     justify-content: space-between;
-    
   }
-
 
   .p_name {
     font-size: 1.7rem;
-    
   }
 
-
   .p_socials {
-   
     width: 36px;
   }
 
-  
-
-.cwfrontend {
-
-  
-padding-bottom: 20px;
-}
-
-
+  .cwfrontend {
+    padding-bottom: 20px;
+  }
 
   .description_container {
     font-size: 1.6rem;
