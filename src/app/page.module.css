@@ -42,6 +42,13 @@ justify-content: space-between;
   z-index: 0;
   left: 0;
 border-right: 1px solid white;
+
+
+text-shadow: 0 0 5px #fff,
+0 0 10px #000000,
+0 0 20px #ffffff,
+0 0 30px #ffffff,
+0 0 40px #ffffff;
 }
 
 .left span {
@@ -68,6 +75,13 @@ display: flex;
 flex-direction: column;
 align-items: flex-end;
 border-left: 1px solid white;
+
+
+text-shadow: 0 0 5px #fff,
+0 0 10px #000000,
+0 0 20px #ffffff,
+0 0 30px #ffffff,
+0 0 40px #ffffff;
 }
 
 .right span {
