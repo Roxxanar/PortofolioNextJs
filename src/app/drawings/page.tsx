@@ -17,6 +17,18 @@ import Contact from "../components/Contact"; // Adjust the path as needed
 export default function Drawings() {
 
 
+  
+  const handleIframeLoad = () => {
+    setTimeout(() => {
+      // scroll la top în toate variantele comune
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0; // pentru Safari
+      document.documentElement.scrollTop = 0; // pentru Chrome, Firefox, IE, Opera
+    }, 500);
+  };
+  
+
+
   const [isFlipped, setIsFlipped] = useState(false);
   const [isFlipped2, setIsFlipped2] = useState(false);
 
@@ -238,6 +250,21 @@ export default function Drawings() {
       <p className={styles.backHeading2}>Made in Photoshop with Wacom tablet and inspired from a real painting I found</p>
     </div>
   </div>
+</div>
+
+<div className={styles.pdf} >
+
+        <iframe
+          className={styles.pdfstyle}
+          src="/FishDrawings.pdf"
+          width="100%"
+          height="550px"
+          loading="lazy"
+          title="Fish Drawings PDF"
+          tabIndex={-1}
+          onLoad={handleIframeLoad}  
+        ></iframe>
+      
 </div>
 
 
