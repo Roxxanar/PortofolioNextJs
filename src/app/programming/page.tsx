@@ -126,7 +126,7 @@ useEffect(() => {
         <span className={styles.title}>CSS</span>
         <div className={styles.skillBar}>
           <span className={`${styles.skillPerhtml} ${styles.first}`}>
-            <span className={styles.tooltip}>58.8%</span>
+            <span className={styles.tooltip}>63.5%</span>
           </span>
         </div>
       </div>
@@ -135,7 +135,7 @@ useEffect(() => {
         <span className={styles.title}>TypeScript</span>
         <div className={styles.skillBar}>
           <span className={`${styles.skillPerscss} ${styles.second}`}>
-            <span className={styles.tooltip}>29.3%</span>
+            <span className={styles.tooltip}>30.9%</span>
           </span>
         </div>
       </div>
@@ -144,7 +144,7 @@ useEffect(() => {
         <span className={styles.title}>JavaScript</span>
         <div className={styles.skillBar}>
           <span className={`${styles.skillPerbootstrap} ${styles.third}`}>
-            <span className={styles.tooltip}>14.9%</span>
+            <span className={styles.tooltip}>5.6%</span>
           </span>
         </div>
       </div>

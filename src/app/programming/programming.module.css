@@ -264,19 +264,19 @@
 
 .skillBar .first {
   /*progreso de las diferentes lenguajes*/
-  width: 58.8%;
+  width: 63.5%;
   animation-delay: 0.1s;
 }
 
 .skillBar .second {
   /*progreso de las diferentes lenguajes*/
-  width: 29.3%;
+  width: 30.9%;
   animation-delay: 0.1s;
 }
 
 .skillBar .third {
   /*progreso de las diferentes lenguajes*/
-  width: 14.9%;
+  width: 5.6%;
   animation-delay: 0.2s;
 }
 
