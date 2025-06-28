@@ -91,7 +91,7 @@ useEffect(() => {
     <div className={styles.p_socials}>    
       <Link
   href="https://github.com/Roxxanar/PortofolioNextJs">
-      <Image
+      <Image className={styles.link}
                         aria-hidden
                         src="/github (1).png"
                         alt="Globe icon"
@@ -176,7 +176,7 @@ useEffect(() => {
     <div className={styles.p_socials}>
     <Link
   href="https://github.com/Roxxanar/ClothesWebsiteAngular">
-      <Image
+      <Image className={styles.link}
                         aria-hidden
                         src="/github (1).png"
                         alt="Globe icon"
@@ -246,7 +246,7 @@ useEffect(() => {
     <div className={styles.p_socials}>
     <Link
   href="https://github.com/Roxxanar/ClothesWebsiteBackendPostgresqlSupabase">
-      <Image
+      <Image className={styles.link}
                         aria-hidden
                         src="/github (1).png"
                         alt="Globe icon"
@@ -306,7 +306,7 @@ useEffect(() => {
     <div className={styles.p_socials}>
     <Link
   href="https://github.com/Roxxanar/StudentVoiceWebAppAngular">
-      <Image
+      <Image className={styles.link}
                         aria-hidden
                         src="/github (1).png"
                         alt="Globe icon"
@@ -328,7 +328,7 @@ useEffect(() => {
 <div className={styles.p_socials2}>
   <Link
   href="https://miro.com/app/board/uXjVOoz8ahI=/?share_link_id=394126618215">
-      <Image
+      <Image className={styles.link}
                         aria-hidden
                         src="/workflow mov.png"
                         alt="Globe icon"
@@ -342,7 +342,7 @@ useEffect(() => {
 
                       <Link
   href="https://www.figma.com/design/RINetoukEgh1t1O7quKP8p/StudentVoice?node-id=0-1&p=f">
-      <Image
+      <Image className={styles.link}
                         aria-hidden
                         src="/figma mov(1).png"
                         alt="Globe icon"

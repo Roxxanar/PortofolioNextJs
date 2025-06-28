@@ -172,6 +172,9 @@
     padding-left: 10.5px;
     padding-right: 10px;
     padding-top: 8px;
+
+    animation: borderPulse 1s infinite ease-out,
+    colorShift 10s infinite ease-in;
   }
 
 
@@ -298,6 +301,8 @@ border-top-right-radius: 10px;
     
   }
 
+  
+
 }
 
 @media (max-width: 500px) {
@@ -327,7 +332,19 @@ border-top-right-radius: 10px;
   .figmaborder {
 
     border:none;
+    animation: none;
   }
+
+
+
+  .link {
+
+    border-radius: 10px;
+    animation: borderPulse 1s infinite ease-out,
+    colorShift 10s infinite ease-in;
+  }
+
+
 }
 
 /* Option 2: If you want to center the entire gallery setup more compactly */
@@ -380,6 +397,8 @@ height: 29px;
 }
 
 
+
+
 /* Continue animation and add shine on hover */
 .container2 button:hover,
 .container2 button:focus {
@@ -389,13 +408,13 @@ height: 29px;
 /* Declate color shifting animation */
 @keyframes colorShift {
 	0%, 100% {
-			background: #fdfdfd;
+			background: #cdcdcd;
 	}
 	33% {
 		background: #acacac;
 	}
 	66%{
-		background: #6f6f6f;
+		background: transparent;
 	}
 }
 

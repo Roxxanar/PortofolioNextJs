@@ -227,7 +227,7 @@ export default function Uiux() {
   <Link
   href="https://www.figma.com/design/SLIUR2O2EosNNjqKjdyQRO/News-Website?node-id=0-1&p=f&t=zvjEGdaWRwrmJmuR-0">
   <div className={styles.figmaborder}>
-  <Image
+  <Image  className={styles.link}
                   aria-hidden
                   src="/figma.png"
                   alt="Globe icon"
