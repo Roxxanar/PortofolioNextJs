@@ -316,6 +316,11 @@
     width: 50px; /* fixed width */
   }
 
+  .card {
+
+    color:black;
+  }
+
   .backHeading,
   .frontHeading {
     font-size: 1.5rem;
@@ -329,6 +334,20 @@
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 400px) {
+
+.backHeading,
+.frontHeading {
+  font-size: 1.4rem;
+}
+
+.backHeading2 {
+  font-size: 1.1rem;
+}
+
+}
+
 
 /* From Uiverse.io by elijahgummer */
 .analyze svg path.stick {
