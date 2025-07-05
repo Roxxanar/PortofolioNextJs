@@ -208,6 +208,10 @@
   .navbar :nth-child(3) {
     font-size: 1.45rem;
   }
+
+   .container a  {
+    font-size: 0.85rem;
+  }
 }
 
 #pulsing-grid {
