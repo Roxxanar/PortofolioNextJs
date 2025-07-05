@@ -1,4 +1,3 @@
-
 .backgroundsvg {
   margin: 0;
   position: absolute;
@@ -27,8 +26,6 @@
 }
 
 .fundal {
-
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,52 +39,43 @@
   z-index: 1000;
 }
 
-
 .folder {
-
   padding: 0px 50px 60px 50px;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-/*gap:30px;*/
-align-items: center;
-width: 50%;
-  height:60%
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /*gap:30px;*/
+  align-items: center;
+  width: 50%;
+  height: 60%;
 }
 
 .writing {
-display: flex;
-justify-content: center;
-gap: 10px;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
   width: 240px;
-  height:60px;
+  height: 60px;
   background-color: #5d0bf5;
   border-radius: 10px;
-
-  
 }
-
-
 
 .container {
   /*position: relative;*/
   /*width: 80%;*/
   max-width: 1200px; /* Prevents it from getting too large */
 
-/*background-color: black;*/
+  /*background-color: black;*/
   min-height: 500px;
   font-family: var(--font-geist-sans);
   display: flex;
   /*justify-content: center;*/
   align-items: center;
   flex-direction: column;
-
- 
 }
 
 .container a {
-
   font-weight: bold;
 }
 
@@ -111,8 +99,6 @@ align-items: center;
 
   background: conic-gradient(rgba(255, 255, 255, 0.75) 0 0) padding-box,
     var(--grad) border-box;
-
-
 }
 
 .navbar::before {
@@ -132,14 +118,12 @@ align-items: center;
   width: 100px; /* fixed width */
   text-align: center;
   opacity: 100;
- 
 }
 
 .effect:hover {
   /*color:#000000;*/
   transform: scale(1.05);
 }
-
 
 .background {
   display: none;
@@ -148,17 +132,12 @@ align-items: center;
   /* background-color: #a62b2b; */
 }
 
-
-
 .responsive-img {
   width: 100%; /* adapts to container width */
   height: auto; /* maintain aspect ratio */
   margin-bottom: 10px;
   object-fit: cover; /* optional: crop if needed */
 }
-
-
-
 
 .footer {
   display: flex;
@@ -168,57 +147,41 @@ align-items: center;
   justify-content: center;
 }
 
-
-
-
-
 @media (max-width: 1300px) {
-  
-
   .fundal {
-padding: 50px 0px 0px 0px;
+    padding: 50px 0px 0px 0px;
     flex-direction: column;
-   height:900px;
-   justify-content: space-between;
-   
+    height: 900px;
+    justify-content: space-between;
+
     width: 60vw;
   }
 
   .folder {
-
-    height:250px;
-   /* padding: 0px 50px 10px 50px;*/
+    height: 250px;
+    /* padding: 0px 50px 10px 50px;*/
   }
-
 
   .navbar {
     width: 60vw;
   }
 
   .backgroundsvg {
-  
     height: 120vh;
+  }
 }
- 
-}
-
-
-
 
 @media (max-width: 500px) {
- .fundal {
-padding-top: 40px;
-  height: 700px;
-  margin-top: 130px;
-  width: 70vw;
- }
+  .fundal {
+    padding-top: 40px;
+    height: 700px;
+    margin-top: 130px;
+    width: 70vw;
+  }
 
-.writing {
-
-  height:50px;
-}
-
- 
+  .writing {
+    height: 50px;
+  }
 
   .navbar {
     width: 60vw;
@@ -231,22 +194,21 @@ padding-top: 40px;
     width: 50px; /* fixed width */
   }
 
-  
-
   .container a {
-
     font-size: 1rem; /* nu face nimic */
   }
 
-
   .hoversection {
-
-height:auto;
+    height: auto;
   }
-
-
 }
 
+@media (max-width: 400px) {
+  .navbar :nth-child(1),
+  .navbar :nth-child(3) {
+    font-size: 1.45rem;
+  }
+}
 
 #pulsing-grid {
   position: relative;
@@ -268,8 +230,6 @@ height:auto;
   width: 100%;
   height: 100%;
 }
-
-
 
 .file {
   position: relative;
@@ -293,7 +253,7 @@ height:auto;
 }
 
 .work5::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 99%;
   left: 0;
@@ -305,7 +265,7 @@ height:auto;
 }
 
 .work5::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -15px;
   left: 75.5px;
@@ -346,7 +306,11 @@ height:auto;
   height: 156px;
   border-radius: 1rem;
   border-top-right-radius: 0;
-  background-image: linear-gradient(to top, #5d0bf5, #aca7d7); /* amber-500 to amber-400 */
+  background-image: linear-gradient(
+    to top,
+    #5d0bf5,
+    #aca7d7
+  ); /* amber-500 to amber-400 */
   display: flex;
   align-items: flex-end;
   transform-origin: bottom;
@@ -354,7 +318,7 @@ height:auto;
 }
 
 .work1::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 99%;
   right: 0;
@@ -366,7 +330,7 @@ height:auto;
 }
 
 .work1::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   right: 142px;
@@ -375,8 +339,6 @@ height:auto;
   background-color: #aca7d7; /* amber-400 */
   clip-path: polygon(100% 14%, 50% 100%, 100% 100%);
 }
-
-
 
 /* Hover Effects */
 .file:hover .work5 {
@@ -400,12 +362,9 @@ height:auto;
   transform: rotateX(-46deg) translateY(1px);
 }
 
-
 @media (max-width: 500px) {
-
   .writing {
-
-    width:160px;
+    width: 160px;
   }
   .file {
     width: 10rem;
@@ -413,9 +372,8 @@ height:auto;
   }
 
   .work5 {
-
-    height:40%;
-    top:3px;
+    height: 40%;
+    top: 3px;
   }
 
   .work5::after {

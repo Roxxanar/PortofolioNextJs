@@ -300,6 +300,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .pdfstyle {
+    height: 400px;
+  }
+}
+
 @media (max-width: 500px) {
   .fundal {
     margin-top: 90px;
@@ -317,8 +323,7 @@
   }
 
   .card {
-
-    color:black;
+    color: black;
   }
 
   .backHeading,
@@ -336,18 +341,24 @@
 }
 
 @media (max-width: 400px) {
+  .backHeading,
+  .frontHeading {
+    font-size: 1.3rem;
+  }
 
-.backHeading,
-.frontHeading {
-  font-size: 1.3rem;
+  .backHeading2 {
+    font-size: 1rem;
+  }
+
+  .pdfstyle {
+    height: 300px;
+  }
+
+  .navbar :nth-child(1),
+  .navbar :nth-child(3) {
+    font-size: 1.45rem;
+  }
 }
-
-.backHeading2 {
-  font-size: 1rem;
-}
-
-}
-
 
 /* From Uiverse.io by elijahgummer */
 .analyze svg path.stick {

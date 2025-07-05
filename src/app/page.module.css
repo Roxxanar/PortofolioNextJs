@@ -1,5 +1,3 @@
-
-
 .backgroundsvg {
   margin: 0;
   position: absolute;
@@ -12,8 +10,8 @@
   /*overflow: hidden;*/
   z-index: -1; /* behind content */
   background-color: black;
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .backgroundsvg::before {
@@ -23,81 +21,63 @@ justify-content: space-between;
   left: -3px;
   right: -3px;
   bottom: -3px;
-  background: linear-gradient(to right, rgba(36, 125, 174, 0.4), rgba(218, 24, 24, 0.4));
+  background: linear-gradient(
+    to right,
+    rgba(36, 125, 174, 0.4),
+    rgba(218, 24, 24, 0.4)
+  );
 
   border-radius: 13px; /* border-radius + border width */
   z-index: -1;
-  
 }
 
-
-
-
 .left {
-
   width: 5vw;
-/*height: 100%;*/
+  /*height: 100%;*/
   position: absolute;
   /*background-color: #4b244b;*/
   z-index: 0;
   left: 0;
-border-right: 1px solid white;
+  border-right: 1px solid white;
 
-
-text-shadow: 0 0 5px #fff,
-0 0 10px #000000,
-0 0 20px #ffffff,
-0 0 30px #ffffff,
-0 0 40px #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #000000, 0 0 20px #ffffff,
+    0 0 30px #ffffff, 0 0 40px #ffffff;
 }
 
 .left span {
-
   line-height: 30px;
   white-space: nowrap;
   font-family: monospace;
   font-size: 1.2rem;
   color: #ffffff;
   padding-left: 20px;
-
- 
 }
 
 .right {
   width: 5vw;
-/*height: 100%;*/
+  /*height: 100%;*/
   position: absolute;
-/*background-color: #4b244b;*/
-z-index: 0;
-right:0;
+  /*background-color: #4b244b;*/
+  z-index: 0;
+  right: 0;
 
-display: flex;
-flex-direction: column;
-align-items: flex-end;
-border-left: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-left: 1px solid white;
 
-
-text-shadow: 0 0 5px #fff,
-0 0 10px #000000,
-0 0 20px #ffffff,
-0 0 30px #ffffff,
-0 0 40px #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #000000, 0 0 20px #ffffff,
+    0 0 30px #ffffff, 0 0 40px #ffffff;
 }
 
 .right span {
-
   line-height: 30px;
   white-space: nowrap;
   font-family: monospace;
   font-size: 1.2rem;
   color: #ffffff;
   padding-right: 20px;
-  
-
- 
 }
-
-
 
 .fundal {
   display: flex;
@@ -202,7 +182,7 @@ text-shadow: 0 0 5px #fff,
 /* Add this new wrapper class */
 .tooltip_wrapper {
   position: relative;
-  display: inline-block;
+  /*display: inline-block;*/
   z-index: 2;
 }
 
@@ -267,22 +247,18 @@ text-shadow: 0 0 5px #fff,
   }
 
   .left {
-
     width: 8vw;
   }
 
   .right {
-
     width: 8vw;
   }
 
   .left span {
-
     padding-left: 10px;
   }
 
   .right span {
-
     padding-right: 10px;
   }
 }
@@ -295,8 +271,7 @@ text-shadow: 0 0 5px #fff,
   }
 
   .icon_container {
-
-    gap:30px;
+    gap: 30px;
   }
 
   .icon_left {
@@ -309,16 +284,27 @@ text-shadow: 0 0 5px #fff,
     height: auto;
   }
 
-
-
   .left {
+    border: none;
+  }
 
-   border: none;
+  .left span {
+    font-size: 1rem;
   }
 
   .right {
-
     border: none;
+  }
+
+  .right span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar :nth-child(1),
+  .navbar :nth-child(3) {
+    font-size: 1.45rem;
   }
 }
 
@@ -360,9 +346,7 @@ text-shadow: 0 0 5px #fff,
 
   background: conic-gradient(rgba(255, 255, 255, 0.75) 0 0) padding-box,
     var(--grad) border-box;
-
 }
-
 
 .navbar::before {
   position: absolute;
@@ -391,7 +375,7 @@ text-shadow: 0 0 5px #fff,
 .background {
   height: 1200px;
   width: 100vw;
-overflow: hidden;
+  overflow: hidden;
   /* background-color: #a62b2b; */
 }
 
@@ -619,33 +603,27 @@ overflow: hidden;
   box-shadow: -40vmin 0 5.385754397084301vmin currentColor;
 }
 
-
 .dinosaur {
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-/*background-color: #da1818;*/
-  position:relative;
+  /*background-color: #da1818;*/
+  position: relative;
   height: 500px;
 
   width: 40vw;
   border-bottom: 2px solid rgb(255, 255, 255);
-margin-top: 100px;
-padding-bottom: 10px;
-
+  margin-top: 100px;
+  padding-bottom: 10px;
 }
 
 .dinosaur :nth-child(1) {
-
   align-self: flex-end;
-  
 }
 
-/* From Uiverse.io by 20essentials */ 
+/* From Uiverse.io by 20essentials */
 .loader_dino {
-
   animation: dinoMove 5s linear infinite, mover 0.3s linear infinite;
 
   --zoom: 0.1;
@@ -665,7 +643,7 @@ padding-bottom: 10px;
     drop-shadow(0 var(--wh) var(--blur) var(--color));
   image-rendering: pixelated;
   zoom: var(--zoom);
- /* animation: mover 0.3s linear infinite;*/
+  /* animation: mover 0.3s linear infinite;*/
 
   .pixel {
     width: var(--wh);
@@ -674,19 +652,14 @@ padding-bottom: 10px;
   }
 }
 
-
 @keyframes dinoMove {
   from {
     transform: translateX(0);
-    
   }
   to {
     transform: translateX(305vw);
-   
   }
 }
-
-
 
 @keyframes mover {
   0%,
@@ -1274,9 +1247,7 @@ padding-bottom: 10px;
   }
 }
 
-
-
-/* From Uiverse.io by carlosepcc */ 
+/* From Uiverse.io by carlosepcc */
 /* Butterfly loader created by WerlynDev in Uiverse.io*/
 
 .loader_butterfly {
@@ -1366,13 +1337,11 @@ padding-bottom: 10px;
   }
 }
 
- /*@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   .loader[showShadow]{
     filter: drop-shadow(0 10px 10px #white);
   }
 }*/
-
-
 
 .footer {
   display: flex;
@@ -1383,48 +1352,37 @@ padding-bottom: 10px;
 }
 
 @media (max-width: 1300px) {
-
   @keyframes dinoMove {
     from {
       transform: translateX(0);
-      
     }
     to {
       transform: translateX(285vw);
-     
     }
   }
 }
 
 @media (max-width: 801px) {
-
   @keyframes dinoMove {
     from {
       transform: translateX(0);
-      
     }
     to {
       transform: translateX(260vw);
-     
     }
   }
 }
 
 @media (max-width: 601px) {
-
   @keyframes dinoMove {
     from {
       transform: translateX(0);
-      
     }
     to {
       transform: translateX(220vw);
-     
     }
   }
 }
-
-
 
 @media (max-width: 500px) {
   .navbar {
@@ -1439,12 +1397,10 @@ padding-bottom: 10px;
   }
 
   .fundal {
-
-    height:200px;
+    height: 200px;
   }
 
   .icon_container {
-
     margin-top: 90px;
   }
 
@@ -1457,7 +1413,6 @@ padding-bottom: 10px;
   }
 
   .dinosaur {
-
     display: none;
   }
 }
