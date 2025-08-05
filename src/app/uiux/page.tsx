@@ -32,7 +32,7 @@ export default function Uiux() {
       ) return;
   
       const container2Height = container2Ref.current.offsetHeight;
-      const fundalHeight = container2Height + 330;
+      const fundalHeight = container2Height + 430;
       const fullHeight = fundalHeight + 450;
   
       fundalRef.current.style.height = `${fundalHeight}px`;
@@ -225,7 +225,7 @@ export default function Uiux() {
   <p>This is a creative News Website Design made in Figma
     <br></br> You can find the link below</p>
   <Link
-  href="https://www.figma.com/design/SLIUR2O2EosNNjqKjdyQRO/News-Website?node-id=0-1&p=f&t=zvjEGdaWRwrmJmuR-0">
+  href="https://www.figma.com/design/SLIUR2O2EosNNjqKjdyQRO/News-Website?node-id=29-3&p=f&t=jFNREI1RoIjKARdD-0">
   <div className={styles.figmaborder}>
   <Image  className={styles.link}
                   aria-hidden

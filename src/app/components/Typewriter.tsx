@@ -13,7 +13,7 @@ const Typewriter = () => {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current!, {
-      strings: ["Hi, my name is Roxana :) I am a web designer and programmer!"],
+      strings: ["Hi, my name is Roxana :) I am a graphic designer and programmer!"],
       typeSpeed: 100,
       startDelay: 0,
       backSpeed: 60,

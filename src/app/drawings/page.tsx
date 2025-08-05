@@ -17,20 +17,9 @@ import Contact from "../components/Contact"; // Adjust the path as needed
 export default function Drawings() {
 
 
-  
-  const handleIframeLoad = () => {
-    setTimeout(() => {
-      // scroll la top în toate variantele comune
-      window.scrollTo(0, 0);
-      document.body.scrollTop = 0; // pentru Safari
-      document.documentElement.scrollTop = 0; // pentru Chrome, Firefox, IE, Opera
-    }, 500);
-  };
-  
-
-
   const [isFlipped, setIsFlipped] = useState(false);
   const [isFlipped2, setIsFlipped2] = useState(false);
+  const [isFlipped3, setIsFlipped3] = useState(false);
 
   const handleCardClick = () => {
     setIsFlipped((prev) => !prev);
@@ -40,6 +29,11 @@ export default function Drawings() {
   const handleCardClick2 = () => {
    
     setIsFlipped2((prev) => !prev);
+  };
+
+   const handleCardClick3 = () => {
+   
+    setIsFlipped3((prev) => !prev);
   };
 
 
@@ -252,20 +246,30 @@ export default function Drawings() {
   </div>
 </div>
 
-<div className={styles.pdf} >
 
-        <iframe
-          className={styles.pdfstyle}
-          src="/FishDrawings.pdf"
-          width="100%"
-          height="550px"
-          loading="lazy"
-          title="Fish Drawings PDF"
-          tabIndex={-1}
-          onLoad={handleIframeLoad}  
-        ></iframe>
-      
+
+<div className={`${styles.container_cardPark}`} onClick={handleCardClick3}>
+  <div className={`${styles.card} ${isFlipped3 ? styles.flipped3 : ""}`}>
+    <div className={styles.front}>
+      <Image className={styles.image}
+        aria-hidden
+        src="/posterPark17.png"
+        alt="Globe icon"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+      />
+    </div>
+
+    <div className={`${styles.back} ${squarePeg.className}`}>
+      <p className={styles.backHeading}>3. Park Banner</p>
+      <p className={styles.backHeading2}>Poster made in Photoshop </p>
+    </div>
+  </div>
 </div>
+
+
 
 
 </div>

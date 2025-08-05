@@ -206,6 +206,26 @@
   z-index: 4;
 }
 
+.container_cardPark {
+  position: relative;
+ width: 30vw;
+  max-width: 590px;
+  aspect-ratio: 590 / 821;
+  height: auto;
+  perspective: 900px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  opacity: 100%;
+  z-index: 4;
+
+}
+
+
+
+
 .image {
   border-radius: 20px;
 }
@@ -222,11 +242,19 @@
   animation: borderPulse 1s infinite ease-out, colorShift 10s infinite ease-in;
 }
 
+
+
 @media (min-width: 1300px) {
   .container_card:hover > .card {
     cursor: pointer;
     transform: rotateY(180deg) rotateZ(180deg);
   }
+
+ .container_cardPark:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+  }
+
 }
 
 .flipped {
@@ -234,6 +262,10 @@
 }
 
 .flipped2 {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.flipped3 {
   transform: rotateY(180deg) rotateZ(180deg);
 }
 
@@ -260,6 +292,9 @@
   transform: rotateY(180deg) rotateZ(180deg);
 }
 
+
+
+
 .backHeading,
 .frontHeading {
   font-size: 1.9rem;
@@ -285,6 +320,12 @@
     padding-top: 40px;
     width: 50vw;
     height: 50vw;
+  }
+
+   .container_cardPark {
+    padding-top: 40px;
+    width: 50vw;
+    
   }
 
   .hoveronphoto {

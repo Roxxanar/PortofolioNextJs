@@ -430,8 +430,8 @@
 
 .container_artgallery {
   width: 55.5vw;
-  height: 100%;
-  max-height: 3000px;
+  height: fit-content;
+  /*max-height: 3000px;*/
 
   display: flex;
   justify-content: center;
@@ -443,6 +443,7 @@
 .carousel_view {
   position: relative;
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -461,6 +462,7 @@
   scrollbar-width: none; /* Firefox */
   scroll-snap-type: x mandatory;
   width: 100%; /* Added: Ensure full width */
+  height: fit-content;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -471,9 +473,10 @@
 .item {
   flex: 0 0 auto; /* asta e screen2 de fapt */
   scroll-snap-align: center;
-  height: 500px;
+  height: fit-content;
   background-color: deeppink;
   border-radius: 8px;
+  height: fit-content;
 }
 
 .screen2 {
