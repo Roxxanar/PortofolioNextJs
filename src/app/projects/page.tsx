@@ -148,7 +148,7 @@ export default function Projects() {
       style={{ width: '10%', height: 'auto' }}
     
     />
- <Link href="/drawings" style={{ textDecoration: 'none', color: 'black' }}> Drawings </Link> 
+ <Link href="/drawings" style={{ textDecoration: 'none', color: 'black' }}> Graphic Design </Link> 
  </div>
 </div>
 
