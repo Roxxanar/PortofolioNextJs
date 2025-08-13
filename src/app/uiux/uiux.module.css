@@ -4,11 +4,12 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 3600px;
+  height: 100vh;
   object-fit: cover;
   filter: blur(15px);
   /*overflow: hidden;*/
   z-index: -1; /* behind content */
+  background-color: black;
 }
 
 .backgroundsvg::before {
@@ -24,12 +25,207 @@
   opacity: 40%;
 }
 
+.fundal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 150px;
+  background-color: white;
+  width: 70vw;
+  height: 70vh;
+  border-radius: 30px;
+  opacity: 80%;
+  z-index: 1000;
+}
+
+.hoversection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* From Uiverse.io by Sharkotech */
+.card {
+  width: 190px;
+  height: 254px;
+
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: 2px solid;
+  font-size: 1.5rem;
+}
+
+.c1 {
+  background-image: url("/desktop3.png");
+  background-size: cover;
+  /*background-position: center;*/
+}
+
+.c2 {
+  background-image: url("/desktop4.png");
+  background-size: cover;
+  /*background-position: center;*/
+}
+
+.c3 {
+  background-image: url("/desktop1.png");
+  background-size: cover;
+  /*background-position: center;*/
+}
+
+.c4 {
+  background: linear-gradient(to right, #247dae, #da1818);
+}
+
+.main:hover .c1 {
+  transform: translateX(-100px) rotate(-40deg);
+}
+
+.main:hover .c2 {
+  transform: translateX(-50px) rotate(-30deg);
+}
+
+.main:hover .c3 {
+  transform: translateX(0) rotate(-20deg);
+}
+
+.main:hover .c4 {
+  transform: translateX(50px) rotate(-10deg);
+}
+
+.c1:hover {
+  transform: translateX(-150px) rotate(0deg) !important;
+}
+
+.c2:hover {
+  transform: translateX(-100px) rotate(0deg) !important;
+}
+
+.c3:hover {
+  transform: translateX(-50px) rotate(0deg) !important;
+}
+
+.c4:hover {
+  transform: translateX(50px) rotate(0deg) !important;
+}
+
+.c5 {
+  background-image: url("/desktop3coffe.png");
+  background-size: cover;
+}
+
+.c6 {
+  background-image: url("/desktop4coffe.png");
+  background-size: cover;
+}
+
+.c7 {
+  background-image: url("/desktop1coffe.png");
+  background-size: cover;
+}
+
+.c8 {
+  background: linear-gradient(to right, #247dae, #da1818);
+}
+
+.main:hover .c5 {
+  transform: translateX(-100px) rotate(-40deg);
+}
+
+.main:hover .c6 {
+  transform: translateX(-50px) rotate(-30deg);
+}
+
+.main:hover .c7 {
+  transform: translateX(0) rotate(-20deg);
+}
+
+.main:hover .c8 {
+  transform: translateX(50px) rotate(-10deg);
+}
+
+.c5:hover {
+  transform: translateX(-150px) rotate(0deg) !important;
+}
+
+.c6:hover {
+  transform: translateX(-100px) rotate(0deg) !important;
+}
+
+.c7:hover {
+  transform: translateX(-50px) rotate(0deg) !important;
+}
+
+.c8:hover {
+  transform: translateX(50px) rotate(0deg) !important;
+}
+
+.main {
+  display: grid;
+  height: 50vmax;
+  place-items: center;
+}
+
+.card_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 80px;
+  padding-top: 40px;
+}
+
+.card_container2 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-right: 80px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.hovertext {
+  position: absolute;
+  right: 470px;
+  left: 470px;
+  top: 40px;
+  font-weight: 700;
+  /*text-align: center;*/
+  background: linear-gradient(to right, #247dae, #da1818);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.hovertext p {
+
+  margin: 0;
+}
+
 .container {
   /*position: relative;*/
   /*width: 80%;*/
-  height: 3500px;
-  min-height: 500px;
+  max-width: 1200px; /* Prevents it from getting too large */
 
+  /*background-color: black;*/
+  min-height: 500px;
+  font-family: var(--font-geist-sans);
   display: flex;
   /*justify-content: center;*/
   align-items: center;
@@ -38,38 +234,6 @@
 
 .container a {
   font-weight: bold;
-}
-
-.fundal {
-  position: absolute;
-  margin-top: 250px;
-  background-color: white;
-  width: 70vw;
-  height: 3000px;
-
-  border-radius: 30px;
-  opacity: 60%;
-}
-
-.fundal::after {
-  content: "";
-  display: flex;
-  width: min(400px, 60vw);
-  height: 100px;
-  background-color: transparent;
-  border-top: 20px solid white;
-  border-left: 20px solid white;
-  border-right: 20px solid white;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: -114px;
-}
-
-.fundalsus {
-  height: 150px;
 }
 
 .navbar {
@@ -118,307 +282,21 @@
   transform: scale(1.05);
 }
 
-.figmaborder:hover {
-  transform: scale(1.05);
+.background {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #a62b2b; */
 }
 
-.fundaljos {
-  position: relative;
-  height: 80px;
-}
-
-.description_cont {
-  margin-top: 50px;
-  position: relative;
-  width: 50vw;
-  height: 280px;
-
-  border-radius: 10px;
-  font-size: 1.9rem;
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.description_cont p {
-  margin-top: 20px;
-  font-weight: bold;
-  background: linear-gradient(to right, #247dae, #da1818);
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.figmaborder {
-  width: 24px;
-  border: 3px solid black;
-  border-radius: 200px;
-  padding-left: 10.5px;
-  padding-right: 10px;
-  padding-top: 8px;
-
-  animation: borderPulse 1s infinite ease-out, colorShift 10s infinite ease-in;
-}
-
-.ribbon {
-  margin-top: 90px;
-
-  height: 100px;
-  width: calc(min(400px, 60vw) + 40px);
-
-  background-color: transparent;
-}
-
-.ribbon5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(min(400px, 60vw) + 60px);
-  height: 70px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  text-align: center;
-
-  margin-left: -10px;
-  margin-right: -10px;
-  background: hsl(0, 0%, 0%);
-
-  position: relative;
-  top: 20px;
-}
-.ribbon5:before,
-.ribbon5:after {
-  content: "";
-  position: absolute;
-}
-.ribbon5:before {
-  height: 0;
-  width: 0;
-  bottom: -10px;
-  left: 0;
-  border-top: 10px solid #2c2c2c;
-  border-left: 10px solid transparent;
-}
-.ribbon5:after {
-  height: 0;
-  width: 0;
-  right: 0;
-  bottom: -10px;
-  border-top: 10px solid #2c2c2c;
-  border-right: 10px solid transparent;
-}
-
-.newswebsite {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 0;
-
-  background: linear-gradient(to right, #247dae, #da1818);
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@media (max-width: 1300px) {
-  .fundalsus {
-    height: 80px;
-  }
-
-  .ribbon {
-    opacity: 80%;
-    border-radius: 10px;
-    width: calc(min(200px, 40vw) + 40px);
-    height: 65px;
-    margin-top: 45px;
-    box-shadow: inset 0 0 0 3px rgb(0, 0, 0);
-    background-color: transparent;
-  }
-
-  .ribbon5 {
-    width: calc(min(200px, 40vw) + 60px);
-    height: 40px;
-
-    top: 10px;
-    background-image: none;
-    background: transparent;
-  }
-
-  .newswebsite {
-    font-size: 2rem;
-    color: #000000;
-
-    background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset;
-  }
-
-  .ribbon5:before {
-    display: none;
-  }
-  .ribbon5:after {
-    display: none;
-  }
-
-  .description_cont {
-    border: 3px solid black;
-  }
-
-  .description_cont p {
-    font-size: 1.7rem;
-    background: linear-gradient(to right, #000000, #000000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-@media (max-width: 500px) {
-  .fundalsus {
-    height: 80px;
-  }
-
-  .ribbon {
-    opacity: 80%;
-    border-radius: 10px;
-    width: calc(min(200px, 40vw) + 40px);
-    height: 65px;
-    margin-top: 45px;
-    /*box-shadow: inset 0 0 0 3px rgb(255, 255, 255);*/
-    background-color: transparent;
-  }
-
-  .ribbon5 {
-    width: calc(min(200px, 40vw) + 60px);
-    height: 40px;
-
-    top: 10px;
-  }
-
-  .figmaborder {
-    border: none;
-    animation: none;
-  }
-
-  .link {
-    border-radius: 10px;
-    animation: borderPulse 1s infinite ease-out, colorShift 10s infinite ease-in;
-  }
-}
-
-/* Option 2: If you want to center the entire gallery setup more compactly */
-.container2 {
-  position: relative;
-  width: fit-content; /* Shrink to content size */
-  max-width: 800px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px; /* Add gap between buttons and gallery */
-  margin: 100px auto 0; /* Center horizontally */
-}
-
-.prev_btn {
-  cursor: pointer;
-
-  border: none;
-
-  color: white;
-  background: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.next_btn {
-  cursor: pointer;
-
-  border: none;
-
-  color: white;
-  background: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.prev_btn,
-.next_btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 29px;
-  height: 29px;
-  border-radius: 30px;
-  animation: borderPulse 1s infinite ease-out, colorShift 10s infinite ease-in;
-}
-
-/* Continue animation and add shine on hover */
-.container2 button:hover,
-.container2 button:focus {
-  animation: borderPulse 1000ms infinite ease-out,
-    colorShift 10000ms infinite ease-in, hoverShine 200ms;
-}
-
-/* Declate color shifting animation */
-@keyframes colorShift {
-  0%,
-  100% {
-    background: #cdcdcd;
-  }
-  33% {
-    background: #acacac;
-  }
-  66% {
-    background: transparent;
-  }
-}
-
-/* Declare border pulse animation */
-@keyframes borderPulse {
-  0% {
-    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255, 0.4),
-      0px 0px 0px 0px rgba(255, 255, 255, 1);
-  }
-  100% {
-    box-shadow: inset 0px 0px 0px 3px rgba(237, 237, 237, 0.2),
-      0px 0px 0px 10px rgba(255, 255, 255, 0);
-  }
-}
-
-/* Declare shine on hover animation */
-@keyframes hoverShine {
-  0% {
-    background-image: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.4) 0%,
-      rgba(255, 255, 255, 0) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-  50% {
-    background-image: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.4) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-  100% {
-    background-image: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0) 50%,
-      rgba(255, 255, 255, 0.4) 100%
-    );
-  }
+.responsive-img {
+  width: 100%; /* adapts to container width */
+  height: auto; /* maintain aspect ratio */
+  margin-bottom: 10px;
+  object-fit: cover; /* optional: crop if needed */
 }
 
 .footer {
-  margin-top: 130px;
-  position: relative;
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -426,115 +304,69 @@
   justify-content: center;
 }
 
-/*Gallery css*/
+@media (max-width: 1500px) {
+.hovertext {
+ 
+  right: 430px;
+  left: 430px;
+  top: 40px;
 
-.container_artgallery {
-  width: 55.5vw;
-  height: fit-content;
-  /*max-height: 3000px;*/
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  position: relative; /* Added for button positioning */
+  
+}
 }
 
-.carousel_view {
-  position: relative;
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Changed: hide overflow on container */
-}
 
-.item_list {
-  position: relative;
-  display: flex;
-  gap: 40px;
-  overflow-x: auto; /* Added: Enable horizontal scrolling */
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  transition: all 0.25s ease-in;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  scroll-snap-type: x mandatory;
-  width: 100%; /* Added: Ensure full width */
-  height: fit-content;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.item_list::-webkit-scrollbar {
-  display: none;
-}
-
-.item {
-  flex: 0 0 auto; /* asta e screen2 de fapt */
-  scroll-snap-align: center;
-  height: fit-content;
-  background-color: deeppink;
-  border-radius: 8px;
-  height: fit-content;
-}
-
-.screen2 {
-  position: relative;
-  width: 55vw;
-  flex: 0 0 auto; /* Added: Prevent shrinking */
-  background-color: transparent;
-  border: 4px solid rgb(0, 0, 0);
-  border-radius: 10px;
-  scroll-snap-align: center;
-  height: auto;
-  z-index: 1000;
-}
-
-@media (max-width: 1300px) {
-  .container2 {
-    margin: 50px auto 0;
+@media (max-width: 1400px) {
+  .card_container {
+    padding-top: 0px;
   }
 
-  .item_list {
-    width: 100vw;
+  .card_container2 {
+    padding-top: 0px;
   }
 
-  .screen2 {
-    width: 60vw;
-    flex: 0 0 auto; /* Added: Prevent shrinking */
-    background-color: transparent;
-    border: 4px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    scroll-snap-align: center;
-    height: auto;
-    z-index: 1000;
-  }
-
-  .container_artgallery {
-    width: 61.5vw;
-    height: auto;
-  }
-
-  .fundal {
+  .hovertext {
     display: none;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+  .fundal {
+    padding: 70px 0px 0px 0px;
+    flex-direction: column;
+    height: 720px;
+    justify-content: space-between;
+
+    width: 60vw;
+  }
+
+  .card_container {
+    height: 250px;
+    padding-left: 0px;
+  }
+
+  .card_container2 {
+    /*height: 250px;*/
+    padding-right: 0px;
+  }
+
   .navbar {
     width: 60vw;
+  }
+
+  .backgroundsvg {
+    height: 120vh;
   }
 }
 
 @media (max-width: 500px) {
-  .container2 {
-    margin: 50px auto 0; /* Center horizontally */
+  .fundal {
+    padding-top: 40px;
+    height: 650px;
+    margin-top: 130px;
+    width: 70vw;
   }
 
-  .container_artgallery {
-    width: 62.5vw;
-  }
   .navbar {
     width: 60vw;
   }
@@ -547,7 +379,11 @@
   }
 
   .container a {
-    font-size: 0.5rem; /* nu face nimic */
+    font-size: 1rem; /* nu face nimic */
+  }
+
+  .hoversection {
+    height: auto;
   }
 }
 
@@ -555,6 +391,10 @@
   .navbar :nth-child(1),
   .navbar :nth-child(3) {
     font-size: 1.45rem;
+  }
+
+  .container a {
+    font-size: 0.85rem;
   }
 }
 
