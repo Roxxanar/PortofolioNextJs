@@ -65,7 +65,7 @@
   align-items: center;
   color: black;
   border: 2px solid;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .c1 {
@@ -123,17 +123,17 @@
 }
 
 .c5 {
-  background-image: url("/desktop3coffe.png");
+  background-image: url("/desktop2coffe.png");
   background-size: cover;
 }
 
 .c6 {
-  background-image: url("/desktop4coffe.png");
+  background-image: url("/desktop3coffe.png");
   background-size: cover;
 }
 
 .c7 {
-  background-image: url("/desktop1coffe.png");
+  background-image: url("/desktop14coffe.png");
   background-size: cover;
 }
 
@@ -184,7 +184,7 @@
   width: 100%;
   height: 100%;
   padding-left: 80px;
-  padding-top: 40px;
+  padding-top: 50px;
 }
 
 .card_container2 {
@@ -193,13 +193,13 @@
   height: 100%;
   padding-right: 80px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 50px;
 }
 
 .hovertext {
   position: absolute;
-  right: 470px;
-  left: 470px;
+  right: 480px;
+  left: 480px;
   top: 40px;
   font-weight: 700;
   /*text-align: center;*/
@@ -208,14 +208,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2rem;
-  
+
   display: flex;
   justify-content: space-between;
+
+  width: 160px;
+  text-align: center;
 }
 
 .hovertext p {
-
   margin: 0;
+  
 }
 
 .container {
@@ -305,16 +308,16 @@
 }
 
 @media (max-width: 1500px) {
-.hovertext {
- 
-  right: 430px;
-  left: 430px;
-  top: 40px;
+  .hovertext {
+    right: 430px;
+    left: 430px;
+    top: 40px;
+  }
 
-  
+  .hovertext p {
+    font-size: 2.2rem;
+  }
 }
-}
-
 
 @media (max-width: 1400px) {
   .card_container {
@@ -348,6 +351,10 @@
   .card_container2 {
     /*height: 250px;*/
     padding-right: 0px;
+  }
+
+  .card {
+    font-size: 1.5rem;
   }
 
   .navbar {

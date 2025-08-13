@@ -222,10 +222,11 @@ export default function Uiux() {
       </div>
 
 <div className={`${styles.description_cont} ${squarePeg.className}`}>
-  <p>This is a creative News Website Design made in Figma
+  <p>This is a creative Coffe Shop Website Design made in Figma with  
+    <br></br> logo writing made by me in Adobe Illustrator
     <br></br> You can find the link below</p>
   <Link
-  href="https://www.figma.com/design/SLIUR2O2EosNNjqKjdyQRO/News-Website?node-id=29-3&p=f&t=jFNREI1RoIjKARdD-0">
+  href="https://www.figma.com/design/utdf2NaCoRfUXWIw3kYzHo/Coffe-Pink?node-id=2-2&p=f&t=Ld9HvR8fdMScZLzH-0">
   <div className={styles.figmaborder}>
   <Image  className={styles.link}
                   aria-hidden
