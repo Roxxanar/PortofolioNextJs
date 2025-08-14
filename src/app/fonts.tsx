@@ -4,8 +4,7 @@ import { Stalemate } from 'next/font/google';
 import { Ysabeau_SC } from 'next/font/google';
 import { Tangerine } from 'next/font/google';
 import { Square_Peg } from 'next/font/google';
-
-
+import { Ingrid_Darling } from "next/font/google";
 
 
 export const mateSC = Mate_SC({
@@ -43,3 +42,8 @@ export const rockSalt = Rock_Salt({
     weight: '400', // Only one weight available for Square Peg
   });
   
+  export const ingridDarling = Ingrid_Darling({
+  weight: "400", // only one available
+  subsets: ["latin"], // or ["latin-ext"] if needed
+  display: "swap",
+});

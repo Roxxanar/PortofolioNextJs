@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import React, { useEffect, useRef } from "react";
 
-import { squarePeg, stalemate } from "../fonts"; // adjust path if needed
+import { stalemate, ingridDarling } from "../fonts"; // adjust path if needed
 
 import { setupPulsingGrid } from "../pulsing-grid.js";
 
@@ -19,7 +19,7 @@ export default function Uiux() {
   const backgroundRef = useRef<HTMLDivElement | null>(null);
   const fundalRef = useRef<HTMLDivElement | null>(null);
   const container2Ref = useRef<HTMLDivElement | null>(null);
-  
+  const screenRef = useRef<HTMLDivElement | null>(null);
 
 
   useEffect(() => {
@@ -28,11 +28,13 @@ export default function Uiux() {
         !containerRef.current ||
         !backgroundRef.current ||
         !fundalRef.current ||
-        !container2Ref.current
+        !container2Ref.current ||
+        !screenRef.current
       ) return;
   
+      const screenHeight = screenRef.current.offsetHeight;
       const container2Height = container2Ref.current.offsetHeight;
-      const fundalHeight = container2Height + 350;
+      const fundalHeight = screenHeight + container2Height + 470;
       const fullHeight = fundalHeight + 450;
   
       fundalRef.current.style.height = `${fundalHeight}px`;
@@ -143,13 +145,23 @@ export default function Uiux() {
 
       <div className={styles.fundalsus}>
         <div className={styles.ribbon}>
-          <span className={`${styles.ribbon5} ${squarePeg.className}`}>
+          <span className={`${styles.ribbon5} ${ingridDarling.className}`}>
             <span className={styles.newswebsite}>Coffe Website</span>
           </span>
         </div>
       </div>
 
-
+<div className={`${styles.screen_first} screen2`} ref={screenRef}>
+                <Image
+                  aria-hidden
+                  src="/desktop1coffe.png"
+                  alt="Globe icon"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
    
 
       <div className={styles.container2} ref={container2Ref}>
@@ -162,22 +174,12 @@ export default function Uiux() {
         <div className={styles.container_artgallery} >
           <div className={styles.carousel_view}>
             <div id="item-list" className={styles.item_list} ref={itemListRef}>
-              <div className={`${styles.screen2} screen2`}>
-                <Image
-                  aria-hidden
-                  src="/desktop1coffe.png"
-                  alt="Globe icon"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
+              
 
               <div className={`${styles.screen2} screen2`}>
                 <Image
                   aria-hidden
-                  src="/desktop2coffe.png"
+                  src="/desktop3coffe.png"
                   alt="Globe icon"
                   width={0}
                   height={0}
@@ -221,7 +223,7 @@ export default function Uiux() {
         </button>
       </div>
 
-<div className={`${styles.description_cont} ${squarePeg.className}`}>
+<div className={`${styles.description_cont} ${ingridDarling.className}`}>
   <p>This is a Coffe Shop Website Design made in Figma with  
     <br></br> logo writing made by me in Adobe Illustrator
     <br></br> You can find the link below</p>
