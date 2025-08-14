@@ -222,7 +222,7 @@ export default function Uiux() {
       </div>
 
 <div className={`${styles.description_cont} ${squarePeg.className}`}>
-  <p>This is a creative Coffe Shop Website Design made in Figma with  
+  <p>This is a Coffe Shop Website Design made in Figma with  
     <br></br> logo writing made by me in Adobe Illustrator
     <br></br> You can find the link below</p>
   <Link

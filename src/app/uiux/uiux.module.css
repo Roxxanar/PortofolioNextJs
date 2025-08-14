@@ -66,6 +66,8 @@
   color: black;
   border: 2px solid;
   font-size: 2rem;
+
+ animation: borderPulse 1s infinite ease-out;
 }
 
 .c1 {
@@ -87,7 +89,7 @@
 }
 
 .c4 {
-  background: linear-gradient(to right, #247dae, #da1818);
+   background: linear-gradient(-90deg, #de4242, #508dad);
 }
 
 .main:hover .c1 {
@@ -138,7 +140,7 @@
 }
 
 .c8 {
-  background: linear-gradient(to right, #247dae, #da1818);
+   background: linear-gradient(-90deg, #de4242, #508dad);
 }
 
 .main:hover .c5 {
@@ -185,6 +187,7 @@
   height: 100%;
   padding-left: 80px;
   padding-top: 50px;
+  
 }
 
 .card_container2 {
@@ -198,9 +201,14 @@
 
 .hovertext {
   position: absolute;
-  right: 480px;
-  left: 480px;
+  /*right: 600px;
+  left: 600px;*/
+  
+  left: 50%;
+  transform: translateX(-50%);
   top: 40px;
+
+  
   font-weight: 700;
   /*text-align: center;*/
   background: linear-gradient(to right, #247dae, #da1818);
@@ -212,7 +220,7 @@
   display: flex;
   justify-content: space-between;
 
-  width: 160px;
+  width: 260px;
   text-align: center;
 }
 
@@ -308,11 +316,7 @@
 }
 
 @media (max-width: 1500px) {
-  .hovertext {
-    right: 430px;
-    left: 430px;
-    top: 40px;
-  }
+  
 
   .hovertext p {
     font-size: 2.2rem;
@@ -328,9 +332,7 @@
     padding-top: 0px;
   }
 
-  .hovertext {
-    display: none;
-  }
+
 }
 
 @media (max-width: 1300px) {
@@ -356,6 +358,11 @@
   .card {
     font-size: 1.5rem;
   }
+
+ .hovertext {
+    display: none;
+  }
+
 
   .navbar {
     width: 60vw;
@@ -392,6 +399,13 @@
   .hoversection {
     height: auto;
   }
+
+.card {
+  width: 160px;
+  height: 224px;
+}
+
+
 }
 
 @media (max-width: 400px) {
@@ -412,4 +426,172 @@
   background-color: white; /* dark background for contrast */
   overflow: hidden;
   opacity: 100;
+}
+
+
+
+
+/* Declate color shifting animation */
+@keyframes colorShift {
+  0%,
+  100% {
+    background: #cdcdcd;
+  }
+  33% {
+    background: #acacac;
+  }
+  66% {
+    background: transparent;
+  }
+}
+
+/* Declare border pulse animation */
+@keyframes borderPulse {
+  0% {
+    box-shadow:  0px 0px 0px 3px rgba(255, 255, 255, 0.4),
+      0px 0px 0px 0px rgb(170, 170, 170);
+  }
+  100% {
+    box-shadow:  0px 0px 0px 3px rgba(237, 237, 237, 0.2),
+      0px 0px 0px 10px rgba(255, 255, 255, 0);
+  }
+}
+
+/* Declare shine on hover animation */
+@keyframes hoverShine {
+  0% {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+  }
+}
+
+
+
+
+/* From Uiverse.io by elijahgummer */
+.analyze svg path.stick {
+  transform: translate(0);
+  animation: stick 2s ease infinite;
+  /* Change wand color */
+}
+
+.analyze svg path.star_1 {
+  fill: #ff4500; /* OrangeRed color */
+  animation: sparkles 2s ease infinite, scaleStars 2s ease infinite,
+    colorChange 2s ease infinite;
+  animation-delay: 150ms;
+}
+
+.analyze svg path.star_2 {
+  fill: #00ff00; /* Lime color */
+  animation: sparkles 2s ease infinite, scaleStars 2s ease infinite,
+    colorChange 2s ease infinite;
+}
+
+.board {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes sparkles {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes stick {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  25% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    transform: translate3d(3px, -2px, 0) rotate(8deg);
+  }
+  75% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+}
+
+@keyframes scaleStars {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    fill: #ff4500; /* OrangeRed */
+  }
+  25% {
+    fill: #ffd700; /* Gold */
+  }
+  50% {
+    fill: #00ff00; /* Lime */
+  }
+  75% {
+    fill: #1e90ff; /* DodgerBlue */
+  }
+  100% {
+    fill: #ff4500; /* OrangeRed */
+  }
 }

@@ -149,7 +149,7 @@
 .description_cont p {
   margin-top: 20px;
   font-weight: bold;
-  background: linear-gradient(to right, #247dae, #da1818);
+  background: linear-gradient(to right, #000000, #000000);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
