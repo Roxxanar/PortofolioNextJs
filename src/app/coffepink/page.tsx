@@ -179,7 +179,7 @@ export default function Uiux() {
               <div className={`${styles.screen2} screen2`}>
                 <Image
                   aria-hidden
-                  src="/desktop3coffe.png"
+                  src="/desktop2coffe.png"
                   alt="Globe icon"
                   width={0}
                   height={0}

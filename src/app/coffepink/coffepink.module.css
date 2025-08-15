@@ -219,7 +219,7 @@
   font-weight: bold;
   margin: 0;
 
-  background: linear-gradient(to right, #F1ABAE, #F1ABAE);
+  background: linear-gradient(to right, #f1abae, #f1abae);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -310,8 +310,7 @@
   }
 
   .description_cont {
-
-    height:500px;
+    height: 500px;
   }
 }
 
@@ -484,11 +483,9 @@
   height: fit-content;
 }
 
-
 .screen_first {
-
-     position: relative;
-     margin-top: 92px;
+  position: relative;
+  margin-top: 92px;
   width: 55vw;
   flex: 0 0 auto; /* Added: Prevent shrinking */
   background-color: transparent;
@@ -518,6 +515,11 @@
 
   .item_list {
     width: 100vw;
+  }
+
+  .screen_first {
+    margin-top: 80px;
+     width: 60vw;
   }
 
   .screen2 {
