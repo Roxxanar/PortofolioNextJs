@@ -211,10 +211,7 @@
   
   font-weight: 700;
   /*text-align: center;*/
-  background: linear-gradient(to right, #247dae, #da1818);
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ 
   font-size: 2rem;
 
   display: flex;
@@ -227,6 +224,10 @@
 .hovertext p {
   margin: 0;
   
+   background: linear-gradient(to right, #247dae, #da1818);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container {
