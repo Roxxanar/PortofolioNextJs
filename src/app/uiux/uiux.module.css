@@ -70,6 +70,19 @@
  animation: borderPulse 1s infinite ease-out;
 }
 
+ .card p {
+
+    width: 190px;
+  height: 134px;
+  background: linear-gradient(-90deg, #de4242, #508dad);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  }
+
+
+
 .c1 {
   background-image: url("/desktop3.png");
   background-size: cover;
@@ -89,7 +102,9 @@
 }
 
 .c4 {
-   background: linear-gradient(-90deg, #de4242, #508dad);
+   /*background: linear-gradient(-90deg, #de4242, #508dad);*/
+   background-image: url("/desktop1.png");
+  background-size: cover;
 }
 
 .main:hover .c1 {
@@ -140,7 +155,9 @@
 }
 
 .c8 {
-   background: linear-gradient(-90deg, #de4242, #508dad);
+   /*background: linear-gradient(-90deg, #de4242, #508dad);*/
+     background-image: url("/desktop14coffe.png");
+  background-size: cover;
 }
 
 .main:hover .c5 {
@@ -187,6 +204,7 @@
   height: 100%;
   padding-left: 80px;
   padding-top: 50px;
+  text-align: center;
   
 }
 
@@ -197,6 +215,7 @@
   padding-right: 80px;
   text-align: center;
   padding-top: 50px;
+  text-align: center;
 }
 
 .hovertext {
@@ -206,7 +225,7 @@
   
   left: 50%;
   transform: translateX(-50%);
-  top: 40px;
+  top: 50px;
 
   
   font-weight: 700;
@@ -360,10 +379,34 @@
     font-size: 1.5rem;
   }
 
+  .card p {
+
+    width: 190px;
+  height: 54px;
+  background: linear-gradient(-90deg, #de4242, #508dad);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  }
+
  .hovertext {
     display: none;
   }
 
+
+  .c4 {
+  background-image: url("/desktop1.png");
+  background-size: cover;
+  /*background-position: center;*/
+}
+
+
+  .c8 {
+  background-image: url("/desktop14coffe.png");
+  background-size: cover;
+  /*background-position: center;*/
+}
 
   .navbar {
     width: 60vw;
@@ -404,6 +447,7 @@
 .card {
   width: 160px;
   height: 224px;
+  
 }
 
 

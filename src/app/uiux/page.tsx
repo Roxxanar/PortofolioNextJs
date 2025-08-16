@@ -62,7 +62,7 @@ export default function Projects() {
                 <div className={`${styles.card} ${styles.c1}`}></div>
                 <div className={`${styles.card} ${styles.c2}`}></div>
                 <div className={`${styles.card} ${styles.c3}`}></div>
-                <div className={`${styles.card} ${styles.c4}`}> News Website </div>
+                <div className={`${styles.card} ${styles.c4}`}> <p>News Website</p> </div>
               </div>
             </Link>
           </section>
@@ -155,7 +155,7 @@ export default function Projects() {
                 <div className={`${styles.card} ${styles.c5}`}></div>
                 <div className={`${styles.card} ${styles.c6}`}></div>
                 <div className={`${styles.card} ${styles.c7}`}></div>
-                <div className={`${styles.card} ${styles.c8}`}> Coffe Website </div>
+                <div className={`${styles.card} ${styles.c8}`}><p> Coffe Website </p> </div>
               </div>
             </Link>
           </section>
