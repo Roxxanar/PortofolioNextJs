@@ -124,7 +124,7 @@
 
 .fundaljos {
   position: relative;
-  height: 80px;
+  height: 0px;
 }
 
 .description_cont {
@@ -235,7 +235,7 @@
     border-radius: 10px;
     width: calc(min(200px, 40vw) + 40px);
     height: 65px;
-    margin-top: 45px;
+    margin-top: 55px;
     box-shadow: inset 0 0 0 3px rgb(0, 0, 0);
     background-color: transparent;
   }
@@ -279,7 +279,7 @@
 
 @media (max-width: 500px) {
   .fundalsus {
-    height: 80px;
+    height: 70px;
   }
 
   .ribbon {
@@ -287,7 +287,7 @@
     border-radius: 10px;
     width: calc(min(200px, 40vw) + 40px);
     height: 65px;
-    margin-top: 45px;
+    margin-top: 55px;
     /*box-shadow: inset 0 0 0 3px rgb(255, 255, 255);*/
     background-color: transparent;
   }
@@ -510,7 +510,7 @@
 
 @media (max-width: 1300px) {
   .container2 {
-    margin: 50px auto 0;
+    margin: 20px auto 0;
   }
 
   .item_list {
@@ -518,7 +518,7 @@
   }
 
   .screen_first {
-    margin-top: 80px;
+    margin-top: 70px;
      width: 60vw;
   }
 
@@ -541,6 +541,11 @@
   .fundal {
     display: none;
   }
+
+  .footer {
+
+    margin-top: 240px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -551,7 +556,7 @@
 
 @media (max-width: 500px) {
   .container2 {
-    margin: 50px auto 0; /* Center horizontally */
+    margin: 20px auto 0; /* Center horizontally */
   }
 
   .container_artgallery {
