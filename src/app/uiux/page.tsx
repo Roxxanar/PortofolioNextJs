@@ -11,19 +11,26 @@ import React, { useEffect } from "react";
 import { stalemate } from "../fonts"; // adjust path if needed
 import { setupPulsingGrid } from "../pulsing-grid.js";
 
+import Contact from "../components/Contact"; // Adjust the path as needed
+
 export default function Projects() {
   const fundalRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
+  const fjRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const adjustHeights = () => {
-      if (fundalRef.current && containerRef.current && backgroundRef.current) {
+      if (fundalRef.current && containerRef.current && backgroundRef.current && footerRef.current && fjRef.current) {
         const fundalHeight = fundalRef.current.offsetHeight;
-        const totalHeight = fundalHeight + 300;
+        const footerHeight = footerRef.current.offsetHeight;
+        const totalHeight = fundalHeight + footerHeight + 300;
+        const fjHeight = fundalHeight + 210;
 
-        containerRef.current.style.height = `${totalHeight}px`;
+        containerRef.current.style.height = `${totalHeight -20}px`;
         backgroundRef.current.style.height = `${totalHeight}px`;
+        fjRef.current.style.height = `${fjHeight}px`;
       }
     };
 
@@ -193,7 +200,11 @@ export default function Projects() {
 
       <div className={styles.background}></div>
 
-      <footer className={styles.footer}></footer>
+      <div className={styles.fundaljos} ref={fjRef}></div>
+
+      <footer className={styles.footer} ref={footerRef}>
+         <Contact/>
+      </footer>
     </div>
   );
 }
