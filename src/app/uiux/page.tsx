@@ -56,7 +56,7 @@ export default function Projects() {
       ></div>
 
 
-      <div className={styles.fundal} ref={fundalRef}>
+      <div className={`${styles.fundal} ${stalemate.className}`} ref={fundalRef}>
 
 
 
