@@ -20,6 +20,8 @@ export default function Drawings() {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isFlipped2, setIsFlipped2] = useState(false);
   const [isFlipped3, setIsFlipped3] = useState(false);
+  const [isFlipped4, setIsFlipped4] = useState(false);
+  const [isFlipped5, setIsFlipped5] = useState(false);
 
   const handleCardClick = () => {
     setIsFlipped((prev) => !prev);
@@ -34,6 +36,17 @@ export default function Drawings() {
    const handleCardClick3 = () => {
    
     setIsFlipped3((prev) => !prev);
+  };
+
+
+   const handleCardClick4 = () => {
+   
+    setIsFlipped4((prev) => !prev);
+  };
+
+   const handleCardClick5 = () => {
+   
+    setIsFlipped5((prev) => !prev);
   };
 
 
@@ -247,9 +260,55 @@ export default function Drawings() {
 </div>
 
 
-
-<div className={`${styles.container_cardPark}`} onClick={handleCardClick3}>
+   <div className={`${styles.container_cardCoffe}`} onClick={handleCardClick3}>
   <div className={`${styles.card} ${isFlipped3 ? styles.flipped3 : ""}`}>
+    <div className={styles.front}>
+      <Image className={styles.image}
+        aria-hidden
+        src="/logoscoffesite.JPG"
+        alt="Globe icon"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" , border: "3px solid #000" }}
+      />
+    </div>
+
+    <div className={`${styles.back} ${squarePeg.className}`}>
+      <p className={styles.backHeading}>3. Coffe E-commerce Site Logos</p>
+      <p className={styles.backHeading2}>Logos made in Adobe Illustrator and Figma</p>
+    </div>
+  </div>
+</div>
+
+
+<div className={`${styles.container_cardBadges}`} onClick={handleCardClick4}>
+  <div className={`${styles.card} ${isFlipped4 ? styles.flipped4 : ""}`}>
+    <div className={styles.front}>
+      <Image className={styles.image}
+        aria-hidden
+        src="/badgessite.JPG"
+        alt="Globe icon"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto", border: "3px solid #000" }}
+      />
+    </div>
+
+    <div className={`${styles.back} ${squarePeg.className}`}>
+      <p className={styles.backHeading}>4. Badge Icons Set</p>
+      <p className={styles.backHeading2}>6 icons made in Adobe Illustrator and Figma</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div className={`${styles.container_cardPark}`} onClick={handleCardClick5}>
+  <div className={`${styles.card} ${isFlipped5 ? styles.flipped5 : ""}`}>
     <div className={styles.front}>
       <Image className={styles.image}
         aria-hidden
@@ -258,12 +317,12 @@ export default function Drawings() {
         width={0}
         height={0}
         sizes="100vw"
-        style={{ width: "100%", height: "auto" }}
+        style={{ width: "100%", height: "auto" , border: "3px solid #ffffffff" }}
       />
     </div>
 
     <div className={`${styles.back} ${squarePeg.className}`}>
-      <p className={styles.backHeading}>3. Park Banner</p>
+      <p className={styles.backHeading}>5. Park Banner</p>
       <p className={styles.backHeading2}>Poster made in Photoshop </p>
     </div>
   </div>
