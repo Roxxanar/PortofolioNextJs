@@ -207,7 +207,7 @@
 }
 
 .container_cardPark {
-  display: none;
+  /*display: none;*/
   position: relative;
  width: 30vw;
   max-width: 590px;
