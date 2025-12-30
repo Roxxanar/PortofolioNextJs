@@ -40,12 +40,78 @@
   font-weight: bold;
 }
 
+.icon_upwork {
+  width: 40px;
+  padding-top: 80px;
+}
+
+/* Add this new wrapper class */
+.tooltip_wrapper {
+  position: relative;
+  /*display: inline-block;*/
+  z-index: 2;
+}
+
+/* Your existing tooltip class, just tweak behavior */
+.text_tooltip {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.7rem;
+  position: absolute;
+  width: 60px;
+  left: 0%;
+  bottom: 100%;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 10px;
+  background: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border: 5px solid #4f3755;
+  border-radius: 10px;
+  text-align: center;
+
+  visibility: hidden;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Tooltip appears on hover */
+.tooltip_wrapper:hover .text_tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip_wrapper img:hover {
+  transform: scale(1.1);
+}
+
+.text_tooltip::before,
+.text_tooltip::after {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text_tooltip::before {
+  border-top: 10px solid #4b244b;
+  margin-top: 5px;
+}
+
+.text_tooltip::after {
+  border-top: 10px solid white;
+  margin-top: -1px;
+  z-index: 1;
+}
+
 .fundal {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
   background-color: white;
   width: 70vw;
   height: fit-content;
@@ -321,6 +387,14 @@
   transform: rotateY(180deg) rotateZ(180deg);
 }
 
+.flipped6 {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.flipped7 {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
 .front,
 .back {
   height: 100%;
@@ -331,7 +405,7 @@
   backface-visibility: hidden;
 
   border-radius: 20px;
-  background: linear-gradient(-90deg, #de4242, #508dad);
+
 
   display: flex;
   flex-direction: column;
@@ -339,9 +413,18 @@
   align-items: center;
 }
 
+.front {
+
+    background: linear-gradient(-90deg, #e05c5c, #508dad);
+}
+
+
 .back {
+
+   background: linear-gradient(-90deg, #e35e5e, #7aa1b7);
   border: 2px solid black;
   transform: rotateY(180deg) rotateZ(180deg);
+
 }
 
 
@@ -363,7 +446,13 @@
 
 @media (max-width: 1300px) {
   .fundal {
-    margin-top: 100px;
+    margin-top: 40px;
+  }
+
+
+  .icon_upwork {
+
+    padding-top: 40px;
   }
 }
 
