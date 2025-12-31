@@ -80,12 +80,14 @@ export default function Drawings() {
   const fundalRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
+  const iconRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     const adjustHeights = () => {
-      if (fundalRef.current && containerRef.current && backgroundRef.current) {
+      if (fundalRef.current && containerRef.current && backgroundRef.current && iconRef.current) {
         const fundalHeight = fundalRef.current.offsetHeight;
-        const totalHeight = fundalHeight + 400;
+        const fundalHeight2 = iconRef.current.offsetHeight;
+        const totalHeight = fundalHeight + fundalHeight2 + 300;
   
         containerRef.current.style.height = `${totalHeight}px`;
         backgroundRef.current.style.height = `${totalHeight}px`;
@@ -147,7 +149,7 @@ export default function Drawings() {
       </div>
 
   
-<div className={styles.icon_upwork}>
+<div className={styles.icon_upwork} ref={iconRef}>
   <div className={styles.tooltip_wrapper}>
   <Link
   href="https://www.upwork.com/freelancers/~01f26a92397914ff5e">
@@ -413,6 +415,7 @@ export default function Drawings() {
 
       <footer className={styles.footer}>
       <Contact/> 
+      
       </footer>
     </div>
   );

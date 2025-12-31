@@ -123,7 +123,7 @@
 
 .fundalsus {
   position: relative;
-  height: 150px;
+  height: 120px;
 }
 
 .navbar {
@@ -454,6 +454,11 @@
 
     padding-top: 40px;
   }
+
+  .text_tooltip {
+
+    display:none;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -504,7 +509,7 @@
 
 @media (max-width: 500px) {
   .fundal {
-    margin-top: 90px;
+    margin-top: 40px;
   }
 
   .navbar {

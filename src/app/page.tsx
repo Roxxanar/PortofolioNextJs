@@ -167,6 +167,35 @@ export default function Home() {
   </div>
 </div>
 
+
+
+<div className={styles.icon_upwork} >
+  <div className={styles.tooltip_wrapper}>
+  <Link
+  href="https://www.upwork.com/freelancers/~01f26a92397914ff5e">
+  <Image
+        aria-hidden
+        src="/upwork-icon.png"
+        alt="Globe icon"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: '100%', height: 'auto' }}
+      
+      />
+  </Link>
+       <span className={styles.text_tooltip}>
+      Upwork
+    </span>
+
+  </div>
+  </div>
+
+
+
+
+
+
   <div className={styles.icon_right}>
   <div className={styles.tooltip_wrapper}>
   <Link

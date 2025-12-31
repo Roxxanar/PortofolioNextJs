@@ -126,6 +126,11 @@
   /*animation-delay: 0.3s;*/
 }
 
+.icon_upwork {
+
+  width:47px;
+}
+
 @keyframes slideInLeft {
   from {
     transform: translateX(-500px);
@@ -241,6 +246,12 @@
 }
 
 @media (max-width: 1200px) {
+
+  .text_tooltip {
+
+    display: none;
+  }
+  
   .fundal {
     margin-top: 80px;
     height: 500px;
@@ -271,7 +282,7 @@
   }
 
   .icon_container {
-    gap: 30px;
+    gap: 20px;
   }
 
   .icon_left {
@@ -280,6 +291,11 @@
   }
 
   .icon_right {
+    width: 100%;
+    height: auto;
+  }
+
+    .icon_upwork {
     width: 100%;
     height: auto;
   }
