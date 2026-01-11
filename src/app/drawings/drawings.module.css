@@ -307,6 +307,23 @@
 
 }
 
+.container_cardCoffeSet {
+  position: relative;
+ width: 30vw;
+  
+  aspect-ratio: 1849 / 1294;
+  height: auto;
+  perspective: 900px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  opacity: 100%;
+  z-index: 4;
+
+}
+
 .container_cardBadges {
   position: relative;
  width: 30vw;
@@ -360,6 +377,11 @@
     transform: rotateY(180deg) rotateZ(180deg);
   }
 
+   .container_cardCoffeSet:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+  }
+
    .container_cardBadges:hover > .card {
     cursor: pointer;
     transform: rotateY(180deg) rotateZ(180deg);
@@ -392,6 +414,14 @@
 }
 
 .flipped7 {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.flipped8 {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.flipped9 {
   transform: rotateY(180deg) rotateZ(180deg);
 }
 
@@ -477,6 +507,12 @@
   }
 
    .container_cardCoffe {
+    padding-top: 40px;
+    width: 50vw;
+    
+  }
+
+   .container_cardCoffeSet {
     padding-top: 40px;
     width: 50vw;
     
