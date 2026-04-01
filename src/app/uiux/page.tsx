@@ -25,7 +25,7 @@ export default function Projects() {
       if (fundalRef.current && containerRef.current && backgroundRef.current && footerRef.current && fjRef.current) {
         const fundalHeight = fundalRef.current.offsetHeight;
         const footerHeight = footerRef.current.offsetHeight;
-        const totalHeight = fundalHeight + footerHeight + 300;
+        const totalHeight = fundalHeight + footerHeight;
         const fjHeight = fundalHeight + 210;
 
         containerRef.current.style.height = `${totalHeight -20}px`;
@@ -49,6 +49,11 @@ export default function Projects() {
       className={`${styles.container} ${stalemate.className}`}
       ref={containerRef}
     >
+
+
+
+
+      
       <div
         className={styles.backgroundsvg}
         ref={backgroundRef}
@@ -56,24 +61,40 @@ export default function Projects() {
       ></div>
 
 
+
+<div className={styles.navbar}>
+        <Link
+          href="/"
+          style={{
+            textDecoration: "none",
+            color: "#247DAE",
+            fontSize: "1.6rem",
+          }}
+          className={stalemate.className}
+        >
+          <span className={styles.effect}>
+            <p>Home</p>
+          </span>
+        </Link>
+        <div id="pulsing-grid"></div>
+
+        <Link
+          href="/projects"
+          style={{
+            textDecoration: "none",
+            color: "#DA1818",
+            fontSize: "1.6rem",
+          }}
+          className={stalemate.className}
+        >
+          <span className={styles.effect}>Projects</span>
+        </Link>
+      </div>
       <div className={`${styles.fundal} ${stalemate.className}`} ref={fundalRef}>
 
 
 
-        <div className={styles.card_container}>
-          
-          <section className={styles.hoversection}>
-            
-            <Link href="/news">
-               <div className={styles.main}>
-                <div className={`${styles.card} ${styles.c1}`}></div>
-                <div className={`${styles.card} ${styles.c2}`}></div>
-                <div className={`${styles.card} ${styles.c3}`}></div>
-                <div className={`${styles.card} ${styles.c4}`}> <p>News Website</p> </div>
-              </div>
-            </Link>
-          </section>
-        </div>
+        
 <div className={styles.hovertext}> 
 
 <div className={styles.analyze}>
@@ -150,6 +171,24 @@ export default function Projects() {
             
             </div>
 
+<div className={styles.containercards}>
+<div className={styles.card_container}>
+          
+          <section className={styles.hoversection}>
+            
+            <Link href="/news">
+               <div className={styles.main}>
+                <div className={`${styles.card} ${styles.c1}`}></div>
+                <div className={`${styles.card} ${styles.c2}`}></div>
+                <div className={`${styles.card} ${styles.c3}`}></div>
+                <div className={`${styles.card} ${styles.c4}`}> <p>News Website</p> </div>
+              </div>
+            </Link>
+          </section>
+        </div>
+
+
+
         <div className={styles.card_container2}>
 
 
@@ -167,36 +206,36 @@ export default function Projects() {
             </Link>
           </section>
         </div>
+
+
+   <div className={styles.card_container3}>
+
+
+          
+
+          
+          <section className={styles.hoversection}>
+            <Link href="/school">
+              <div className={styles.main}>
+                <div className={`${styles.card} ${styles.c9}`}></div>
+                <div className={`${styles.card} ${styles.c10}`}></div>
+                <div className={`${styles.card} ${styles.c11}`}></div>
+                <div className={`${styles.card} ${styles.c12}`}><p> School Website </p> </div>
+              </div>
+            </Link>
+          </section>
+        </div>
+</div>
+
       </div>
 
-      <div className={styles.navbar}>
-        <Link
-          href="/"
-          style={{
-            textDecoration: "none",
-            color: "#247DAE",
-            fontSize: "1.6rem",
-          }}
-          className={stalemate.className}
-        >
-          <span className={styles.effect}>
-            <p>Home</p>
-          </span>
-        </Link>
-        <div id="pulsing-grid"></div>
 
-        <Link
-          href="/projects"
-          style={{
-            textDecoration: "none",
-            color: "#DA1818",
-            fontSize: "1.6rem",
-          }}
-          className={stalemate.className}
-        >
-          <span className={styles.effect}>Projects</span>
-        </Link>
-      </div>
+
+
+      
+
+
+    
 
       <div className={styles.background}></div>
 
