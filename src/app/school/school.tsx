@@ -12,7 +12,7 @@ import { setupPulsingGrid } from "../pulsing-grid.js";
 
 import Contact from "../components/Contact"; // Adjust the path as needed
 
-export default function School() {
+export default function Uiux() {
 
 
   const containerRef = useRef<HTMLDivElement | null>(null);

@@ -101,7 +101,7 @@ export default function Drawings() {
         const fundalHeight2 = iconRef.current.offsetHeight;
         const totalHeight = fundalHeight + fundalHeight2 + 300;
   
-        containerRef.current.style.height = `${totalHeight}px`;
+        containerRef.current.style.height = `${totalHeight - 40}px`;
         backgroundRef.current.style.height = `${totalHeight}px`;
       }
     };

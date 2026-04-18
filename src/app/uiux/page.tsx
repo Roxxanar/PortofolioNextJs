@@ -14,6 +14,8 @@ import { setupPulsingGrid } from "../pulsing-grid.js";
 import Contact from "../components/Contact"; // Adjust the path as needed
 
 export default function Projects() {
+
+  const cardsRef = useRef<HTMLDivElement>(null);
   const fundalRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -22,15 +24,16 @@ export default function Projects() {
 
   useEffect(() => {
     const adjustHeights = () => {
-      if (fundalRef.current && containerRef.current && backgroundRef.current && footerRef.current && fjRef.current) {
-        const fundalHeight = fundalRef.current.offsetHeight;
-        const footerHeight = footerRef.current.offsetHeight;
-        const totalHeight = fundalHeight + footerHeight;
-        const fjHeight = fundalHeight + 210;
+      if (cardsRef.current && fundalRef.current && containerRef.current && backgroundRef.current && footerRef.current && fjRef.current) {
+        const cardsHeight = cardsRef.current.scrollHeight;
+    const footerHeight = footerRef.current.offsetHeight;
 
-        containerRef.current.style.height = `${totalHeight -20}px`;
-        backgroundRef.current.style.height = `${totalHeight}px`;
-        fjRef.current.style.height = `${fjHeight}px`;
+    const totalHeight = cardsHeight + footerHeight + 400; // buffer
+    const fjHeight = cardsHeight + 200;
+
+    containerRef.current.style.height = `${totalHeight - 40}px`;
+    backgroundRef.current.style.height = `${totalHeight}px`;
+    fjRef.current.style.height = `${fjHeight}px`;
       }
     };
 
@@ -171,7 +174,7 @@ export default function Projects() {
             
             </div>
 
-<div className={styles.containercards}>
+<div className={styles.containercards} ref={cardsRef}>
 <div className={styles.card_container}>
           
           <section className={styles.hoversection}>
